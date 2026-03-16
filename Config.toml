@@ -4,7 +4,7 @@ cache_max_days = 7
 cache_url = "https://mikaelkall.github.io/security-rss/cache.json"
 minify = true
 
-extra_css = ["static/style.css"]
+extra_css = ["style.css"]
 
 sources = [
 "https://cvedaily.com/feed.xml",
