@@ -7,7 +7,6 @@ minify = true
 sources = [
 "https://cvedaily.com/feed.xml",
 "https://cvedaily.com/feed-critical.xml",
-"https://www.cisa.gov/known-exploited-vulnerabilities-catalog.rss",
 "https://www.exploit-db.com/rss.xml",
 "https://packetstormsecurity.com/files/feed/",
 "https://www.bleepingcomputer.com/feed/",
