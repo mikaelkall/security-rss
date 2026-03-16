@@ -1,20 +1,27 @@
-site_title = "Security Threat Intelligence Feeds"
+site_title = "Security RSS Dashboard"
 
 cache_max_days = 7
+cache_url = "https://mikaelkall.github.io/security-rss/cache.json"
+minify = true
 
+[[feeds]]
+title = "CVE Feeds"
 sources = [
-"https://cvedaily.com/feed.xml",
-"https://cvedaily.com/feed-critical.xml",
-"https://www.exploit-db.com/rss.xml",
-"https://packetstormsecurity.com/files/feed/",
-"https://www.bleepingcomputer.com/feed/"
-"https://www.cvedetails.com/vulnerability-feed.php?vendor_id=26",
-"https://www.cvedetails.com/vulnerability-feed.php?vendor_id=452",
-"https://www.exploit-db.com/rss.xml",
-"https://packetstormsecurity.com/files/feed/",
-"https://www.bleepingcomputer.com/feed/"
+    "https://cvedaily.com/feed.xml",
+    "https://cvedaily.com/feed-critical.xml",
+    "https://www.cisa.gov/known-exploited-vulnerabilities-catalog.rss"
 ]
 
-cache_url = "https://mikaelkall.github.io/security-rss/cache.json"
+[[feeds]]
+title = "Exploits"
+sources = [
+    "https://www.exploit-db.com/rss.xml",
+    "https://packetstormsecurity.com/files/feed/"
+]
 
-minify = true
+[[feeds]]
+title = "Security News"
+sources = [
+    "https://www.bleepingcomputer.com/feed/",
+    "https://thehackernews.com/feeds/posts/default"
+]
