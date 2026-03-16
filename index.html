@@ -12,13 +12,73 @@
 <body>
 <section class="daily-content">
 <h2 class="daily-heading">
-<time datetime="2026-03-16T20:32:16.680571591Z">03-16</time>
+<time datetime="2026-03-16T23:08:39.608353453Z">03-16</time>
 </h2>
 <ul class="sources card">
 <li class="source">
 <section>
 <h3 class="source-name">CVE Daily – Critical CVEs</h3>
 <section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-32267 – Craft CMS is a content management system (CMS). From version 4.0.0-RC1 to before...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32267">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-32267</strong></p>
+<p>Craft CMS is a content management system (CMS). From version 4.0.0-RC1 to before version 4.17.6 and from version 5.0.0-RC1 to before version 5.9.12, a low-privilege user (or an unauthenticated user who has been sent a shared URL) can escalate their privileges to admin by abusing UsersController->actionImpersonateWithToken. This issue has been patched in versions 4.17.6 and 5.9.12.</p>
+<p><strong>CVSS:</strong> 9.2 · <strong>CWE:</strong> CWE-863</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32267">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-28430 – Chamilo LMS is a learning management system. Prior to version 1.11.34, there is ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-28430">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-28430</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to version 1.11.34, there is an unauthenticated SQL injection vulnerability which allows remote attackers to execute arbitrary SQL commands via the custom_dates parameter. By chaining this with a predictable legacy password reset mechanism, an attacker can achieve full administrative account takeover without any prior credentials. The vulnerabili…</p>
+<p><strong>CVSS:</strong> 9.3 · <strong>CWE:</strong> CWE-89</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28430">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2025-69809 – A write-what-where condition in p2r3 Bareiron commit 8e4d40 allows unauthenticat...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-69809">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2025-69809</strong></p>
+<p>A write-what-where condition in p2r3 Bareiron commit 8e4d40 allows unauthenticated attackers to write arbitrary values to memory, enabling arbitrary code execution via a crafted packet.</p>
+<p><strong>CVSS:</strong> 9.8 · <strong>CWE:</strong> CWE-123</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-69809">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2025-69808 – An out-of-bounds memory access (OOB) in p2r3 Bareiron commit 8e4d40 allows unaut...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-69808">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2025-69808</strong></p>
+<p>An out-of-bounds memory access (OOB) in p2r3 Bareiron commit 8e4d40 allows unauthenticated attackers to access sensitive information and cause a Denial of Service (DoS) via supplying a crafted packet.</p>
+<p><strong>CVSS:</strong> 9.1 · <strong>CWE:</strong> CWE-125</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-69808">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
 <article>
 <details class="article-expander">
 <summary class="article-expander__title">[Critical] CVE-2026-4254 – A weakness has been identified in Tenda AC8 up to 16.03.50.11. This vulnerabilit...</summary>
@@ -103,13 +163,313 @@
 <section class="articles-per-source">
 <article>
 <details class="article-expander">
-<summary class="article-expander__title">[Unknown] CVE-2025-69809 – A write-what-where condition in p2r3 Bareiron commit 8e4d40 allows unauthenticat...</summary>
+<summary class="article-expander__title">[Medium] CVE-2026-2454 – Mattermost versions 11.3.x <= 11.3.0, 11.2.x <=11.2.2, 10.11.x <=10.11.10 fail...</>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-2454">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-2454</strong></p>
+<p>Mattermost versions 11.3.x <= 11.3.0, 11.2.x <=11.2.2, 10.11.x <=10.11.10 fail to handle incorrectly reported array lengths which allows malicious user to cause OOM errors and crash the server via sending corrupted msgpack frames within websocket messages to calls plugin. Mattermost Advisory ID: MMSA-2025-00537</>
+<p><strong>CVSS:</strong> 5.8 · <strong>CWE:</strong> CWE-1287</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2454">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-29522 – ZwickRoell Test Data Management versions prior to 3.0.8 contain a local file inc...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-29522">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-29522</strong></p>
+<p>ZwickRoell Test Data Management versions prior to 3.0.8 contain a local file inclusion (LFI) vulnerability in the /server/node_upgrade_srv.js endpoint. An unauthenticated attacker can supply directory traversal sequences via the firmware parameter to access arbitrary files on the server, leading to information disclosure of sensitive system files.</p>
+<p><strong>CVSS:</strong> 8.7 · <strong>CWE:</strong> CWE-22</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-29522">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Low] CVE-2026-26230 – Mattermost versions 10.11.x <= 10.11.10 fail to properly validate permission req...</>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-26230">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk low">Low</span> CVE-2026-26230</strong></p>
+<p>Mattermost versions 10.11.x <= 10.11.10 fail to properly validate permission requirements in the team member roles API endpoint which allows team administrators to demote members to guest role. Mattermost Advisory ID: MMSA-2025-00531</>
+<p><strong>CVSS:</strong> 3.8 · <strong>CWE:</strong> CWE-863</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-26230">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-1629 – Mattermost versions 10.11.x <= 10.11.10 Fail to invalidate cached permalink prev...</>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-1629">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-1629</strong></p>
+<p>Mattermost versions 10.11.x <= 10.11.10 Fail to invalidate cached permalink preview data when a user loses channel access which allows the user to continue viewing private channel content via previously cached permalink previews until cache reset or relogin.. Mattermost Advisory ID: MMSA-2026-00580</>
+<p><strong>CVSS:</strong> 4.3 · <strong>CWE:</strong> CWE-672</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1629">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-69902 – A command injection vulnerability in the minimal_wrapper.py component of kubectl...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-69902">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-69902</strong></p>
+<p>A command injection vulnerability in the minimal_wrapper.py component of kubectl-mcp-server v1.2.0 allows attackers to execute arbitrary commands via injecting arbitrary shell metacharacters.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-69902">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50881 – The `flow/admin/moniteur.php` script in Use It Flow administration website befor...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50881">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50881</strong></p>
+<p>The `flow/admin/moniteur.php` script in Use It Flow administration website before 10.0.0 is vulnerable to Remote Code Execution. When handling GET requests, the script takes user-supplied input from the `action` URL parameter, performs insufficient validation, and incorporates this input into a string that is subsequently executed by the `eval()` function. Although a `method_exists()` check is pe…</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50881">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-32267 – Craft CMS is a content management system (CMS). From version 4.0.0-RC1 to before...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32267">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-32267</strong></p>
+<p>Craft CMS is a content management system (CMS). From version 4.0.0-RC1 to before version 4.17.6 and from version 5.0.0-RC1 to before version 5.9.12, a low-privilege user (or an unauthenticated user who has been sent a shared URL) can escalate their privileges to admin by abusing UsersController->actionImpersonateWithToken. This issue has been patched in versions 4.17.6 and 5.9.12.</p>
+<p><strong>CVSS:</strong> 9.2 · <strong>CWE:</strong> CWE-863</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32267">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-32264 – Craft CMS is a content management system (CMS). From version 4.0.0-RC1 to before...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32264">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-32264</strong></p>
+<p>Craft CMS is a content management system (CMS). From version 4.0.0-RC1 to before version 4.17.5 and from version 5.0.0-RC1 to before version 5.9.11, there is a Behavior injection RCE vulnerability in ElementIndexesController and FieldsController. Craft control panel administrator permissions and allowAdminChanges must be enabled for this to work. This issue has been patched in versions 4.17.5 and…</p>
+<p><strong>CVSS:</strong> 8.6 · <strong>CWE:</strong> CWE-470</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32264">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-32263 – Craft CMS is a content management system (CMS). From version 5.6.0 to before ver...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32263">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-32263</strong></p>
+<p>Craft CMS is a content management system (CMS). From version 5.6.0 to before version 5.9.11, in src/controllers/EntryTypesController.php, the $settings array from parse_str is passed directly to Craft::configure() without Component::cleanseConfig(). This allows injecting Yii2 behavior/event handlers via "as" or "on" prefixed keys, the same attack vector as the original advisory. Craft control pan…</p>
+<p><strong>CVSS:</strong> 8.6 · <strong>CWE:</strong> CWE-470</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32263">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-32262 – Craft CMS is a content management system (CMS). From version 4.0.0-RC1 to before...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32262">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-32262</strong></p>
+<p>Craft CMS is a content management system (CMS). From version 4.0.0-RC1 to before version 4.17.5 and from version 5.0.0-RC1 to before version 5.9.11, the AssetsController->replaceFile() method has a targetFilename body parameter that is used unsanitized in a deleteFile() call before Assets::prepareAssetName() is applied on save. This allows an authenticated user with replaceFiles permission to del…</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-22</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32262">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-30882 – Chamilo LMS is a learning management system. Chamilo LMS version 1.11.34 and pri...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-30882">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-30882</strong></p>
+<p>Chamilo LMS is a learning management system. Chamilo LMS version 1.11.34 and prior contains a Reflected Cross-Site Scripting (XSS) vulnerability in the session category listing page. The keyword parameter from $_REQUEST is echoed directly into an HTML href attribute without any encoding or sanitization. An attacker can inject arbitrary HTML/JavaScript by breaking out of the attribute context usin…</p>
+<p><strong>CVSS:</strong> 6.1 · <strong>CWE:</strong> CWE-79</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-30882">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-30881 – Chamilo LMS is a learning management system. Version 1.11.34 and prior contains ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-30881">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-30881</strong></p>
+<p>Chamilo LMS is a learning management system. Version 1.11.34 and prior contains a SQL Injection vulnerability in the statistics AJAX endpoint. The parameters date_start and date_end from $_REQUEST are embedded directly into a raw SQL string without proper sanitization. Although Database::escape_string() is called downstream, its output is immediately neutralized by str_replace("\'", "'", ...), wh…</p>
+<p><strong>CVSS:</strong> 8.8 · <strong>CWE:</strong> CWE-89</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-30881">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-30876 – Chamilo LMS is a learning management system. Prior to version 1.11.36, Chamilo i...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-30876">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-30876</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to version 1.11.36, Chamilo is vulnerable to user enumeration with valid/invalid username. This issue has been patched in version 1.11.36.</p>
+<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-204</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-30876">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-30875 – Chamilo LMS is a learning management system. Prior to version 1.11.36, an arbitr...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-30875">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-30875</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to version 1.11.36, an arbitrary file upload vulnerability in the H5P Import feature allows authenticated users with Teacher role to achieve Remote Code Execution (RCE). The H5P package validation only checks if h5p.json exists but doesn't block .htaccess or PHP files with alternative extensions. An attacker uploads a crafted H5P package containi…</p>
+<p><strong>CVSS:</strong> 8.8 · <strong>CWE:</strong> CWE-94</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-30875">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-29516 – Buffalo TeraStation NAS TS5400R firmware version 4.02-0.06 and prior contain an ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-29516">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-29516</strong></p>
+<p>Buffalo TeraStation NAS TS5400R firmware version 4.02-0.06 and prior contain an excessive file permissions vulnerability that allows authenticated attackers to read the /etc/shadow file by uploading and executing a PHP file through the webserver. Attackers can exploit world-readable permissions on /etc/shadow to retrieve hashed passwords for all configured accounts including root.</p>
+<p><strong>CVSS:</strong> 6.9 · <strong>CWE:</strong> CWE-732</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-29516">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-28430 – Chamilo LMS is a learning management system. Prior to version 1.11.34, there is ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-28430">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-28430</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to version 1.11.34, there is an unauthenticated SQL injection vulnerability which allows remote attackers to execute arbitrary SQL commands via the custom_dates parameter. By chaining this with a predictable legacy password reset mechanism, an attacker can achieve full administrative account takeover without any prior credentials. The vulnerabili…</p>
+<p><strong>CVSS:</strong> 9.3 · <strong>CWE:</strong> CWE-89</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28430">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-26304 – Mattermost versions 11.3.x <= 11.3.0, 11.2.x <=11.2.2 fail to verify run_create...</>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-26304">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-26304</strong></p>
+<p>Mattermost versions 11.3.x <= 11.3.0, 11.2.x <=11.2.2 fail to verify run_create permission for empty playbookId, which allows team members to create unauthorized runs via the playbook run API. Mattermost Advisory ID: MMSA-2025-00542</>
+<p><strong>CVSS:</strong> 4.3 · <strong>CWE:</strong> CWE-863</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-26304">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2025-69693 – Out-of-bounds read in FFmpeg 8.0 and 8.0.1 RV60 video decoder (libavcodec/rv60de...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-69693">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2025-69693</strong></p>
+<p>Out-of-bounds read in FFmpeg 8.0 and 8.0.1 RV60 video decoder (libavcodec/rv60dec.c). The quantization parameter (qp) validation at line 2267 only checks the lower bound (qp < 0) but is missing upper bound validation. The qp value can reach 65 (base value 63 from 6-bit frame header + offset +2 from read_qp_offset) while the rv60_qp_to_idx array has size 64 (valid indices 0-63). This results in ou…</p>
+<p><strong>CVSS:</strong> 5.4 · <strong>CWE:</strong> CWE-125</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-69693">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-68971 – In Forgejo through 13.0.3, the attachment component allows a denial of service b...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-68971">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-68971</strong></p>
+<p>In Forgejo through 13.0.3, the attachment component allows a denial of service by uploading a multi-gigabyte file attachment (e.g., to be associated with an issue or a release).</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68971">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-32261 – Webhooks for Craft CMS plugin adds the ability to manage “webhooks” in Craft CMS...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32261">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-32261</strong></p>
+<p>Webhooks for Craft CMS plugin adds the ability to manage “webhooks” in Craft CMS, which will send GET or POST requests when certain events occur. From version 3.0.0 to before version 3.2.0, the Webhooks plugin renders user-supplied template content through Twig’s renderString() function without sandbox protection. This allows an authenticated user with access to the Craft control panel and permis…</p>
+<p><strong>CVSS:</strong> 8.5 · <strong>CWE:</strong> CWE-1336</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32261">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2025-69809 – A write-what-where condition in p2r3 Bareiron commit 8e4d40 allows unauthenticat...</summary>
 <a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-69809">
 <div class="article-summary-box-inner">
 <span>
-<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-69809</strong></p>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2025-69809</strong></p>
 <p>A write-what-where condition in p2r3 Bareiron commit 8e4d40 allows unauthenticated attackers to write arbitrary values to memory, enabling arbitrary code execution via a crafted packet.</p>
-<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><strong>CVSS:</strong> 9.8 · <strong>CWE:</strong> CWE-123</p>
 <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-69809">View on NVD</a></p>
 </span>
 </div>
@@ -118,13 +478,13 @@
 </article>
 <article>
 <details class="article-expander">
-<summary class="article-expander__title">[Unknown] CVE-2025-69808 – An out-of-bounds memory access (OOB) in p2r3 Bareiron commit 8e4d40 allows unaut...</summary>
+<summary class="article-expander__title">[Critical] CVE-2025-69808 – An out-of-bounds memory access (OOB) in p2r3 Bareiron commit 8e4d40 allows unaut...</summary>
 <a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-69808">
 <div class="article-summary-box-inner">
 <span>
-<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-69808</strong></p>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2025-69808</strong></p>
 <p>An out-of-bounds memory access (OOB) in p2r3 Bareiron commit 8e4d40 allows unauthenticated attackers to access sensitive information and cause a Denial of Service (DoS) via supplying a crafted packet.</p>
-<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><strong>CVSS:</strong> 9.1 · <strong>CWE:</strong> CWE-125</p>
 <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-69808">View on NVD</a></p>
 </span>
 </div>
@@ -133,13 +493,13 @@
 </article>
 <article>
 <details class="article-expander">
-<summary class="article-expander__title">[Unknown] CVE-2025-69727 – An Incorrect Access Control vulnerability exists in INDEX-EDUCATION PRONOTE prio...</summary>
+<summary class="article-expander__title">[Medium] CVE-2025-69727 – An Incorrect Access Control vulnerability exists in INDEX-EDUCATION PRONOTE prio...</summary>
 <a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-69727">
 <div class="article-summary-box-inner">
 <span>
-<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-69727</strong></p>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2025-69727</strong></p>
 <p>An Incorrect Access Control vulnerability exists in INDEX-EDUCATION PRONOTE prior to 2025.2.8. The affected components (index.js and composeUrlImgPhotoIndividu) allow the construction of direct URLs to user profile images based solely on predictable identifiers such as user IDs and names. Due to missing authorization checks and lack of rate-limiting when generating or accessing these URLs, an una…</p>
-<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-284</p>
 <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-69727">View on NVD</a></p>
 </span>
 </div>
@@ -215,7 +575,7 @@ docum...</summary>
 <span>
 <p><strong><span class="badge risk medium">Medium</span> CVE-2026-4224</strong></p>
 <p>When an Expat parser with a registered ElementDeclHandler parses an inline document type definition containing a deeply nested content model a C stack overflow occurs.</p>
-<p><strong>CVSS:</strong> 6.0 · <strong>CWE:</strong> N/A</p>
+<p><strong>CVSS:</strong> 6.0 · <strong>CWE:</strong> CWE-674</p>
 <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4224">View on NVD</a></p>
 </span>
 </div>
@@ -230,7 +590,7 @@ docum...</summary>
 <span>
 <p><strong><span class="badge risk medium">Medium</span> CVE-2026-3644</strong></p>
 <p>The fix for CVE-2026-0672, which rejected control characters in http.cookies.Morsel, was incomplete. The Morsel.update(), |= operator, and unpickling paths were not patched, allowing control characters to bypass input validation. Additionally, BaseCookie.js_output() lacked the output validation applied to BaseCookie.output().</p>
-<p><strong>CVSS:</strong> 6.0 · <strong>CWE:</strong> N/A</p>
+<p><strong>CVSS:</strong> 6.0 · <strong>CWE:</strong> CWE-20</p>
 <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3644">View on NVD</a></p>
 </span>
 </div>
@@ -374,13 +734,13 @@ docum...</summary>
 </article>
 <article>
 <details class="article-expander">
-<summary class="article-expander__title">[Unknown] CVE-2025-69768 – SQL Injection vulnerability in Chyrp v.2.5.2 and before allows a remote attacker...</summary>
+<summary class="article-expander__title">[High] CVE-2025-69768 – SQL Injection vulnerability in Chyrp v.2.5.2 and before allows a remote attacker...</summary>
 <a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-69768">
 <div class="article-summary-box-inner">
 <span>
-<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-69768</strong></p>
+<p><strong><span class="badge risk high">High</span> CVE-2025-69768</strong></p>
 <p>SQL Injection vulnerability in Chyrp v.2.5.2 and before allows a remote attacker to obtain sensitive information via the Admin.php component</p>
-<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><strong>CVSS:</strong> 7.5 · <strong>CWE:</strong> CWE-89</p>
 <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-69768">View on NVD</a></p>
 </span>
 </div>
@@ -584,13 +944,13 @@ docum...</summary>
 </article>
 <article>
 <details class="article-expander">
-<summary class="article-expander__title">[Unknown] CVE-2025-57543 – Cross Site scripting vulnerability (XSS) in NetBox 4.3.5 "comment" field on obje...</summary>
+<summary class="article-expander__title">[Medium] CVE-2025-57543 – Cross Site scripting vulnerability (XSS) in NetBox 4.3.5 "comment" field on obje...</summary>
 <a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-57543">
 <div class="article-summary-box-inner">
 <span>
-<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-57543</strong></p>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2025-57543</strong></p>
 <p>Cross Site scripting vulnerability (XSS) in NetBox 4.3.5 "comment" field on object forms. An attacker can inject arbitrary HTML, which will be rendered in the web UI when viewed by other users. This could potentially lead to user interface redress attacks or be escalated to XSS in certain contexts.</p>
-<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><strong>CVSS:</strong> 6.1 · <strong>CWE:</strong> CWE-79</p>
 <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-57543">View on NVD</a></p>
 </span>
 </div>
@@ -725,7 +1085,7 @@ docum...</summary>
 <span>
 <p><strong><span class="badge risk low">Low</span> CVE-2025-52646</strong></p>
 <p>HCL AION is affected by a vulnerability where certain offering configurations may permit execution of potentially harmful SQL queries. Improper validation or restrictions on query execution could expose the system to unintended database interactions or limited information exposure under specific conditions.</p>
-<p><strong>CVSS:</strong> 2.2 · <strong>CWE:</strong> N/A</p>
+<p><strong>CVSS:</strong> 2.2 · <strong>CWE:</strong> CWE-89</p>
 <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52646">View on NVD</a></p>
 </span>
 </div>
@@ -740,7 +1100,7 @@ docum...</summary>
 <span>
 <p><strong><span class="badge risk low">Low</span> CVE-2025-52645</strong></p>
 <p>HCL AION is affected by a vulnerability where model packaging and distribution mechanisms may not include sufficient authenticity verification. This may allow the possibility of unverified or modified model artifacts being used, potentially leading to integrity concerns or unintended behaviour.</p>
-<p><strong>CVSS:</strong> 1.9 · <strong>CWE:</strong> N/A</p>
+<p><strong>CVSS:</strong> 1.9 · <strong>CWE:</strong> CWE-345</p>
 <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52645">View on NVD</a></p>
 </span>
 </div>
@@ -785,7 +1145,7 @@ docum...</summary>
 <span>
 <p><strong><span class="badge risk low">Low</span> CVE-2025-52642</strong></p>
 <p>HCL AION is affected by a vulnerability where internal filesystem paths may be exposed through application responses or system behaviour. Exposure of internal paths may reveal environment structure details which could potentially aid in further targeted attacks or information disclosure.</p>
-<p><strong>CVSS:</strong> 3.3 · <strong>CWE:</strong> N/A</p>
+<p><strong>CVSS:</strong> 3.3 · <strong>CWE:</strong> CWE-538</p>
 <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52642">View on NVD</a></p>
 </span>
 </div>
@@ -1302,313 +1662,13 @@ docum...</summary>
 </a>
 </details>
 </article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4210 – A security flaw has been discovered in D-Link DNS-120, DNR-202L, DNS-315L, DNS-3...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4210">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4210</strong></p>
-<p>A security flaw has been discovered in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. Affected by this vulnerability is the function cgi_tm_set_share of the file /cgi-bin/time_machine.cgi. The manipulation of the argumen…</p>
-<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4210">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4209 – A vulnerability was identified in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, D...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4209">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4209</strong></p>
-<p>A vulnerability was identified in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. Affected is the function cgi_create_import_users/cgi_user_batch_create/cgi_user_set_quota/cgi_user_del/cgi_user_modify/cgi_group_set_quota/…</p>
-<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4209">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4207 – A vulnerability was determined in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, D...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4207">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4207</strong></p>
-<p>A vulnerability was determined in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. This impacts the function cgi_device/cgi_sms_test/cgi_firmware_upload/cgi_ntp_time of the file /cgi-bin/system_mgr.cgi. Executing a manipul…</p>
-<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4207">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4206 – A vulnerability was found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-32...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4206">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4206</strong></p>
-<p>A vulnerability was found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. This affects the function FMT_rebuild_diskmgr/FMT_create_diskmgr/ScanDisk_run_e2fsck of the file /cgi-bin/dsk_mgr.cgi. Performing a manipulation…</p>
-<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4206">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4205 – A vulnerability has been found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, D...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4205">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4205</strong></p>
-<p>A vulnerability has been found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. The impacted element is the function cgi_refresh_db/FTP_Server_BlockIP_Add/FTP_Server_BlockIP_Del of the file /cgi-bin/app_mgr.cgi. Such ma…</p>
-<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4205">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4204 – A flaw has been found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, ...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4204">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4204</strong></p>
-<p>A flaw has been found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. The affected element is the function cgi_myfavorite_add/cgi_myfavorite_set/cgi_myfavorite_del/cgi_myfavorite_set_sort_info/cgi_myfavorite_remove_apk…</p>
-<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4204">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4203 – A vulnerability was detected in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4203">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4203</strong></p>
-<p>A vulnerability was detected in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. Impacted is the function cgi_portforwarding_add/cgi_portforwarding_del/cgi_portforwarding_modify/cgi_portforwarding_add_scan/cgi_dhcpd_lease/…</p>
-<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4203">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[High] CVE-2026-4201 – A weakness has been identified in glowxq glowxq-oj up to 6f7c723090472057252040f...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4201">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk high">High</span> CVE-2026-4201</strong></p>
-<p>A weakness has been identified in glowxq glowxq-oj up to 6f7c723090472057252040fd2bbbdaa1b5ed2393. This vulnerability affects the function Upload of the file business/business-system/src/main/java/com/glowxq/system/admin/controller/SysFileController.java. Executing a manipulation can lead to unrestricted upload. The attack can be launched remotely. The exploit has been made available to the publi…</p>
-<p><strong>CVSS:</strong> 7.3 · <strong>CWE:</strong> CWE-284</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4201">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[High] CVE-2026-4200 – A security flaw has been discovered in glowxq glowxq-oj up to 6f7c72309047205725...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4200">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk high">High</span> CVE-2026-4200</strong></p>
-<p>A security flaw has been discovered in glowxq glowxq-oj up to 6f7c723090472057252040fd2bbbdaa1b5ed2393. This affects the function uploadTestcaseZipUrl of the file business/business-oj/src/main/java/com/glowxq/oj/problem/controller/ProblemCaseController.java. Performing a manipulation results in server-side request forgery. The attack can be initiated remotely. The exploit has been released to the…</p>
-<p><strong>CVSS:</strong> 7.3 · <strong>CWE:</strong> CWE-918</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4200">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4199 – A vulnerability was identified in bazinga012 mcp_code_executor up to 0.3.0. Affe...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4199">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4199</strong></p>
-<p>A vulnerability was identified in bazinga012 mcp_code_executor up to 0.3.0. Affected by this issue is the function installDependencies of the file src/index.ts. Such manipulation leads to command injection. The attack can only be performed from a local environment. The exploit is publicly available and might be used. It is best practice to apply a patch to resolve this issue. The project was info…</p>
-<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4199">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4198 – A vulnerability was determined in hypermodel-labs mcp-server-auto-commit 1.0.0. ...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4198">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4198</strong></p>
-<p>A vulnerability was determined in hypermodel-labs mcp-server-auto-commit 1.0.0. Affected by this vulnerability is the function getGitChanges of the file index.ts. This manipulation causes command injection. The attack can only be executed locally. The exploit has been publicly disclosed and may be utilized. Patch name: f7d992c830c5f2ec5749852e66c0195e3ed7fe30. Applying a patch is the recommended…</p>
-<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4198">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4197 – A vulnerability was found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-32...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4197">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4197</strong></p>
-<p>A vulnerability was found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. Affected is the function RSS_Get_Update_Status/RSS_Update/RSS_Channel_AutoDownlaod/RSS_Add/RSS_Channel_Item_Downlaod/RSS_History_Item_List/RSS_I…</p>
-<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4197">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4196 – A vulnerability has been found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, D...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4196">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4196</strong></p>
-<p>A vulnerability has been found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. This impacts the function cgi_recovery/cgi_backup_now/cgi_set_schedule/cgi_set_rsync_server of the file /cgi-bin/remote_backup.cgi. The man…</p>
-<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4196">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4195 – A flaw has been found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, ...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4195">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4195</strong></p>
-<p>A flaw has been found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. This affects an unknown function of the file /cgi-bin/wizard_mgr.cgi. Executing a manipulation can lead to command injection. The attack can be exec…</p>
-<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4195">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[High] CVE-2026-4194 – A vulnerability was detected in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4194">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk high">High</span> CVE-2026-4194</strong></p>
-<p>A vulnerability was detected in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. The impacted element is the function cgi_set_wto of the file /cgi-bin/system_mgr.cgi. Performing a manipulation results in improper access co…</p>
-<p><strong>CVSS:</strong> 7.3 · <strong>CWE:</strong> CWE-266</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4194">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[High] CVE-2026-4193 – A security vulnerability has been detected in D-Link DIR-823G 1.0.2B05. The affe...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4193">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk high">High</span> CVE-2026-4193</strong></p>
-<p>A security vulnerability has been detected in D-Link DIR-823G 1.0.2B05. The affected element is the function GetDDNSSettings/GetDeviceDomainName/GetDeviceSettings/GetDMZSettings/GetFirewallSettings/GetGuestNetworkSettings/GetLanWanConflictInfo/GetLocalMacAddress/GetNetworkSettings/GetQoSSettings/GetRouterInformationSettings/GetRouterLanSettings/GetWanSettings/SetAccessCtlList/SetAccessCtlSwitch/S…</p>
-<p><strong>CVSS:</strong> 7.3 · <strong>CWE:</strong> CWE-266</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4193">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4192 – A vulnerability has been found in AvinashBole quip-mcp-server 1.0.0. Affected by...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4192">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4192</strong></p>
-<p>A vulnerability has been found in AvinashBole quip-mcp-server 1.0.0. Affected by this vulnerability is the function setupToolHandlers of the file src/index.ts. Such manipulation leads to command injection. The attack may be performed from remote. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responde…</p>
-<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4192">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[High] CVE-2026-4191 – A flaw has been found in JawherKl node-api-postgres up to 2.5. Affected is the f...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4191">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk high">High</span> CVE-2026-4191</strong></p>
-<p>A flaw has been found in JawherKl node-api-postgres up to 2.5. Affected is the function path.extname of the file index.js of the component Profile Picture Handler. This manipulation causes unrestricted upload. The attack is possible to be carried out remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
-<p><strong>CVSS:</strong> 7.3 · <strong>CWE:</strong> CWE-284</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4191">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[High] CVE-2026-4190 – A vulnerability was detected in JawherKl node-api-postgres up to 2.5. This impac...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4190">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk high">High</span> CVE-2026-4190</strong></p>
-<p>A vulnerability was detected in JawherKl node-api-postgres up to 2.5. This impacts the function User.getAll of the file models/user.js. The manipulation of the argument sort results in sql injection. The attack can be executed remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
-<p><strong>CVSS:</strong> 7.3 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4190">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">[Medium] CVE-2026-4189 – A weakness has been identified in phpipam up to 1.7.4. The impacted element is a...</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4189">
-<div class="article-summary-box-inner">
-<span>
-<p><strong><span class="badge risk medium">Medium</span> CVE-2026-4189</strong></p>
-<p>A weakness has been identified in phpipam up to 1.7.4. The impacted element is an unknown function of the file app/admin/sections/edit-result.php of the component Section Handler. Executing a manipulation of the argument subnetOrdering can lead to sql injection. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks. The vendor was con…</p>
-<p><strong>CVSS:</strong> 4.7 · <strong>CWE:</strong> CWE-74</p>
-<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4189">View on NVD</a></p>
-</span>
-</div>
-</a>
-</details>
-</article>
 </section>
 </section>
 </li>
 </ul>
 </section>
 <footer>
-<time id="build-timestamp" datetime="2026-03-16 20:32:16.701363287 UTC">2026-03-16 20:32:16 UTC</time>
+<time id="build-timestamp" datetime="2026-03-16 23:08:39.633101201 UTC">2026-03-16 23:08:39 UTC</time>
 <span><a class="footer-link" href="https://github.com/NotCraft/NotFeed"> notfeed 0.2.9</a></span>
 </footer>
 <script src="index.js"></script>
