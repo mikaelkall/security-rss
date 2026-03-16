@@ -1,0 +1,20 @@
+site_title = "Security Threat Intelligence Feeds"
+
+cache_max_days = 7
+
+sources = [
+"https://cvedaily.com/feed.xml",
+"https://cvedaily.com/feed-critical.xml",
+"https://www.exploit-db.com/rss.xml",
+"https://packetstormsecurity.com/files/feed/",
+"https://www.bleepingcomputer.com/feed/"
+"https://www.cvedetails.com/vulnerability-feed.php?vendor_id=26",
+"https://www.cvedetails.com/vulnerability-feed.php?vendor_id=452",
+"https://www.exploit-db.com/rss.xml",
+"https://packetstormsecurity.com/files/feed/",
+"https://www.bleepingcomputer.com/feed/"
+]
+
+cache_url = "https://mikaelkall.github.io/security-rss/cache.json"
+
+minify = true
