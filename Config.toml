@@ -6,6 +6,5 @@ minify = true
 
 sources = [
 "https://cvedaily.com/feed.xml",
-"https://cvedaily.com/feed-critical.xml",
-"https://www.exploit-db.com/rss.xml"
+"https://cvedaily.com/feed-critical.xml"
 ]
