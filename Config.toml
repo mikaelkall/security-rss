@@ -8,7 +8,6 @@ sources = [
 "https://cvedaily.com/feed.xml",
 "https://cvedaily.com/feed-critical.xml",
 "https://cvefeed.io/rssfeed/latest.xml",
-"https://cvefeed.io/rssfeed/high.xml",
 # Exploits
 "https://packetstormsecurity.com/files/feed/",
 "https://www.zerodayinitiative.com/rss/published/",
