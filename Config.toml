@@ -6,5 +6,21 @@ minify = true
 
 sources = [
 "https://cvedaily.com/feed.xml",
-"https://cvedaily.com/feed-critical.xml"
+"https://cvedaily.com/feed-critical.xml",
+"https://cvefeed.io/rssfeed/latest.xml",
+"https://cvefeed.io/rssfeed/high.xml",
+# Exploits
+"https://packetstormsecurity.com/files/feed/",
+"https://www.zerodayinitiative.com/rss/published/",
+# News
+"https://www.bleepingcomputer.com/feed/",
+"https://feeds.feedburner.com/TheHackersNews",
+"https://krebsonsecurity.com/feed/",
+"https://www.darkreading.com/rss.xml",
+# Threat intel
+"https://isc.sans.edu/rssfeed_full.xml",
+"https://www.paranoidcybersecurity.com/rss/all",
+# Vendors
+"https://msrc.microsoft.com/blog/rss/",
+"https://googleprojectzero.blogspot.com/feeds/posts/default"
 ]
