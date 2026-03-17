@@ -8,6 +8,5 @@ sources = [
 "https://cvedaily.com/feed.xml",
 "https://cvedaily.com/feed-critical.xml",
 "https://cvefeed.io/rssfeed/latest.xml",
-"https://www.darkreading.com/rss.xml",
-"https://isc.sans.edu/rssfeed_full.xml",
+"https://www.darkreading.com/rss.xml"
 ]
