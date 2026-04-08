@@ -12,6 +12,2552 @@
 <body>
 <section class="daily-content">
 <h2 class="daily-heading">
+<time datetime="2026-04-08T23:14:51.675535291Z">04-08</time>
+</h2>
+<ul class="sources card">
+<li class="source">
+<section>
+<h3 class="source-name">CVE Daily – Critical CVEs</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-39890 – PraisonAI is a multi-agent teams system. Prior to 4.5.115, the AgentService.load...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39890">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-39890</strong></p>
+<p>PraisonAI is a multi-agent teams system. Prior to 4.5.115, the AgentService.loadAgentFromFile method uses the js-yaml library to parse YAML files without disabling dangerous tags (such as !!js/function and !!js/undefined). This allows an attacker to craft a malicious YAML file that, when parsed, executes arbitrary JavaScript code. An attacker can exploit this vulnerability by uploading a maliciou…</p>
+<p><strong>CVSS:</strong> 9.8 · <strong>CWE:</strong> CWE-502</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39890">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-39888 – PraisonAI is a multi-agent teams system. Prior to 1.5.115, execute_code() in pra...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39888">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-39888</strong></p>
+<p>PraisonAI is a multi-agent teams system. Prior to 1.5.115, execute_code() in praisonaiagents.tools.python_tools defaults to sandbox_mode="sandbox", which runs user code in a subprocess wrapped with a restricted __builtins__ dict and an AST-based blocklist. The AST blocklist embedded inside the subprocess wrapper (blocked_attrs of python_tools.py) contains only 11 attribute names — a strict subset…</p>
+<p><strong>CVSS:</strong> 9.9 · <strong>CWE:</strong> CWE-657</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39888">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-39860 – Nix is a package manager for Linux and other Unix systems. A bug in the fix for ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39860">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-39860</strong></p>
+<p>Nix is a package manager for Linux and other Unix systems. A bug in the fix for CVE-2024-27297 allowed for arbitrary overwrites of files writable by the Nix process orchestrating the builds (typically the Nix daemon running as root in multi-user installations) by following symlinks during fixed-output derivation output registration. This affects sandboxed Linux builds - sandboxed macOS builds are…</p>
+<p><strong>CVSS:</strong> 9.0 · <strong>CWE:</strong> CWE-61</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39860">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-2942 – The ProSolution WP Client plugin for WordPress is vulnerable to arbitrary file u...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-2942">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-2942</strong></p>
+<p>The ProSolution WP Client plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'proSol_fileUploadProcess' function in all versions up to, and including, 1.9.9. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.</p>
+<p><strong>CVSS:</strong> 9.8 · <strong>CWE:</strong> CWE-434</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2942">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+<li class="source">
+<section>
+<h3 class="source-name">CVE Daily – Latest CVEs</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-5805 – A weakness has been identified in code-projects Easy Blog Site up to 1.0. The im...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-5805">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-5805</strong></p>
+<p>A weakness has been identified in code-projects Easy Blog Site up to 1.0. The impacted element is an unknown function of the file /users/contact_us.php. Executing a manipulation of the argument Name can lead to sql injection. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks.</p>
+<p><strong>CVSS:</strong> 7.3 · <strong>CWE:</strong> CWE-74</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5805">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-5803 – A security flaw has been discovered in bigsk1 openai-realtime-ui up to 188ccde27...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-5803">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-5803</strong></p>
+<p>A security flaw has been discovered in bigsk1 openai-realtime-ui up to 188ccde27fdf3d8fab8da81f3893468f53b2797c. The affected element is an unknown function of the file server.js of the component API Proxy Endpoint. Performing a manipulation of the argument Query results in server-side request forgery. The attack can be initiated remotely. The exploit has been released to the public and may be us…</p>
+<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-918</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5803">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-5451 – The Extensions for Leaflet Map plugin for WordPress is vulnerable to Stored Cros...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-5451">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-5451</strong></p>
+<p>The Extensions for Leaflet Map plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'elevation-track' shortcode in all versions up to, and including, 4.14. This is due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts i…</p>
+<p><strong>CVSS:</strong> 6.4 · <strong>CWE:</strong> CWE-79</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5451">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-5436 – The MW WP Form plugin for WordPress is vulnerable to Arbitrary File Move/Read in...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-5436">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-5436</strong></p>
+<p>The MW WP Form plugin for WordPress is vulnerable to Arbitrary File Move/Read in all versions up to and including 5.1.1. This is due to insufficient validation of the $name parameter (upload field key) passed to the generate_user_file_dirpath() function, which uses WordPress's path_join() — a function that returns absolute paths unchanged, discarding the intended base directory. The attacker-cont…</p>
+<p><strong>CVSS:</strong> 8.1 · <strong>CWE:</strong> CWE-22</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5436">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39892 – cryptography is a package designed to expose cryptographic primitives and recipe...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39892">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39892</strong></p>
+<p>cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. From 45.0.0 to before 46.0.7, if a non-contiguous buffer was passed to APIs which accepted Python buffers (e.g. Hash.update()), this could lead to buffer overflows. This vulnerability is fixed in 46.0.7.</p>
+<p><strong>CVSS:</strong> 6.9 · <strong>CWE:</strong> CWE-119</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39892">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-39891 – PraisonAI is a multi-agent teams system. Prior to 4.5.115, the create_agent_cent...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39891">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-39891</strong></p>
+<p>PraisonAI is a multi-agent teams system. Prior to 4.5.115, the create_agent_centric_tools() function returns tools (like acp_create_file) that process file content using template rendering. When user input from agent.start() is passed directly into these tools without escaping, template expressions in the input are executed rather than treated as literal text. This vulnerability is fixed in 4.5.1…</p>
+<p><strong>CVSS:</strong> 8.8 · <strong>CWE:</strong> CWE-94</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39891">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-39890 – PraisonAI is a multi-agent teams system. Prior to 4.5.115, the AgentService.load...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39890">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-39890</strong></p>
+<p>PraisonAI is a multi-agent teams system. Prior to 4.5.115, the AgentService.loadAgentFromFile method uses the js-yaml library to parse YAML files without disabling dangerous tags (such as !!js/function and !!js/undefined). This allows an attacker to craft a malicious YAML file that, when parsed, executes arbitrary JavaScript code. An attacker can exploit this vulnerability by uploading a maliciou…</p>
+<p><strong>CVSS:</strong> 9.8 · <strong>CWE:</strong> CWE-502</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39890">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-39889 – PraisonAI is a multi-agent teams system. Prior to 4.5.115, the A2U (Agent-to-Use...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39889">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-39889</strong></p>
+<p>PraisonAI is a multi-agent teams system. Prior to 4.5.115, the A2U (Agent-to-User) event stream server in PraisonAI exposes all agent activity without authentication. The create_a2u_routes() function registers the following endpoints with NO authentication checks: /a2u/info, /a2u/subscribe, /a2u/events/{stream_name}, /a2u/events/sub/{id}, and /a2u/health. This vulnerability is fixed in 4.5.115.</p>
+<p><strong>CVSS:</strong> 7.5 · <strong>CWE:</strong> CWE-200</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39889">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-39888 – PraisonAI is a multi-agent teams system. Prior to 1.5.115, execute_code() in pra...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39888">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-39888</strong></p>
+<p>PraisonAI is a multi-agent teams system. Prior to 1.5.115, execute_code() in praisonaiagents.tools.python_tools defaults to sandbox_mode="sandbox", which runs user code in a subprocess wrapped with a restricted __builtins__ dict and an AST-based blocklist. The AST blocklist embedded inside the subprocess wrapper (blocked_attrs of python_tools.py) contains only 11 attribute names — a strict subset…</p>
+<p><strong>CVSS:</strong> 9.9 · <strong>CWE:</strong> CWE-657</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39888">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-39885 – FrontMCP is a TypeScript-first framework for the Model Context Protocol (MCP). P...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39885">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-39885</strong></p>
+<p>FrontMCP is a TypeScript-first framework for the Model Context Protocol (MCP). Prior to 2.3.0, the mcp-from-openapi library uses @apidevtools/json-schema-ref-parser to dereference $ref pointers in OpenAPI specifications without configuring any URL restrictions or custom resolvers. A malicious OpenAPI specification containing $ref values pointing to internal network addresses, cloud metadata endpo…</p>
+<p><strong>CVSS:</strong> 7.5 · <strong>CWE:</strong> CWE-918</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39885">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-39883 – OpenTelemetry-Go is the Go implementation of OpenTelemetry. From 1.15.0 to 1.42...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39883">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-39883</strong></p>
+<p>OpenTelemetry-Go is the Go implementation of OpenTelemetry. From 1.15.0 to 1.42.0, the fix for CVE-2026-24051 changed the Darwin ioreg command to use an absolute path but left the BSD kenv command using a bare name, allowing the same PATH hijacking attack on BSD and Solaris platforms. This vulnerability is fixed in 1.43.0.</p>
+<p><strong>CVSS:</strong> 7.3 · <strong>CWE:</strong> CWE-426</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39883">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39882 – OpenTelemetry-Go is the Go implementation of OpenTelemetry. Prior to 1.43.0, the...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39882">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39882</strong></p>
+<p>OpenTelemetry-Go is the Go implementation of OpenTelemetry. Prior to 1.43.0, the otlp HTTP exporters (traces/metrics/logs) read the full HTTP response body into an in-memory bytes.Buffer without a size cap. This is exploitable for memory exhaustion when the configured collector endpoint is attacker-controlled (or a network attacker can mitm the exporter connection). This vulnerability is fixed in…</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-789</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39882">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39881 – Vim is an open source, command line text editor. Prior to 9.2.0316, a command in...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39881">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39881</strong></p>
+<p>Vim is an open source, command line text editor. Prior to 9.2.0316, a command injection vulnerability in Vim's netbeans interface allows a malicious netbeans server to execute arbitrary Ex commands when Vim connects to it, via unsanitized strings in the defineAnnoType and specialKeys protocol messages. This vulnerability is fixed in 9.2.0316.</p>
+<p><strong>CVSS:</strong> 5.0 · <strong>CWE:</strong> CWE-94</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39881">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-39860 – Nix is a package manager for Linux and other Unix systems. A bug in the fix for ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39860">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-39860</strong></p>
+<p>Nix is a package manager for Linux and other Unix systems. A bug in the fix for CVE-2024-27297 allowed for arbitrary overwrites of files writable by the Nix process orchestrating the builds (typically the Nix daemon running as root in multi-user installations) by following symlinks during fixed-output derivation output registration. This affects sandboxed Linux builds - sandboxed macOS builds are…</p>
+<p><strong>CVSS:</strong> 9.0 · <strong>CWE:</strong> CWE-61</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39860">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39844 – NiceGUI is a Python-based UI framework. Prior to 3.10.0, Since PurePosixPath onl...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39844">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39844</strong></p>
+<p>NiceGUI is a Python-based UI framework. Prior to 3.10.0, Since PurePosixPath only recognizes forward slashes (/) as path separators, an attacker can bypass this sanitization on Windows by using backslashes (\) in the upload filename. Applications that construct file paths using file.name (a pattern demonstrated in NiceGUI's bundled examples) are vulnerable to arbitrary file write on Windows. This…</p>
+<p><strong>CVSS:</strong> 5.9 · <strong>CWE:</strong> CWE-22</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39844">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-39429 – kcp is a Kubernetes-like control plane for form-factors and use-cases beyond Kub...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39429">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-39429</strong></p>
+<p>kcp is a Kubernetes-like control plane for form-factors and use-cases beyond Kubernetes and container workloads. Prior to 0.30.3 and 0.29.3, the cache server is directly exposed by the root shard and has no authentication or authorization in place. This allows anyone who can access the root shard to read and write to the cache server. This vulnerability is fixed in 0.30.3 and 0.29.3.</p>
+<p><strong>CVSS:</strong> 8.2 · <strong>CWE:</strong> CWE-302</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39429">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-39416 – AIL framework is an open-source platform to collect, crawl, process and analyse ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39416">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-39416</strong></p>
+<p>AIL framework is an open-source platform to collect, crawl, process and analyse unstructured data. Prior to 6.8, a stored cross-site scripting (XSS) vulnerability was identified in the modal item preview functionality. When item content longer than 800 characters was processed, attacker-controlled content was returned without an explicit text/plain content type, allowing the browser to interpret…</p>
+<p><strong>CVSS:</strong> 8.5 · <strong>CWE:</strong> CWE-79</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39416">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39415 – Frappe Learning Management System (LMS) is a learning system that helps users st...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39415">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39415</strong></p>
+<p>Frappe Learning Management System (LMS) is a learning system that helps users structure their content. Prior to 2.46.0, a vulnerability has been identified in Frappe Learning where quiz scores can be modified by students before submission. The application currently relies on client-side calculated scores, which can be altered using browser developer tools prior to sending the submission request.…</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-602</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39415">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-39414 – MinIO is a high-performance object storage system. From RELEASE.2018-08-18T03-49...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39414">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-39414</strong></p>
+<p>MinIO is a high-performance object storage system. From RELEASE.2018-08-18T03-49-57Z to before RELEASE.2025-12-20T04-58-37Z, MinIO's S3 Select feature is vulnerable to memory exhaustion when processing CSV files containing lines longer than available memory. The CSV reader's nextSplit() function calls bufio.Reader.ReadBytes('\n') with no size limit, buffering the entire input in memory until a ne…</p>
+<p><strong>CVSS:</strong> 7.1 · <strong>CWE:</strong> CWE-770</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39414">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-5802 – A vulnerability was identified in idachev mcp-javadc up to 1.2.4. Impacted is an...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-5802">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-5802</strong></p>
+<p>A vulnerability was identified in idachev mcp-javadc up to 1.2.4. Impacted is an unknown function of the component HTTP Interface. Such manipulation of the argument jarFilePath leads to os command injection. It is possible to launch the attack remotely. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded…</p>
+<p><strong>CVSS:</strong> 7.3 · <strong>CWE:</strong> CWE-77</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5802">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39880 – Remnawave Backend is the backend for the Remnawave proxy and user management sol...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39880">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39880</strong></p>
+<p>Remnawave Backend is the backend for the Remnawave proxy and user management solution. Prior to 2.7.5, a glitch in the HWID device registration logic allows an authenticated user to bypass the configured limit for HWID devices and register more devices than expected, allowing them to resell subscriptions and consume excessive traffic. This vulnerability is fixed in 2.7.5.</p>
+<p><strong>CVSS:</strong> 5.0 · <strong>CWE:</strong> CWE-362</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39880">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39864 – Kamailio is an open source implementation of a SIP Signaling Server. Prior to 6...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39864">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39864</strong></p>
+<p>Kamailio is an open source implementation of a SIP Signaling Server. Prior to 6.0.5 and 5.8.7, an out-of-bounds read in the auth module of Kamailio (formerly OpenSER and SER) allows remote attackers to cause a denial of service (process crash) via a specially crafted SIP packet if a successful user authentication without a database backend is followed by additional user identity checks. This vuln…</p>
+<p><strong>CVSS:</strong> 4.4 · <strong>CWE:</strong> CWE-125</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39864">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-39863 – Kamailio is an open source implementation of a SIP Signaling Server. Prior to 6...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39863">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-39863</strong></p>
+<p>Kamailio is an open source implementation of a SIP Signaling Server. Prior to 6.1.1, 6.0.6, and 5.8.8, an out-of-bounds access in the core of Kamailio (formerly OpenSER and SER) allows remote attackers to cause a denial of service (process crash) via a specially crafted data packet sent over TCP. The issue impacts Kamailio instances having TCP or TLS listeners. This vulnerability is fixed in 5.1.…</p>
+<p><strong>CVSS:</strong> 7.5 · <strong>CWE:</strong> CWE-119</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39863">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39862 – Tophat is a mobile applications testing harness. Prior to 2.5.1, Tophat is affec...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39862">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39862</strong></p>
+<p>Tophat is a mobile applications testing harness. Prior to 2.5.1, Tophat is affected by remote code execution via crafted tophat:// or http://localhost:29070 URLs. The arguments query parameter flows unsanitized from URL parsing through to /bin/bash -c execution, allowing an attacker to execute arbitrary commands on a developer's macOS workstation. Any developer with Tophat installed is vulnerable…</p>
+<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-78</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39862">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39859 – LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScri...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39859">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39859</strong></p>
+<p>LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScript. Prior to 10.25.3, liquidjs 10.25.0 documents root as constraining filenames passed to renderFile() and parseFile(), but top-level file loads do not enforce that boundary. A Liquid instance configured with an empty temporary directory as root can return the contents of arbitrary files. This vulnerability is fixed i…</p>
+<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-22</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39859">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39413 – LightRAG provides simple and fast retrieval-augmented generation. Prior to 1.4.1...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39413">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39413</strong></p>
+<p>LightRAG provides simple and fast retrieval-augmented generation. Prior to 1.4.14, the LightRAG API is vulnerable to a JWT algorithm confusion attack where an attacker can forge tokens by specifying 'alg': 'none' in the JWT header. Since the jwt.decode() call does not explicitly deny the 'none' algorithm, a crafted token without a signature will be accepted as valid, leading to unauthorized acces…</p>
+<p><strong>CVSS:</strong> 4.2 · <strong>CWE:</strong> CWE-347</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39413">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39412 – LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScri...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39412">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39412</strong></p>
+<p>LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScript. Prior to 10.25.4, the sort_natural filter bypasses the ownPropertyOnly security option, allowing template authors to extract values of prototype-inherited properties through a sorting side-channel attack. Applications relying on ownPropertyOnly: true as a security boundary (e.g., multi-tenant template systems) are…</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-200</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39412">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39411 – LobeHub is a work-and-lifestyle space to find, build, and collaborate with agent...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39411">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39411</strong></p>
+<p>LobeHub is a work-and-lifestyle space to find, build, and collaborate with agent teammates that grow with you. Prior to 2.1.48, the webapi authentication layer trusts a client-controlled X-lobe-chat-auth header that is only XOR-obfuscated, not signed or otherwise authenticated. Because the XOR key is hardcoded in the repository, an attacker can forge arbitrary auth payloads and bypass authenticat…</p>
+<p><strong>CVSS:</strong> 5.0 · <strong>CWE:</strong> CWE-287</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39411">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39362 – InvenTree is an Open Source Inventory Management System. Prior to 1.2.7 and 1.3...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39362">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39362</strong></p>
+<p>InvenTree is an Open Source Inventory Management System. Prior to 1.2.7 and 1.3.0, when INVENTREE_DOWNLOAD_FROM_URL is enabled (opt-in), authenticated users can supply remote_image URLs that are fetched server-side via requests.get() with only Django's URLValidator check. There is no validation against private IP ranges or internal hostnames. Redirects are followed (allow_redirects=True), enablin…</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-918</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39362">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35525 – LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScri...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35525">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35525</strong></p>
+<p>LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScript. Prior to 10.25.3, for {% include %}, {% render %}, and {% layout %}, LiquidJS checks whether the candidate path is inside the configured partials or layouts roots before reading it. That check is path-based, not realpath-based. Because of that, a file like partials/link.liquid passes the directory containment chec…</p>
+<p><strong>CVSS:</strong> 8.2 · <strong>CWE:</strong> CWE-61</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35525">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35479 – InvenTree is an Open Source Inventory Management System. Prior to 1.2.7 and 1.3...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35479">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35479</strong></p>
+<p>InvenTree is an Open Source Inventory Management System. Prior to 1.2.7 and 1.3.0, any users who have staff access permissions can install plugins via the API, without requiring "superuser" account access. This level of permission requirement is out of alignment with other plugin actions (such as uninstalling) which do require superuser access. The vulnerability allows staff users (who may be con…</p>
+<p><strong>CVSS:</strong> 6.6 · <strong>CWE:</strong> CWE-285</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35479">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35478 – InvenTree is an Open Source Inventory Management System. From 0.16.0 to before 1...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35478">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35478</strong></p>
+<p>InvenTree is an Open Source Inventory Management System. From 0.16.0 to before 1.2.7, any authenticated InvenTree user can create a valid API token attributed to any other user in the system — including administrators and superusers — by supplying the target's user ID in the user field of a POST /api/user/tokens/ request. The returned token is immediately usable for full API authentication as the…</p>
+<p><strong>CVSS:</strong> 8.3 · <strong>CWE:</strong> CWE-639</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35478">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35477 – InvenTree is an Open Source Inventory Management System. From 1.2.3 to 1.2.6, th...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35477">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35477</strong></p>
+<p>InvenTree is an Open Source Inventory Management System. From 1.2.3 to 1.2.6, the fix for CVE-2026-27629 upgraded the PART_NAME_FORMAT validator to use jinja2.sandbox.SandboxedEnvironment. However, the actual renderer in part/helpers.py was not updated and still uses the non-sandboxed jinja2.Environment. Additionally, the validator uses a dummy Part instance with pk=None, which allows conditional…</p>
+<p><strong>CVSS:</strong> 5.5 · <strong>CWE:</strong> CWE-1336</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35477">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35476 – InvenTree is an Open Source Inventory Management System. Prior to 1.2.7 and 1.3...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35476">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35476</strong></p>
+<p>InvenTree is an Open Source Inventory Management System. Prior to 1.2.7 and 1.3.0, a non-staff authenticated user can elevate their account to a staff level via a POST request against their user account endpoint. The write permissions on the API endpoint are improperly configured, allowing any user to change their staff status. This vulnerability is fixed in 1.2.7 and 1.3.0.</p>
+<p><strong>CVSS:</strong> 7.2 · <strong>CWE:</strong> CWE-285</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35476">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-23869 – A denial of service vulnerability exists in React Server Components, affecting t...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-23869">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-23869</strong></p>
+<p>A denial of service vulnerability exists in React Server Components, affecting the following packages: react-server-dom-parcel, react-server-dom-turbopack and react-server-dom-webpack (versions 19.0.0 through 19.0.4, 19.1.0 through 19.1.5, and 19.2.0 through 19.2.4). The vulnerability is triggered by sending specially crafted HTTP requests to Server Function endpoints.The payload of the HTTP requ…</p>
+<p><strong>CVSS:</strong> 7.5 · <strong>CWE:</strong> CWE-400</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-23869">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39851 – Saleor is an e-commerce platform. From 2.10.0 to before 3.23.0a3, 3.22.47, 3.21...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39851">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39851</strong></p>
+<p>Saleor is an e-commerce platform. From 2.10.0 to before 3.23.0a3, 3.22.47, 3.21.54, and 3.20.118, the requestEmailChange() mutation was revealing the existence of user-provided email addresses in error messages. This vulnerability is fixed in 3.23.0a3, 3.22.47, 3.21.54, and 3.20.118.</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-204</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39851">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35455 – immich is a high performance self-hosted photo and video management solution. Pr...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35455">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35455</strong></p>
+<p>immich is a high performance self-hosted photo and video management solution. Prior to 2.7.0, sStored Cross-Site Scripting (XSS) in the 360° panorama viewer allows any authenticated user to execute arbitrary JavaScript in the browser of any other user who views the malicious panorama with the OCR overlay enabled. The attacker uploads an equirectangular image containing crafted text; OCR extracts…</p>
+<p><strong>CVSS:</strong> 7.3 · <strong>CWE:</strong> CWE-79</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35455">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35446 – LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web app...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35446">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35446</strong></p>
+<p>LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From 24.0.0 to before 27.0.3 and 28.0.1, an incorrect order of operations in the FilesDownloadHandler could result in an attacker escaping the intended download directories. This vulnerability is fixed in 27.0.3 and 28.0.1.</p>
+<p><strong>CVSS:</strong> 7.7 · <strong>CWE:</strong> CWE-552</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35446">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35407 – Saleor is an e-commerce platform. From 2.10.0 to before 3.23.0a3, 3.22.47, 3.21...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35407">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35407</strong></p>
+<p>Saleor is an e-commerce platform. From 2.10.0 to before 3.23.0a3, 3.22.47, 3.21.54, and 3.20.118, a business-logic and authorization flaw was found in the account email change workflow, the confirmation flow did not verify that the email change confirmation token was issued for the given authenticated user. As a result, a valid email-change token generated for one account can be replayed while au…</p>
+<p><strong>CVSS:</strong> 5.9 · <strong>CWE:</strong> CWE-285</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35407">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35403 – LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web app...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35403">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35403</strong></p>
+<p>LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From 15.10 to before 27.0.3 and 28.0.1, there is a potential for a cross-site scripting attack in the survey_accounts module if a user provides an invalid visit label. While the data is properly JSON encoded, the Content-Type header is not…</p>
+<p><strong>CVSS:</strong> 6.5 · <strong>CWE:</strong> CWE-79</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35403">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35401 – Saleor is an e-commerce platform. From 2.0.0 to before 3.23.0a3, 3.22.47, 3.21.5...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35401">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35401</strong></p>
+<p>Saleor is an e-commerce platform. From 2.0.0 to before 3.23.0a3, 3.22.47, 3.21.54, and 3.20.118, a malicious actor can include many GraphQL mutations or queries in a single API call using aliases or chaining multiple mutations, resulting in resource exhaustion. This vulnerability is fixed in 3.23.0a3, 3.22.47, 3.21.54, and 3.20.118.</p>
+<p><strong>CVSS:</strong> 7.5 · <strong>CWE:</strong> CWE-770</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35401">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Low] CVE-2026-35400 – LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web app...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35400">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk low">Low</span> CVE-2026-35400</strong></p>
+<p>LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From 20.0.0 to before 27.0.3 and 28.0.1, an endpoint in the publication module was incorrectly trusting the baseURL submitted by a user's POST request rather than the internal LORIS value. This could result in a theoretical attacker with pu…</p>
+<p><strong>CVSS:</strong> 3.5 · <strong>CWE:</strong> CWE-59</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35400">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35169 – LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web app...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35169">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35169</strong></p>
+<p>LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From to before 27.0.3 and 28.0.1, the help_editor module of LORIS did not properly sanitize some user supplied variables which could result in a reflected cross-site scripting attack if a user is tricked into following an invalid link. The…</p>
+<p><strong>CVSS:</strong> 8.7 · <strong>CWE:</strong> CWE-79</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35169">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35165 – LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web app...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35165">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35165</strong></p>
+<p>LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From 21.0.0 to before 27.0.3 and 28.0.1, while the document_repository frontend was restricting file access, the backend endpoint was not correctly verifying access permissions. A user could theoretically download a file that they should no…</p>
+<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-639</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35165">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-34985 – LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web app...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34985">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-34985</strong></p>
+<p>LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From 16.1.0 to before 27.0.3 and 28.0.1, While the frontend of the media module filters files that the user should not have access to, the backend was not applying access checks and it would be possible for someone who should not have acces…</p>
+<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-639</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34985">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-34837 – Zammad is a web based open source helpdesk/customer support system. Prior to 7.0...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34837">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-34837</strong></p>
+<p>Zammad is a web based open source helpdesk/customer support system. Prior to 7.0.1, he REST endpoint POST /api/v1/ai_assistance/text_tools/:id contains an authorization failure. Context data (e.g., a group or organization) supplied to be used in the AI prompt were not checked if they are accessible for the current user. This leads to having data present in the AI prompt that were not authorized b…</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-862</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34837">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-34782 – Zammad is a web based open source helpdesk/customer support system. Prior to 7.0...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34782">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-34782</strong></p>
+<p>Zammad is a web based open source helpdesk/customer support system. Prior to 7.0.1 and 6.5.4, the REST endpoint POST /api/v1/ai_assistance/text_tools/:id was not checking if a user is privileged to use the text tool, resulting in being able to use it in all situations. This vulnerability is fixed in 7.0.1 and 6.5.4.</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-862</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34782">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-34724 – Zammad is a web based open source helpdesk/customer support system. Prior to 7.0...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34724">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-34724</strong></p>
+<p>Zammad is a web based open source helpdesk/customer support system. Prior to 7.0.1, a server-side template injection vulnerability which leads to RCE via AI Agent exists. Impact is limited to environments where an attacker can control or influence type_enrichment_data (typically high-privilege administrative configuration). This vulnerability is fixed in 7.0.1.</p>
+<p><strong>CVSS:</strong> 8.7 · <strong>CWE:</strong> CWE-94</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34724">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-34723 – Zammad is a web based open source helpdesk/customer support system. Prior to 7.0...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34723">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-34723</strong></p>
+<p>Zammad is a web based open source helpdesk/customer support system. Prior to 7.0.1 and 6.5.4, unauthenticated remote attackers were able to access the getting started endpoint to get access to sensitive internal entity data, even after the system setup was completed. This vulnerability is fixed in 7.0.1 and 6.5.4.</p>
+<p><strong>CVSS:</strong> 8.7 · <strong>CWE:</strong> CWE-284</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34723">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-34722 – Zammad is a web based open source helpdesk/customer support system. Prior to 7.0...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34722">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-34722</strong></p>
+<p>Zammad is a web based open source helpdesk/customer support system. Prior to 7.0.1 and 6.5.4, the used endpoint for ticket creation was missing authorization if the related parameter for adding links is used. This vulnerability is fixed in 7.0.1 and 6.5.4.</p>
+<p><strong>CVSS:</strong> 6.9 · <strong>CWE:</strong> CWE-862</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34722">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-34721 – Zammad is a web based open source helpdesk/customer support system. Prior to 7.0...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34721">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-34721</strong></p>
+<p>Zammad is a web based open source helpdesk/customer support system. Prior to 7.0.1 and 6.5.4, the OAuth callback endpoints for Microsoft, Google, and Facebook external credentials do not validate a CSRF state parameter. This vulnerability is fixed in 7.0.1 and 6.5.4.</p>
+<p><strong>CVSS:</strong> 5.9 · <strong>CWE:</strong> CWE-352</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34721">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Low] CVE-2026-34720 – Zammad is a web based open source helpdesk/customer support system. Prior to 7.0...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34720">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk low">Low</span> CVE-2026-34720</strong></p>
+<p>Zammad is a web based open source helpdesk/customer support system. Prior to 7.0.1 and 6.5.4, the SSO mechanism in Zammad was not verifying the header originates from a trusted SSO proxy/gateway before applying further actions on it. This vulnerability is fixed in 7.0.1 and 6.5.4.</p>
+<p><strong>CVSS:</strong> 2.3 · <strong>CWE:</strong> CWE-346</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34720">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-34719 – Zammad is a web based open source helpdesk/customer support system. Prior to 7.0...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34719">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-34719</strong></p>
+<p>Zammad is a web based open source helpdesk/customer support system. Prior to 7.0.1 and 6.5.4, the webhook model was missing a proper validation for loop back addresses, or link-local addresses — only the URL scheme (HTTP/HTTPS) as well as the hostname was checked. This could end up in retrieving confidential metadata of cloud/hosting providers. The existing check is now extended and is applied wh…</p>
+<p><strong>CVSS:</strong> 8.3 · <strong>CWE:</strong> CWE-918</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34719">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-34718 – Zammad is a web based open source helpdesk/customer support system. Prior to 7.0...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34718">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-34718</strong></p>
+<p>Zammad is a web based open source helpdesk/customer support system. Prior to 7.0.1 and 6.5.4, the HTML sanitizer for ticket articles was missing proper sanitization of data: ... URI schemes, resulting in storing such malicious content in the database of the Zammad instance. The Zammad GUI is rendering this content, due to applied CSP rules no harm was done by e.g., clicking such a link. This vuln…</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-80</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34718">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-34392 – LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web app...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34392">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-34392</strong></p>
+<p>LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From 20.0.0 to before 27.0.3 and 28.0.1, a bug in the static file router can allow an attacker to traverse outside of the intended directory, allowing unintended files to be downloaded through the static, css, and js endpoints. This vulnera…</p>
+<p><strong>CVSS:</strong> 7.5 · <strong>CWE:</strong> CWE-552</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34392">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Low] CVE-2026-34248 – Zammad is a web based open source helpdesk/customer support system. Prior to 7.0...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34248">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk low">Low</span> CVE-2026-34248</strong></p>
+<p>Zammad is a web based open source helpdesk/customer support system. Prior to 7.0.1, customers in shared organizations (means they can see each other's tickets) could see fields which are not intended for customers - including fields not intended for them at all (e.g. priority, custom ticket attributes for internal purposes). This was the case when a customer opened a ticket from another user of t…</p>
+<p><strong>CVSS:</strong> 2.1 · <strong>CWE:</strong> CWE-284</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34248">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Low] CVE-2026-34166 – LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScri...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34166">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk low">Low</span> CVE-2026-34166</strong></p>
+<p>LiquidJS is a Shopify / GitHub Pages compatible template engine in pure JavaScript. Prior to 10.25.3, the replace filter in LiquidJS incorrectly accounts for memory usage when the memoryLimit option is enabled. It charges str.length + pattern.length + replacement.length bytes to the memory limiter, but the actual output from str.split(pattern).join(replacement) can be quadratically larger when th…</p>
+<p><strong>CVSS:</strong> 3.7 · <strong>CWE:</strong> CWE-400</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34166">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-33350 – LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web app...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33350">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-33350</strong></p>
+<p>LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. Prior to 27.0.3 and 28.0.1, a SQL injection has been identified in some code sections for the MRI feedback popup window of the imaging browser. Attackers can use SQL ingestion to access/alter data on the server. This vulnerability is fixed…</p>
+<p><strong>CVSS:</strong> 7.5 · <strong>CWE:</strong> CWE-89</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33350">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-30818 – An OS command injection vulnerability in the dnsmasq module of TP-Link Archer AX...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-30818">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-30818</strong></p>
+<p>An OS command injection vulnerability in the dnsmasq module of TP-Link Archer AX53 v1.0 allows an authenticated adjacent attacker to execute arbitrary code when a specially crafted configuration file is processed due to insufficient input validation. Successful exploitation may allow the attacker to modify device configuration, access sensitive information, or further compromise system integrity.…</p>
+<p><strong>CVSS:</strong> 8.5 · <strong>CWE:</strong> CWE-78</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-30818">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-30817 – An external configuration control vulnerability in the OpenVPN module of TP-Link...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-30817">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-30817</strong></p>
+<p>An external configuration control vulnerability in the OpenVPN module of TP-Link AX53 v1.0 allows an authenticated adjacent attacker to read arbitrary files when a malicious configuration file is processed. Successful exploitation may allow unauthorized access to arbitrary files on the device, potentially exposing sensitive information.This issue affects AX53 v1.0: before 1.7.1 Build 20260213.</p>
+<p><strong>CVSS:</strong> 6.8 · <strong>CWE:</strong> CWE-15</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-30817">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-30816 – An external control of configuration vulnerability in the OpenVPN module of TP-L...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-30816">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-30816</strong></p>
+<p>An external control of configuration vulnerability in the OpenVPN module of TP-Link AX53 v1.0 allows an authenticated adjacent attacker to read arbitrary file when a malicious configuration file is processed.  Successful exploitation may allow unauthorized access to arbitrary files on the device, potentially exposing sensitive information.This issue affects AX53 v1.0: before 1.7.1 Build 20260213.</p>
+<p><strong>CVSS:</strong> 6.8 · <strong>CWE:</strong> CWE-15</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-30816">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-30815 – An OS command injection vulnerability in the OpenVPN module
+of TP-Link Archer AX...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-30815">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-30815</strong></p>
+<p>An OS command injection vulnerability in the OpenVPN module of TP-Link Archer AX53 v1.0 allows an authenticated adjacent attacker to execute system commands when a specially crafted configuration file is processed due to insufficient input validation. Successful exploitation may allow modification of configuration files, disclosure of sensitive information, or further compromise of device integri…</p>
+<p><strong>CVSS:</strong> 8.5 · <strong>CWE:</strong> CWE-78</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-30815">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-30814 – A stack-based buffer overflow in the tmpServer module of TP-Link Archer AX53 v1...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-30814">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-30814</strong></p>
+<p>A stack-based buffer overflow in the tmpServer module of TP-Link Archer AX53 v1.0 allows an authenticated adjacent attacker to trigger a segmentation fault and potentially execute arbitrary code via a specially crafted configuration file. Successful exploitation may cause a crash and could allow arbitrary code execution, enabling modification of device state, exposure of sensitive data, or furthe…</p>
+<p><strong>CVSS:</strong> 7.3 · <strong>CWE:</strong> CWE-121</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-30814">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-2942 – The ProSolution WP Client plugin for WordPress is vulnerable to arbitrary file u...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-2942">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-2942</strong></p>
+<p>The ProSolution WP Client plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'proSol_fileUploadProcess' function in all versions up to, and including, 1.9.9. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.</p>
+<p><strong>CVSS:</strong> 9.8 · <strong>CWE:</strong> CWE-434</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2942">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-27806 – Fleet is open source device management software. Prior to 4.81.1, the Orbit agen...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-27806">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-27806</strong></p>
+<p>Fleet is open source device management software. Prior to 4.81.1, the Orbit agent's FileVault disk encryption key rotation flow on collects a local user's password via a GUI dialog and interpolates it directly into a Tcl/expect script executed via exec.Command("expect", "-c", script). Because the password is inserted into Tcl brace-quoted send {%s}, a password containing } terminates the literal…</p>
+<p><strong>CVSS:</strong> 7.8 · <strong>CWE:</strong> CWE-78</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27806">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-20709 – Use of Default Cryptographic Key in the hardware for some Intel(R) Pentium(R) Pr...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20709">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-20709</strong></p>
+<p>Use of Default Cryptographic Key in the hardware for some Intel(R) Pentium(R) Processor Silver Series, Intel(R) Celeron(R) Processor J Series, Intel(R) Celeron(R) Processor N Series may allow an escalation of privilege. Hardware reverse engineer adversary with a privileged user combined with a high complexity attack may enable escalation of privilege. This result may potentially occur via physica…</p>
+<p><strong>CVSS:</strong> 6.6 · <strong>CWE:</strong> CWE-1394</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20709">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-0814 – The Advanced Contact form 7 DB plugin for WordPress is vulnerable to unauthorize...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-0814">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-0814</strong></p>
+<p>The Advanced Contact form 7 DB plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the 'vsz_cf7_export_to_excel' function in all versions up to, and including, 2.0.9. This makes it possible for authenticated attackers, with Subscriber-level access and above, to export form submissions to excel file.</p>
+<p><strong>CVSS:</strong> 4.3 · <strong>CWE:</strong> CWE-862</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0814">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-0811 – The Advanced Contact form 7 DB plugin for WordPress is vulnerable to Cross-Site ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-0811">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-0811</strong></p>
+<p>The Advanced Contact form 7 DB plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 2.0.9. This is due to missing or incorrect nonce validation on the 'vsz_cf7_save_setting_callback' function. This makes it possible for unauthenticated attackers to delete form entry via a forged request granted they can trick a site administrator into performing a…</p>
+<p><strong>CVSS:</strong> 5.4 · <strong>CWE:</strong> CWE-352</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0811">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50673 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50673">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50673</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of the http_lanport parameter in the /webgl.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50673">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50672 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50672">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50672</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of parameters in the /yyxz_dlink.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50672">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50671 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50671">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50671</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of parameters in the /xwgl_ref.asp endpoint. An attacker can exploit this vulnerability by sending a crafted HTTP GET request with excessively long strings in parameters name, en, user_id, shibie_name, time, act, log, and rpri.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50671">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50670 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50670">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50670</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of parameters in the /xwgl_bwr.asp endpoint. An attacker can exploit this vulnerability by sending a crafted HTTP GET request in the name, qq, and time parameters.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50670">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50669 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 and DI-8003G...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50669">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50669</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 and DI-8003G 19.12.10A1 due to improper handling of the wan_ping parameter in the /wan_ping.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50669">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50668 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50668">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50668</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of the s parameter in the /web_list_opt.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50668">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50667 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50667">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50667</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of the iface parameter in the /wan_line_detection.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50667">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50666 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50666">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50666</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of multiple parameters in the /web_post.asp endpoint. An attacker can exploit this vulnerability by sending a crafted HTTP GET request in parameters such as name, en, user_id, log, and time.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50666">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50665 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50665">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50665</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of input parameters in the /web_keyword.asp endpoint. An attacker can exploit this vulnerability by sending a crafted HTTP GET request via the name, en, time, mem_gb2312, and mem_utf8 parameters.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50665">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50664 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50664">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50664</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of parameters in the /user_group.asp endpoint. The attacker can exploit this vulnerability by sending a crafted HTTP GET request with parameters name, mem, pri, and attr.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50664">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50663 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50663">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50663</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of the name parameter in the /usb_paswd.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50663">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50662 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50662">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50662</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of the name parameter in the /url_group.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50662">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50661 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50661">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50661</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of multiple parameters in the /url_rule.asp endpoint. An attacker can exploit this vulnerability by sending a crafted HTTP GET request with parameters name, en, ips, u, time, act, rpri, and log.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50661">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50660 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50660">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50660</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of the name parameter in the /url_member.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50660">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50659 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50659">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50659</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of the custom_error parameter in the /user.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50659">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50657 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50657">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50657</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of the pid parameter in the /trace.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50657">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50655 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50655">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50655</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of the name parameter in the /thd_group.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50655">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50654 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50654">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50654</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper validation of the id parameter in the /thd_member.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50654">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50653 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50653">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50653</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper handling of the name and mem parameters in the /time_group.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50653">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50652 – An issue in D-Link DI-8003 16.07.26A1 related to improper handling of the id par...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50652">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50652</strong></p>
+<p>An issue in D-Link DI-8003 16.07.26A1 related to improper handling of the id parameter in the /saveparm_usb.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50652">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50650 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to inade...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50650">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50650</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to inadequate validation of input size in the routes_static parameter in the /router.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50650">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50649 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50649">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50649</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper input validation in the vlan_name parameter in the /shut_set.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50649">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50648 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to inade...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50648">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50648</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to inadequate input validation in the /tggl.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50648">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50647 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1, specificall...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50647">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50647</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1, specifically in the handling of the wans parameter in the qos.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50647">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50646 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to insuf...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50646">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50646</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to insufficient input validation on the name parameter in the /qos_type_asp.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50646">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50645 – A vulnerability has been discovered in D-Link DI-8003 16.07.26A1, which can lead...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50645">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50645</strong></p>
+<p>A vulnerability has been discovered in D-Link DI-8003 16.07.26A1, which can lead to a buffer overflow when the s parameter in the pppoe_list_opt.asp endpoint is manipulated. By sending a crafted request with an excessively large value for the s parameter, an attacker can trigger a buffer overflow condition.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50645">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2025-50644 – A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to impro...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-50644">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2025-50644</strong></p>
+<p>A buffer overflow vulnerability exists in D-Link DI-8003 16.07.26A1 due to improper validation of user input in the qj.asp endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50644">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2025-30650 – A Missing Authentication for Critical Function vulnerability in command processi...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-30650">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2025-30650</strong></p>
+<p>A Missing Authentication for Critical Function vulnerability in command processing of Juniper Networks Junos OS allows a privileged local attacker to gain access to line cards running Junos OS Evolved as root. This issue affects systems running Junos OS using Linux-based line cards. Affected line cards include: * MPC7, MPC8, MPC9, MPC10, MPC11 * LC2101, LC2103 * LC480, LC4800, LC9600…</p>
+<p><strong>CVSS:</strong> 6.7 · <strong>CWE:</strong> CWE-306</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-30650">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-33756 – Saleor is an e-commerce platform. From 2.0.0 to before 3.23.0a3, 3.22.47, 3.21.5...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33756">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-33756</strong></p>
+<p>Saleor is an e-commerce platform. From 2.0.0 to before 3.23.0a3, 3.22.47, 3.21.54, and 3.20.118, Saleor supports query batching by submitting multiple GraphQL operations in a single HTTP request as a JSON array but wasn't enforcing any upper limit on the number of operations. This allowed an unauthenticated attacker to send a single HTTP request many operations (bypassing the per query complexity…</p>
+<p><strong>CVSS:</strong> 7.5 · <strong>CWE:</strong> CWE-770</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33756">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-33466 – Improper Limitation of a Pathname to a Restricted Directory (CWE-22) in Logstash...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33466">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-33466</strong></p>
+<p>Improper Limitation of a Pathname to a Restricted Directory (CWE-22) in Logstash can lead to arbitrary file write and potentially remote code execution via Relative Path Traversal (CAPEC-139). The archive extraction utilities used by Logstash do not properly validate file paths within compressed archives. An attacker who can serve a specially crafted archive to Logstash through a compromised or a…</p>
+<p><strong>CVSS:</strong> 8.1 · <strong>CWE:</strong> CWE-22</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33466">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-33459 – Uncontrolled Resource Consumption (CWE-400) in Kibana can lead to denial of serv...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33459">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-33459</strong></p>
+<p>Uncontrolled Resource Consumption (CWE-400) in Kibana can lead to denial of service via Excessive Allocation (CAPEC-130). An authenticated user with access to the automatic import feature can submit specially crafted requests with excessively large input values. When multiple such requests are sent concurrently, the backend services become unstable, resulting in service disruption and deployment…</p>
+<p><strong>CVSS:</strong> 6.5 · <strong>CWE:</strong> CWE-400</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33459">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-33458 – Server-Side Request Forgery (CWE-918) in Kibana One Workflow can lead to informa...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33458">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-33458</strong></p>
+<p>Server-Side Request Forgery (CWE-918) in Kibana One Workflow can lead to information disclosure. An authenticated user with workflow creation and execution privileges can bypass host allowlist restrictions in the Workflows Execution Engine, potentially exposing sensitive internal endpoints and data.</p>
+<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-918</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33458">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+<li class="source">
+<section>
+<h3 class="source-name">Latest Vulnerabilities</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-3199 - Nexus Repository 3 - Authenticated Remote Code Execution via Task Property Injection</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-3199">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-3199
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:17 p.m. | 43 minutes ago
+<br/>
+<strong>Description :</strong>A vulnerability in the task management component of Sonatype Nexus Repository versions 3.22.1 through 3.90.2 allows an authenticated attacker with task creation permissions to execute arbitrary code, bypassing the nexus.scripts.allowCreation security control.
+<br/>
+<strong>Severity:</strong> 9.4 | CRITICAL
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5919 - Google Chrome WebSockets Origin Bypass</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5919">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5919
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Insufficient validation of untrusted input in WebSockets in Google Chrome prior to 147.0.7727.55 allowed a remote attacker who had compromised the renderer process to bypass same origin policy via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5918 - Google Chrome Navigation Cross-Origin Data Leak Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5918">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5918
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Inappropriate implementation in Navigation in Google Chrome prior to 147.0.7727.55 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5915 - Google Chrome WebML Out-of-Bounds Memory Write Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5915">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5915
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Insufficient validation of untrusted input in WebML in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to perform an out of bounds memory write via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5914 - Google Chrome Type Confusion Heap Corruption Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5914">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5914
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Type Confusion in CSS in Google Chrome prior to 147.0.7727.55 allowed an attacker who convinced a user to install a malicious extension to potentially exploit heap corruption via a crafted Chrome Extension. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5913 - Google Chrome Blink Out-of-Bounds Read Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5913">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5913
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Out of bounds read in Blink in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to perform an out of bounds memory read via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5912 - Google Chrome WebRTC Integer Overflow</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5912">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5912
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Integer overflow in WebRTC in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to perform an out of bounds memory write via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5911 - Google Chrome Policy Bypass Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5911">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5911
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Policy bypass in ServiceWorkers in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to bypass content security policy via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5910 - Google Chrome Media Integer Overflow Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5910">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5910
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Integer overflow in Media in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to potentially exploit heap corruption via a crafted video file. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5909 - Google Chrome Media Integer Overflow Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5909">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5909
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Integer overflow in Media in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to potentially exploit heap corruption via a crafted video file. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5908 - Google Chrome Media Integer Overflow</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5908">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5908
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Integer overflow in Media in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to potentially exploit heap corruption via a crafted video file. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5907 - Google Chrome Media Out-of-Bounds Memory Read Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5907">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5907
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Insufficient data validation in Media in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to perform an out of bounds memory read via a crafted video file. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5906 - Google Chrome Android Spoofing Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5906">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5906
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Incorrect security UI in Omnibox in Google Chrome on Android prior to 147.0.7727.55 allowed a remote attacker to spoof the contents of the Omnibox (URL bar) via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5905 - Google Chrome Domain Spoofing Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5905">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5905
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Incorrect security UI in Permissions in Google Chrome on Windows prior to 147.0.7727.55 allowed a remote attacker to perform domain spoofing via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5904 - Google Chrome V8 Use-After-Free Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5904">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5904
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Use after free in V8 in Google Chrome prior to 147.0.7727.55 allowed an attacker who convinced a user to install a malicious extension to potentially exploit heap corruption via a crafted Chrome Extension. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5903 - Google Chrome IFrameSandbox Policy Bypass</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5903">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5903
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Policy bypass in IFrameSandbox in Google Chrome prior to 147.0.7727.55 allowed a remote attacker who convinced a user to engage in specific UI gestures to bypass navigation restrictions via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5902 - Google Chrome Android Media Stream Metadata Corruption</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5902">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5902
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Race in Media in Google Chrome on Android prior to 147.0.7727.55 allowed a remote attacker who had compromised the renderer process to corrupt media stream metadata via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5901 - Google Chrome DevTools Extension Cookie Modification Bypass</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5901">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5901
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Insufficient policy enforcement in DevTools in Google Chrome prior to 147.0.7727.55 allowed an attacker who convinced a user to install a malicious extension to bypass enterprise host restrictions for cookie modification via a crafted Chrome Extension. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5900 - Google Chrome Policy Bypass Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5900">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5900
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Policy bypass in Downloads in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to bypass of multi-download protections via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5899 - Google Chrome UXSS History Navigation Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5899">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5899
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Insufficient policy enforcement in History Navigation in Google Chrome prior to 147.0.7727.55 allowed a remote attacker who convinced a user to engage in specific UI gestures to inject arbitrary scripts or HTML (UXSS) via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5898 - Google Chrome iOS UI Spoofing Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5898">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5898
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Incorrect security UI in Omnibox in Google Chrome on iOS prior to 147.0.7727.55 allowed a remote attacker to perform UI spoofing via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5897 - Google Chrome UI Spoofing Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5897">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5897
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Incorrect security UI in Downloads in Google Chrome prior to 147.0.7727.55 allowed a remote attacker who convinced a user to engage in specific UI gestures to perform UI spoofing via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5896 - Google Chrome Audio Policy Bypass Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5896">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5896
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Policy bypass in Audio in Google Chrome prior to 147.0.7727.55 allowed a remote attacker who convinced a user to engage in specific UI gestures to bypass sandbox download restrictions via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5895 - Google Chrome iOS Omnibox Spoofing Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5895">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5895
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Incorrect security UI in Omnibox in Google Chrome on iOS prior to 147.0.7727.55 allowed a remote attacker to spoof the contents of the Omnibox (URL bar) via a crafted domain name. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5894 - Google Chrome PDF Navigation Bypass Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5894">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5894
+<br/>
+<strong>Published :</strong> April 8, 2026, 10:16 p.m. | 44 minutes ago
+<br/>
+<strong>Description :</strong>Inappropriate implementation in PDF in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to bypass navigation restrictions via a crafted HTML page. (Chromium security severity: Low)
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+<li class="source">
+<section>
+<h3 class="source-name">darkreading</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Threat Actors Get Crafty With Emojis to Escape Detection</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/emojis-power-covert-threat-actor-communications">
+<div class="article-summary-box-inner">
+<span>When 🤖 means &quot;bot available,&quot; 🧰 signifies &quot;toolkit,&quot; or 💰💰💰 translates to &quot;big ransom,&quot; bad actors can evade filters and keep it all on the down-low.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI-Led Remediation Crisis Prompts HackerOne to Pause Bug Bounties</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-led-remediation-crisis-prompts-hackerone-pause-bug-bounties">
+<div class="article-summary-box-inner">
+<span>Discovery used to be the bottleneck for open source bugs, but with automated discovery, remediation's the bottleneck, which bounties don't fund.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Fraud Rockets Higher in Mobile-First Latin America</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/fraud-mobile-first-latin-america">
+<div class="article-summary-box-inner">
+<span>Cyber-fraudsters move quickly from compromised devices to account takeover to funds transfer, shifting money before many financial institutions can react.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Full Sail University to Open IBM Cyber Defense Range Powered by AWS and Cloud Range on Campus</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/full-sail-university-ibm-cyber-defense-range-aws-cloud-range">
+<div class="article-summary-box-inner">
+<span></span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Niobium Introduces The Fog</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/niobium-introduces-the-fog">
+<div class="article-summary-box-inner">
+<span></span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Pluralsight Launches SecureReady to Help Organizations Build Job-Ready Cybersecurity Teams</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/remote-workforce/pluralsight-launches-secureready-cybersecurity-teams">
+<div class="article-summary-box-inner">
+<span></span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Iranian Threat Actors Disrupt US Critical Infrastructure Via Exposed PLCs</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/iranian-threat-actors-us-critical-infrastructure-exposed-plcs">
+<div class="article-summary-box-inner">
+<span>Attackers compromised Internet-facing OT devices and caused file and display manipulation, operational disruption, and financial losses across sectors.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Storm-1175 Deploys Medusa Ransomware at 'High Velocity'</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/storm-1175-medusa-ransomware-high-velocity">
+<div class="article-summary-box-inner">
+<span>Microsoft says the financially motivated cybercrime group has exploited N-day and zero-day vulnerabilities in campaigns predicated on speed.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Grafana Patches AI Bug That Could Have Leaked User Data</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/grafana-patches-ai-bug-leaked-user-data">
+<div class="article-summary-box-inner">
+<span>By hiding malicious instructions on an attacker-controlled Web page, AI could ingest orders that appear benign but return sensitive data to the attacker's server.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">RSAC 2026: How AI Is Reshaping Cybersecurity Faster Than Ever</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/rsac-2026-how-ai-is-reshaping-cybersecurity-faster-than-ever">
+<div class="article-summary-box-inner">
+<span>Dark Reading's Kelly Jackson Higgins shares insights on the past, present, and future of cybersecurity after attending RSAC 2026 Conference.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Human vs AI: Debates Shape RSAC 2026 Cybersecurity Trends</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/human-vs-ai-debates-shape-rsac-2026-cybersecurity-trends">
+<div class="article-summary-box-inner">
+<span>As AI dominated RSAC 2026, CISOs and industry leaders debated its role in security, from agentic applications to the challenges of scaling human involvement in decision-making.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Lies, Damned Lies, and Cybersecurity Metrics</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/lies-damned-lies-cybersecurity-metrics">
+<div class="article-summary-box-inner">
+<span>A panel of five C-suite leaders discuss how cybersecurity success is measured and why it isn't improving results.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Focusing on the People in Cybersecurity at RSAC 2026 Conference</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/focusing-people-cybersecurity-rsac2026">
+<div class="article-summary-box-inner">
+<span>AI dominated RSAC 2026 Conference, but it's still the humans in cybersecurity who matter most.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI-Assisted Supply Chain Attack Targets GitHub</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-assisted-supply-chain-attack-targets-github">
+<div class="article-summary-box-inner">
+<span>PRT-scan is the second campaign in recent months where a threat actor appears to have leveraged AI for automated targeting of a widespread GitHub misconfiguration.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Axios Attack Shows Complex Social Engineering Is Industrialized</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/axios-attack-complex-social-engineering-industrialized">
+<div class="article-summary-box-inner">
+<span>The attack on the popular NPM package Axios is just one of many targeting maintainers and has shone a light on how threat actors can scale sophisticated social engineering campaigns.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Fortinet Issues Emergency Patch for FortiClient Zero-Day</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/fortinet-emergency-patch-forticlient-zero-day">
+<div class="article-summary-box-inner">
+<span>The authentication bypass flaw, tracked as CVE-2026-35616, is the latest in a series of Fortinet vulnerabilities that have been exploited in the wild.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Automated Credential Harvesting Campaign Exploits React2Shell Flaw</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/automated-credential-harvesting-campaign-react2shell">
+<div class="article-summary-box-inner">
+<span>An emerging threat cluster tracked as UAT-10608 is exploiting vulnerable Web-exposed Next.js apps and using an automated tool to exfiltrate credentials, secrets, and other system data.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Shadow AI in Healthcare Is Here to Stay</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/shadow-ai-in-healthcare-is-here-to-stay">
+<div class="article-summary-box-inner">
+<span>Medical professionals are not going to stop using AI tools to manage growing workloads. Organizations should prioritize bolstering security protocols to limit their blast radius.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">OWASP GenAI Security Project Gets Update, New Tools Matrix</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/owasp-genai-security-project-update-matrix">
+<div class="article-summary-box-inner">
+<span>In recognition of 21 generative AI risks, the standards groups recommends that companies take separate but linked approaches to defending GenAI and agentic AI systems.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Inconsistent Privacy Labels Don't Tell Users What They Are Getting</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/data-privacy/inconsistent-privacy-labels-not-enough">
+<div class="article-summary-box-inner">
+<span>Data privacy labels are a great idea for mobile apps, but the current versions just aren't good enough.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Apple Breaks Precedent, Patches DarkSword for iOS 18</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/apple-patches-darksword-ios-18">
+<div class="article-summary-box-inner">
+<span>Even organizations with users unwilling or unable to adopt iOS 26 can now protect themselves from a severe mobile OS-cracking tool.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Blast Radius of TeamPCP Attacks Expands Amid Hacker Infighting</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/teampcp-attacks-hacker-infighting">
+<div class="article-summary-box-inner">
+<span>As organizations disclose breaches tied to TeamPCP's supply chain attacks, ShinyHunters and Lapsus$ are getting involved, taking credit, and creating a murky situation for enterprises.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Picking Up 'Skull Vibrations'? Could Be XR Headset Authentication</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/remote-workforce/skull-vibrations-could-be-xr-headset-authentication">
+<div class="article-summary-box-inner">
+<span>&quot;Skull vibration harmonics generated by vital signs&quot; can be used to sign in to VR, AR, and MR headsets, according to emerging research.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Claude Source Code Leak Highlights Big Supply Chain Missteps</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/source-code-leaks-highlight-lack-supply-chain-oversight">
+<div class="article-summary-box-inner">
+<span>Or, why the software supply chain should be treated as critical infrastructure with guardrails built in at every layer.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Chainguard Unveils Factory 2.0 to Automate Hardening the Software Supply Chain</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/chainguard-factory-automate-hardening-software-supply-chain">
+<div class="article-summary-box-inner">
+<span>The rebuilt Chainguard platform adds deeper security designed to continuously reconcile open source artifacts across containers, libraries, agent skills, and GitHub Actions.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CrowdStrike Next-Gen SIEM Can Now Ingest Microsoft Defender Telemetry</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/crowdstrike-falcon-ingest-microsoft-defender-telemetry">
+<div class="article-summary-box-inner">
+<span>Once CrowdStrike's nemesis, Microsoft is now a collaborator. A shared interest in Formula 1 helped thaw the years-long fierce rivalry.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Geopolitics, AI, and Cybersecurity: Insights From RSAC 2026</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/geopolitics-ai-cybersecurity-insights-rsac-2026">
+<div class="article-summary-box-inner">
+<span>AI-driven threats, global leadership shifts, and the future of cybersecurity in a rapidly evolving landscape were among the discussions at RSAC 2026 Conference.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Not Toying Around: Hasbro Attack May Take 'Weeks' to Remediate</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/toying-around-hasbro-attack-remediate">
+<div class="article-summary-box-inner">
+<span>The company's 8-K filing notes &quot;unauthorized access&quot; and that it has activated business continuity plans and taken some systems offline.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Security Bosses Are All-In on AI. Here's Why</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/security-bosses-all-in-ai">
+<div class="article-summary-box-inner">
+<span>CISOs are bullish on AI and have big plans to roll out future tools. We talk to Reddit CISO Frederick Lee and leading analyst Dave Gruber about how AI is working out in the real world, as well as its future promise.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">RSAC 2026: AI Dominates, But Community Remains Key to Security</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/rsac-2026-ai-dominates-community">
+<div class="article-summary-box-inner">
+<span>As AI took center stage at this year's conference, experts debated automation, oversight and the evolving role of human intelligence in cybersecurity — despite the US government's notable absence.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Bank Trojan 'Casbaneiro' Worms Through Latin America</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/bank-trojan-casbaneiro-worms-latin-america">
+<div class="article-summary-box-inner">
+<span>Augmented Marauder's multipronged banking-Trojan cyber campaigns are targeting Spanish speakers, evading detection, and replicating rapidly.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Ransomware Will Hit Hospitals. Rehearsals Are Key to Defense</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/ransomware-hospitals-preparation-key-defense">
+<div class="article-summary-box-inner">
+<span>A chief medical information officer describes what hospitals face when they inevitably suffer a ransomware attack—whether it leads to short- or long-term outages.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">LatAm's Self-Taught Cyber Talent Overlooked Amid Cyberattack Glut</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/remote-workforce/latam-cyber-talent-overlooked-cyberattack-glut">
+<div class="article-summary-box-inner">
+<span>A newly released study exclusively shared with Dark Reading details the unique circumstances that make up Latin America's labor pool, and why organizations may want to expand their talent search.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Cyberattacks Intensify Pressure on Latin American Governments</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/cyberattacks-latin-american-governments">
+<div class="article-summary-box-inner">
+<span>Cyber threats across Latin America are increasingly targeting government systems, from disruptive attacks in Puerto Rico to a surge of probes against Colombia’s health sector.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Venom Stealer MaaS Platform Commoditizes ClickFix Attacks</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/venom-stealer-maas-commoditizes-clickfix-attacks">
+<div class="article-summary-box-inner">
+<span>A new service on the cybercrime market provides automated capabilities to create persistent information-stealing social engineering attacks.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Are We Training AI Too Late?</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-analytics/are-we-training-ai-too-late">
+<div class="article-summary-box-inner">
+<span>Ask the Expert: Cybersecurity teams need to expand their field of view to include new, unique threat sources, rather than relying on past, proven threat actors.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">The Forgotten Endpoint: Security Risks of Dormant Devices</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/forgotten-endpoint-security-risks-dormant-devices">
+<div class="article-summary-box-inner">
+<span>Technology Talk: That forgotten notebook holds plenty of secrets to enterprise access.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Axios NPM Package Compromised in Precision Attack</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/axios-npm-package-compromised-precision-attack">
+<div class="article-summary-box-inner">
+<span>The NPM package for Axios, a popular JavaScript HTTP client library, was briefly compromised this week, possibly by North Korean threat actors.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Google's Vertex AI Is Over-Privileged. That's a Problem</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/googles-vertex-ai-over-privilege-problem">
+<div class="article-summary-box-inner">
+<span>Palo Alto Networks researchers show how attackers could exploit AI agents on Google's Vertex AI to steal data and break into restricted cloud infrastructure.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">TeamPCP Breaches Cloud, SaaS Instances With Stolen Credentials</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cloud-security/teampcp-breaches-cloud-saas-instances-stolen-credentials">
+<div class="article-summary-box-inner">
+<span>The threat group's shift to speedy attacks on AWS, Azure, and SaaS instances shows organizations need to respond quickly to compromised credentials.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI and Quantum Are Forcing a Rethink of Digital Trust</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/ai-and-quantum-are-forcing-a-rethink-of-digital-trust">
+<div class="article-summary-box-inner">
+<span>In a conversation with Dark Reading’s Terry Sweeney, DigiCert CEO Amit Sinha explains how AI-driven identities and quantum threats are reshaping the foundations of digital trust.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Black Hat USA</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/events/black-hat-usa">
+<div class="article-summary-box-inner">
+<span></span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Iran Deploys 'Pseudo-Ransomware,' Revives Pay2Key Operations</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/iran-pseudo-ransomware-pay2key-operations">
+<div class="article-summary-box-inner">
+<span>Iranian APTs are blurring the lines between state-sponsored and cybercriminal activities to target high-impact US organizations.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI-Powered 'DeepLoad' Malware Steals Credentials, Evades Detection</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/ai-powered-deepload-steals-credentials-evades-detection">
+<div class="article-summary-box-inner">
+<span>The massive amount of junk code that hides the malware's logic from security scans was almost certainly generated by AI, researchers say.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI-Driven Code Surge Is Forcing a Rethink of AppSec</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-driven-code-surge-is-forcing-a-rethink-of-appsec">
+<div class="article-summary-box-inner">
+<span>In a conversation with Dark Reading’s Terry Sweeney, Black Duck CEO Jason Schmitt explains how AI is reshaping application security and why it must evolve to keep pace.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">F5 BIG-IP Vulnerability Reclassified as RCE, Under Exploitation</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/f5-big-ip-vulnerability-reclassified-rce-exploitation">
+<div class="article-summary-box-inner">
+<span>CVE-2025-53521 was initially disclosed in October as a high-severity denial-of-service (DoS) flaw, but new information has revealed the bug is actually much more dangerous.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Manufacturing &amp; Healthcare Share Struggles with Passwords</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/manufacturing-and-healthcare-share-struggles-with-passwords">
+<div class="article-summary-box-inner">
+<span>The two key economic sectors struggle with security for a reason: Many insiders view access management as a roadblock, while attackers see it as a way in.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Storm Brews Over Critical, No-Click Telegram Flaw</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/storm-brews-critical-no-click-telegram-flaw">
+<div class="article-summary-box-inner">
+<span>The vulnerability, which is allegedly triggered by a corrupted sticker in the messaging app, received a 9.8 CVSS score, but Telegram denies it exists.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">China Upgrades the Backdoor It Uses to Spy on Telcos Globally</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/china-upgrades-backdoor-spy-telcos">
+<div class="article-summary-box-inner">
+<span>Chinese APT Red Menshen's super-advanced BPFdoor malware defeats traditional cybersecurity protections. All telcos can do, really, is try hunting it down.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Wartime Usage of Compromised IP Cameras Highlight Their Danger</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/wartime-usage-of-compromised-ip-cameras-highlight-their-danger">
+<div class="article-summary-box-inner">
+<span>The list of countries exploiting Internet-connected cameras to give them eyes inside their adversaries' borders continues to expand. What should companies look out for?</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+</ul>
+</section>
+<section class="daily-content">
+<h2 class="daily-heading">
 <time datetime="2026-04-07T23:13:57.611319144Z">04-07</time>
 </h2>
 <ul class="sources card">
