@@ -12,6 +12,2611 @@
 <body>
 <section class="daily-content">
 <h2 class="daily-heading">
+<time datetime="2026-04-10T23:12:37.827094869Z">04-10</time>
+</h2>
+<ul class="sources card">
+<li class="source">
+<section>
+<h3 class="source-name">CVE Daily – Critical CVEs</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-40189 – goshs is a SimpleHTTPServer written in Go. Prior to 2.0.0-beta.4, goshs enforces...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40189">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-40189</strong></p>
+<p>goshs is a SimpleHTTPServer written in Go. Prior to 2.0.0-beta.4, goshs enforces the documented per-folder .goshs ACL/basic-auth mechanism for directory listings and file reads, but it does not enforce the same authorization checks for state-changing routes. An unauthenticated attacker can upload files with PUT, upload files with multipart POST /upload, create directories with ?mkdir, and delete…</p>
+<p><strong>CVSS:</strong> 9.3 · <strong>CWE:</strong> CWE-862</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40189">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-40177 – ajenti.plugin.core defines all necessary core elements to allow Ajenti to run pr...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40177">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-40177</strong></p>
+<p>ajenti.plugin.core defines all necessary core elements to allow Ajenti to run properly. Prior to 0.112, if the 2FA was activated, it was possible to bypass the password authentication This vulnerability is fixed in 0.112.</p>
+<p><strong>CVSS:</strong> 9.3 · <strong>CWE:</strong> CWE-287</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40177">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-40175 – Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40175">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-40175</strong></p>
+<p>Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.0, the Axios library is vulnerable to a specific "Gadget" attack chain that allows Prototype Pollution in any third-party dependency to be escalated into Remote Code Execution (RCE) or Full Cloud Compromise (via AWS IMDSv2 bypass). This vulnerability is fixed in 1.15.0.</p>
+<p><strong>CVSS:</strong> 10.0 · <strong>CWE:</strong> CWE-113</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40175">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-33707 – Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, th...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33707">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-33707</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, the default password reset mechanism generates tokens using sha1($email) with no random component, no expiration, and no rate limiting. An attacker who knows a user's email can compute the reset token and change the victim's password without authentication. This vulnerability is fixed in 1.11.38 and 2.0.0-RC.3.</p>
+<p><strong>CVSS:</strong> 9.4 · <strong>CWE:</strong> CWE-640</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33707">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-33698 – Chamilo LMS is a learning management system. Prior to 1.11.38, a chained attack ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33698">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-33698</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38, a chained attack can enable otherwise-blocked PHP code from the main/install/ directory and allow an unauthenticated attacker to modify existing files or create new files where allowed by system permissions. This only affects portals with the main/install/ directory still present and read-accessible. This vulnerability is fixed in 1.1…</p>
+<p><strong>CVSS:</strong> 9.3 · <strong>CWE:</strong> CWE-552</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33698">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-32892 – Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, Ch...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32892">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-32892</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, Chamilo LMS contains an OS Command Injection vulnerability in the file move function. The move() function in fileManage.lib.php passes user-controlled path values directly into exec() shell commands without using escapeshellarg(). When a user moves a document via document.php, the move_to POST parameter — which only pas…</p>
+<p><strong>CVSS:</strong> 9.1 · <strong>CWE:</strong> CWE-78</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32892">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-40157 – PraisonAI is a multi-agent teams system. Prior to 4.5.128, cmd_unpack in the rec...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40157">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-40157</strong></p>
+<p>PraisonAI is a multi-agent teams system. Prior to 4.5.128, cmd_unpack in the recipe CLI extracts .praison tar archives using raw tar.extract() without validating archive member paths. A .praison bundle containing ../../ entries will write files outside the intended output directory. An attacker who distributes a malicious bundle can overwrite arbitrary files on the victim's filesystem when they r…</p>
+<p><strong>CVSS:</strong> 9.4 · <strong>CWE:</strong> CWE-22</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40157">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+<li class="source">
+<section>
+<h3 class="source-name">CVE Daily – Latest CVEs</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-5724 – The frontend gRPC server's streaming interceptor chain did not include the autho...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-5724">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-5724</strong></p>
+<p>The frontend gRPC server's streaming interceptor chain did not include the authorization interceptor. When a ClaimMapper and Authorizer are configured, unary RPCs enforce authentication and authorization, but the streaming AdminService/StreamWorkflowReplicationMessages endpoint accepted requests without credentials. This endpoint is registered on the same port as WorkflowService and cannot be dis…</p>
+<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-306</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5724">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-40252 – FastGPT is an AI Agent building platform. Prior to 4.14.10.4, Broken Access Cont...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40252">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-40252</strong></p>
+<p>FastGPT is an AI Agent building platform. Prior to 4.14.10.4, Broken Access Control vulnerability (IDOR/BOLA) allows any authenticated team to access and execute applications belonging to other teams by supplying a foreign appId. While the API correctly validates the team token, it does not verify that the requested application belongs to the authenticated team. This leads to cross-tenant data ex…</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-284</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40252">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-40242 – Arcane is an interface for managing Docker containers, images, networks, and vol...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40242">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-40242</strong></p>
+<p>Arcane is an interface for managing Docker containers, images, networks, and volumes. Prior to 1.17.3, the /api/templates/fetch endpoint accepts a caller-supplied url parameter and performs a server-side HTTP GET request to that URL without authentication and without URL scheme or host validation. The server's response is returned directly to the caller. type. This constitutes an unauthenticated…</p>
+<p><strong>CVSS:</strong> 7.2 · <strong>CWE:</strong> CWE-918</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40242">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Low] CVE-2026-40194 – phpseclib is a PHP secure communications library. Prior to 3.0.51, 2.0.53, and 1...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40194">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk low">Low</span> CVE-2026-40194</strong></p>
+<p>phpseclib is a PHP secure communications library. Prior to 3.0.51, 2.0.53, and 1.0.28, phpseclib\Net\SSH2::get_binary_packet() uses PHP's != operator to compare a received SSH packet HMAC against the locally computed HMAC. != on equal-length binary strings in PHP uses memcmp(), which short-circuits on the first differing byte. This is a real variable-time comparison (CWE-208), proven by scaling b…</p>
+<p><strong>CVSS:</strong> 3.7 · <strong>CWE:</strong> CWE-208</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40194">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-40191 – ClearanceKit intercepts file-system access events on macOS and enforces per-proc...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40191">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-40191</strong></p>
+<p>ClearanceKit intercepts file-system access events on macOS and enforces per-process access policies. Prior to 5.0.4-beta-1f46165, ClearanceKit's Endpoint Security event handler only checked the source path of dual-path file operations against File Access Authorization (FAA) rules and App Jail policies. The destination path was ignored entirely. This allowed any local process to bypass file-acces…</p>
+<p><strong>CVSS:</strong> 6.8 · <strong>CWE:</strong> CWE-863</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40191">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-40190 – LangSmith Client SDKs provide SDK's for interacting with the LangSmith platform...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40190">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-40190</strong></p>
+<p>LangSmith Client SDKs provide SDK's for interacting with the LangSmith platform. Prior to 0.5.18, the LangSmith JavaScript/TypeScript SDK (langsmith) contains an incomplete prototype pollution fix in its internally vendored lodash set() utility. The baseAssignValue() function only guards against the __proto__ key, but fails to prevent traversal via constructor.prototype. This allows an attacker w…</p>
+<p><strong>CVSS:</strong> 5.6 · <strong>CWE:</strong> CWE-1321</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40190">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-40189 – goshs is a SimpleHTTPServer written in Go. Prior to 2.0.0-beta.4, goshs enforces...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40189">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-40189</strong></p>
+<p>goshs is a SimpleHTTPServer written in Go. Prior to 2.0.0-beta.4, goshs enforces the documented per-folder .goshs ACL/basic-auth mechanism for directory listings and file reads, but it does not enforce the same authorization checks for state-changing routes. An unauthenticated attacker can upload files with PUT, upload files with multipart POST /upload, create directories with ?mkdir, and delete…</p>
+<p><strong>CVSS:</strong> 9.3 · <strong>CWE:</strong> CWE-862</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40189">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-40188 – goshs is a SimpleHTTPServer written in Go. From 1.0.7 to before 2.0.0-beta.4, th...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40188">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-40188</strong></p>
+<p>goshs is a SimpleHTTPServer written in Go. From 1.0.7 to before 2.0.0-beta.4, the SFTP command rename sanitizes only the source path and not the destination, so it is possible to write outside of the root directory of the SFTP. This vulnerability is fixed in 2.0.0-beta.4.</p>
+<p><strong>CVSS:</strong> 7.7 · <strong>CWE:</strong> CWE-1314</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40188">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-40185 – TREK is a collaborative travel planner. Prior to 2.7.2, TREK was missing authori...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40185">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-40185</strong></p>
+<p>TREK is a collaborative travel planner. Prior to 2.7.2, TREK was missing authorization checks on the Immich trip photo management routes. This vulnerability is fixed in 2.7.2.</p>
+<p><strong>CVSS:</strong> 7.1 · <strong>CWE:</strong> CWE-862</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40185">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Low] CVE-2026-40184 – TREK is a collaborative travel planner. Prior to 2.7.2, TREK served uploaded pho...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40184">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk low">Low</span> CVE-2026-40184</strong></p>
+<p>TREK is a collaborative travel planner. Prior to 2.7.2, TREK served uploaded photos without requiring authentication. This vulnerability is fixed in 2.7.2.</p>
+<p><strong>CVSS:</strong> 3.7 · <strong>CWE:</strong> CWE-306</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40184">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-40180 – Quarkus OpenAPI Generator is Quarkus' extensions for generation of Rest Clients ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40180">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-40180</strong></p>
+<p>Quarkus OpenAPI Generator is Quarkus' extensions for generation of Rest Clients and server stubs generation. Prior to 2.16.0 and 2.15.0-lts, the unzip() method in ApicurioCodegenWrapper.java extracts ZIP entries without validating that the resolved file path stays within the intended output directory. At line 101, the destination is constructed as new File(toOutputDir, entry.getName()) and the co…</p>
+<p><strong>CVSS:</strong> 7.7 · <strong>CWE:</strong> CWE-22</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40180">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-40178 – ajenti.plugin.core defines all necessary core elements to allow Ajenti to run pr...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40178">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-40178</strong></p>
+<p>ajenti.plugin.core defines all necessary core elements to allow Ajenti to run properly. Prior to 0.112, if the 2FA was activated, it was possible during a short moment after the authentication of an user to bypass its authentication. This vulnerability is fixed in 0.112.</p>
+<p><strong>CVSS:</strong> 6.9 · <strong>CWE:</strong> CWE-287</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40178">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-40177 – ajenti.plugin.core defines all necessary core elements to allow Ajenti to run pr...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40177">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-40177</strong></p>
+<p>ajenti.plugin.core defines all necessary core elements to allow Ajenti to run properly. Prior to 0.112, if the 2FA was activated, it was possible to bypass the password authentication This vulnerability is fixed in 0.112.</p>
+<p><strong>CVSS:</strong> 9.3 · <strong>CWE:</strong> CWE-287</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40177">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-40175 – Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40175">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-40175</strong></p>
+<p>Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.0, the Axios library is vulnerable to a specific "Gadget" attack chain that allows Prototype Pollution in any third-party dependency to be escalated into Remote Code Execution (RCE) or Full Cloud Compromise (via AWS IMDSv2 bypass). This vulnerability is fixed in 1.15.0.</p>
+<p><strong>CVSS:</strong> 10.0 · <strong>CWE:</strong> CWE-113</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40175">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-40168 – Postiz is an AI social media scheduling tool. Prior to 2.21.5, the /api/public/s...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40168">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-40168</strong></p>
+<p>Postiz is an AI social media scheduling tool. Prior to 2.21.5, the /api/public/stream endpoint is vulnerable to SSRF. Although the application validates the initially supplied URL and blocks direct private/internal hosts, it does not re-validate the final destination after HTTP redirects. As a result, an attacker can supply a public HTTPS URL that passes validation and then redirects the server-s…</p>
+<p><strong>CVSS:</strong> 8.2 · <strong>CWE:</strong> CWE-918</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40168">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39922 – GeoNode versions 4.0 before 4.4.5 and 5.0 before 5.0.2 contain a server-side req...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39922">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39922</strong></p>
+<p>GeoNode versions 4.0 before 4.4.5 and 5.0 before 5.0.2 contain a server-side request forgery vulnerability in the service registration endpoint that allows authenticated attackers to trigger outbound network requests to arbitrary URLs by submitting a crafted service URL during form validation. Attackers can probe internal network targets including loopback addresses, RFC1918 private IP ranges, li…</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-918</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39922">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-39921 – GeoNode versions 4.0 before 4.4.5 and 5.0 before 5.0.2 contain a server-side req...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39921">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-39921</strong></p>
+<p>GeoNode versions 4.0 before 4.4.5 and 5.0 before 5.0.2 contain a server-side request forgery vulnerability that allows authenticated users with document upload permissions to trigger arbitrary outbound HTTP requests by providing a malicious URL via the doc_url parameter during document upload. Attackers can supply URLs pointing to internal network targets, loopback addresses, RFC1918 addresses, o…</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-918</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39921">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-32252 – Chartbrew is an open-source web application that can connect directly to databas...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32252">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-32252</strong></p>
+<p>Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 4.9.0, a cross-tenant authorization bypass exists in Chartbrew in GET /team/:team_id/template/generate/:project_id. The GET handler calls checkAccess(req, "updateAny", "chart") without awaiting the returned promise, and it does not verify that the supplied projec…</p>
+<p><strong>CVSS:</strong> 7.7 · <strong>CWE:</strong> CWE-285</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32252">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-30232 – Chartbrew is an open-source web application that can connect directly to databas...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-30232">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-30232</strong></p>
+<p>Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 4.8.5, Chartbrew allows authenticated users to create API data connections with arbitrary URLs. The server fetches these URLs using request-promise without any IP address validation, enabling Server-Side Request Forgery attacks against internal networks and cloud…</p>
+<p><strong>CVSS:</strong> 7.8 · <strong>CWE:</strong> CWE-918</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-30232">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-3446 – When calling base64.b64decode() or related functions the decoding process would ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-3446">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-3446</strong></p>
+<p>When calling base64.b64decode() or related functions the decoding process would stop after encountering the first padded quad regardless of whether there was more information to be processed. This can lead to data being accepted which may be processed differently by other implementations. Use "validate=True" to enable stricter processing of base64 data.</p>
+<p><strong>CVSS:</strong> 6.0 · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3446">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-33737 – Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, mu...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33737">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-33737</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, multiple files use simplexml_load_string() without XXE protection. With LIBXML_NOENT flag, arbitrary server files can be read. This vulnerability is fixed in 1.11.38 and 2.0.0-RC.3.</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-611</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33737">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-33736 – Chamilo LMS is a learning management system. Prior to 2.0.0-RC.3, any authentica...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33736">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-33736</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 2.0.0-RC.3, any authenticated user (including ROLE_STUDENT) can enumerate all platform users and access personal information (email, phone, roles) via GET /api/users, including administrator accounts. This vulnerability is fixed in 2.0.0-RC.3.</p>
+<p><strong>CVSS:</strong> 6.5 · <strong>CWE:</strong> CWE-639</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33736">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-33710 – Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, RE...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33710">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-33710</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, REST API keys are generated using md5(time() + (user_id * 5) - rand(10000, 10000)). The rand(10000, 10000) call always returns exactly 10000 (min == max), making the formula effectively md5(timestamp + user_id*5 - 10000). An attacker who knows a username and approximate key creation time can brute-force the API key. Thi…</p>
+<p><strong>CVSS:</strong> 7.5 · <strong>CWE:</strong> CWE-330</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33710">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-33708 – Chamilo LMS is a learning management system. Prior to 1.11.38, the get_user_info...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33708">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-33708</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38, the get_user_info_from_username REST API endpoint returns personal information (email, first name, last name, user ID, active status) of any user to any authenticated user, including students. There is no authorization check. This vulnerability is fixed in 1.11.38.</p>
+<p><strong>CVSS:</strong> 6.5 · <strong>CWE:</strong> CWE-862</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33708">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-33707 – Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, th...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33707">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-33707</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, the default password reset mechanism generates tokens using sha1($email) with no random component, no expiration, and no rate limiting. An attacker who knows a user's email can compute the reset token and change the victim's password without authentication. This vulnerability is fixed in 1.11.38 and 2.0.0-RC.3.</p>
+<p><strong>CVSS:</strong> 9.4 · <strong>CWE:</strong> CWE-640</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33707">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-33706 – Chamilo LMS is a learning management system. Prior to 1.11.38, any authenticated...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33706">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-33706</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38, any authenticated user with a REST API key can modify their own status field via the update_user_from_username endpoint. A student (status=5) can change their status to Teacher/CourseManager (status=1), gaining course creation and management privileges. This vulnerability is fixed in 1.11.38.</p>
+<p><strong>CVSS:</strong> 7.1 · <strong>CWE:</strong> CWE-269</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33706">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-33705 – Chamilo LMS is a learning management system. Prior to 1.11.38, Twig template fil...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33705">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-33705</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38, Twig template files (.tpl) under /main/template/default/ are directly accessible without authentication via HTTP GET requests. These templates expose internal application logic, variable names, AJAX endpoint URLs, and admin panel structure. This vulnerability is fixed in 1.11.38.</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-538</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33705">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-33704 – Chamilo LMS is a learning management system. Prior to 1.11.38, any authenticated...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33704">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-33704</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38, any authenticated user (including students) can write arbitrary content to files on the server via the BigUpload endpoint. The key parameter controls the filename and the raw POST body becomes the file content. While .php extensions are filtered to .phps, the .pht extension passes through unmodified. On Apache configurations where .ph…</p>
+<p><strong>CVSS:</strong> 7.1 · <strong>CWE:</strong> CWE-434</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33704">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-33703 – Chamilo LMS is a learning management system. Prior to 2.0.0-RC.3, an Insecure Di...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33703">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-33703</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 2.0.0-RC.3, an Insecure Direct Object Reference (IDOR) vulnerability in the /social-network/personal-data/{userId} endpoint allows any authenticated user to access full personal data and API tokens of arbitrary users by modifying the userId parameter. This results in mass disclosure of sensitive user information and credentials, enabling a ful…</p>
+<p><strong>CVSS:</strong> 7.1 · <strong>CWE:</strong> CWE-639</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33703">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-33702 – Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, Ch...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33702">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-33702</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, Chamilo LMS contains an Insecure Direct Object Reference (IDOR) vulnerability in the Learning Path progress saving endpoint. The file lp_ajax_save_item.php accepts a uid (user ID) parameter directly from $_REQUEST and uses it to load and modify another user's Learning Path progress — including score, status, completion,…</p>
+<p><strong>CVSS:</strong> 7.1 · <strong>CWE:</strong> CWE-639</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33702">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-33698 – Chamilo LMS is a learning management system. Prior to 1.11.38, a chained attack ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33698">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-33698</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38, a chained attack can enable otherwise-blocked PHP code from the main/install/ directory and allow an unauthenticated attacker to modify existing files or create new files where allowed by system permissions. This only affects portals with the main/install/ directory still present and read-accessible. This vulnerability is fixed in 1.1…</p>
+<p><strong>CVSS:</strong> 9.3 · <strong>CWE:</strong> CWE-552</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33698">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-33618 – Chamilo LMS is a learning management system. Prior to .0.0-RC.3, the PlatformCon...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33618">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-33618</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to .0.0-RC.3, the PlatformConfigurationController::decodeSettingArray() method uses PHP's eval() to parse platform settings from the database. An attacker with admin access (obtainable via Advisory 1) can inject arbitrary PHP code into the settings, which is then executed when any user (including unauthenticated) requests /platform-config/list. T…</p>
+<p><strong>CVSS:</strong> 8.8 · <strong>CWE:</strong> CWE-95</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33618">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-27460 – Tandoor Recipes is an application for managing recipes, planning meals, and buil...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-27460">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-27460</strong></p>
+<p>Tandoor Recipes is an application for managing recipes, planning meals, and building shopping lists. Prior to 2.6.5, a critical Denial of Service (DoS) vulnerability was in the recipe import functionality. This vulnerability allows an authenticated user to crash the server or make a significantly degrade its performance by uploading a large size ZIP file (ZIP Bomb). This vulnerability is fixed in…</p>
+<p><strong>CVSS:</strong> 6.5 · <strong>CWE:</strong> CWE-409</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27460">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-5483 – A flaw was found in odh-dashboard in Red Hat Openshift AI. This vulnerability in...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-5483">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-5483</strong></p>
+<p>A flaw was found in odh-dashboard in Red Hat Openshift AI. This vulnerability in the `odh-dashboard` component of Red Hat OpenShift AI (RHOAI) allows for the disclosure of Kubernetes Service Account tokens through a NodeJS endpoint. This could enable an attacker to gain unauthorized access to Kubernetes resources.</p>
+<p><strong>CVSS:</strong> 8.5 · <strong>CWE:</strong> CWE-201</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5483">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-40163 – Saltcorn is an extensible, open source, no-code database application builder. Pr...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40163">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-40163</strong></p>
+<p>Saltcorn is an extensible, open source, no-code database application builder. Prior to 1.4.5, 1.5.5, and 1.6.0-beta.4, the POST /sync/offline_changes endpoint allows an unauthenticated attacker to create arbitrary directories and write a changes.json file with attacker-controlled JSON content anywhere on the server filesystem. The GET /sync/upload_finished endpoint allows an unauthenticated attac…</p>
+<p><strong>CVSS:</strong> 8.2 · <strong>CWE:</strong> CWE-22</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40163">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-40162 – Bugsink is a self-hosted error tracking tool. In 2.1.0, an authenticated file wr...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40162">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-40162</strong></p>
+<p>Bugsink is a self-hosted error tracking tool. In 2.1.0, an authenticated file write vulnerability was identified in Bugsink 2.1.0 in the artifact bundle assembly flow. A user with a valid authentication token could cause the application to write attacker-controlled content to a filesystem location writable by the Bugsink process. This vulnerability is fixed in 2.1.1.</p>
+<p><strong>CVSS:</strong> 7.1 · <strong>CWE:</strong> CWE-20</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40162">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-33141 – Chamilo LMS is a learning management system. Prior to 2.0.0-RC.3, an Insecure Di...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33141">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-33141</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 2.0.0-RC.3, an Insecure Direct Object Reference (IDOR) vulnerability in the REST API stats endpoint allows any authenticated user (including low-privilege students with ROLE_USER) to read any other user's learning progress, certificates, and gradebook scores for any course, without enrollment or supervisory relationship. This vulnerability is…</p>
+<p><strong>CVSS:</strong> 6.5 · <strong>CWE:</strong> CWE-639</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33141">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-32932 – Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, an...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32932">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-32932</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, an Open Redirect vulnerability in the session course edit page allows an attacker to redirect an authenticated administrator to an arbitrary external URL after saving coach assignment changes. The redirect also leaks the id_session parameter to the attacker's server. This vulnerability is fixed in 1.11.38 and 2.0.0-RC.3.</p>
+<p><strong>CVSS:</strong> 4.7 · <strong>CWE:</strong> CWE-601</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32932">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-32931 – Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, an...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32931">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-32931</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, an unrestricted file upload vulnerability in the exercise sound upload function allows an authenticated teacher to upload a PHP webshell by spoofing the Content-Type header to audio/mpeg. The uploaded file retains its original .php extension and is placed in a web-accessible directory, enabling Remote Code Execution as…</p>
+<p><strong>CVSS:</strong> 7.5 · <strong>CWE:</strong> CWE-434</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32931">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-32930 – Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, an...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32930">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-32930</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, an Insecure Direct Object Reference (IDOR) vulnerability in the gradebook evaluation edit page allows any authenticated teacher to view and modify the settings (name, max score, weight) of evaluations belonging to any other course by manipulating the editeval GET parameter. This vulnerability is fixed in 1.11.38 and 2.0…</p>
+<p><strong>CVSS:</strong> 7.1 · <strong>CWE:</strong> CWE-639</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32930">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-32894 – Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, an...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32894">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-32894</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, an Insecure Direct Object Reference (IDOR) vulnerability in the gradebook result view page allows any authenticated teacher to delete any student's grade result across the entire platform by manipulating the delete_mark or resultdelete GET parameters. No ownership or course-scope verification is performed. This vulnerab…</p>
+<p><strong>CVSS:</strong> 7.1 · <strong>CWE:</strong> CWE-476</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32894">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-32893 – Chamilo LMS is a learning management system. Prior to 2.0.0-RC.3, a Reflected Cr...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32893">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-32893</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 2.0.0-RC.3, a Reflected Cross-Site Scripting (XSS) vulnerability in the exercise question list admin panel allows an attacker to execute arbitrary JavaScript in an authenticated teacher's browser. The pagination code merges all $_GET parameters via array_merge() and outputs the result via http_build_query() directly into HTML href attributes w…</p>
+<p><strong>CVSS:</strong> 5.4 · <strong>CWE:</strong> CWE-79</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32893">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-32892 – Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, Ch...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32892">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-32892</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, Chamilo LMS contains an OS Command Injection vulnerability in the file move function. The move() function in fileManage.lib.php passes user-controlled path values directly into exec() shell commands without using escapeshellarg(). When a user moves a document via document.php, the move_to POST parameter — which only pas…</p>
+<p><strong>CVSS:</strong> 9.1 · <strong>CWE:</strong> CWE-78</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32892">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-31941 – Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, Ch...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-31941">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-31941</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, Chamilo LMS contains a Server-Side Request Forgery (SSRF) vulnerability in the Social Wall feature. The endpoint read_url_with_open_graph accepts a URL from the user via the social_wall_new_msg_main POST parameter and performs two server-side HTTP requests to that URL without validating whether the target is an internal…</p>
+<p><strong>CVSS:</strong> 7.7 · <strong>CWE:</strong> CWE-918</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-31941">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-31940 – Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, in...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-31940">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-31940</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, in main/lp/aicc_hacp.php, user-controlled request parameters are directly used to set the PHP session ID before loading global bootstrap. This leads to session fixation. This vulnerability is fixed in 1.11.38 and 2.0.0-RC.3.</p>
+<p><strong>CVSS:</strong> 7.5 · <strong>CWE:</strong> CWE-384</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-31940">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-31939 – Chamilo LMS is a learning management system. Prior to 1.11.38, there is a path t...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-31939">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-31939</strong></p>
+<p>Chamilo LMS is a learning management system. Prior to 1.11.38, there is a path traversal in main/exercise/savescores.php leading to arbitrary file feletion. User input from $_REQUEST['test'] is concatenated directly into filesystem path without canonicalization or traversal checks. This vulnerability is fixed in 1.11.38.</p>
+<p><strong>CVSS:</strong> 8.3 · <strong>CWE:</strong> CWE-22</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-31939">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-1502 – CR/LF bytes were not rejected by HTTP client proxy tunnel headers or host.</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-1502">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-1502</strong></p>
+<p>CR/LF bytes were not rejected by HTTP client proxy tunnel headers or host.</p>
+<p><strong>CVSS:</strong> 5.7 · <strong>CWE:</strong> N/A</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1502">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Low] CVE-2025-66447 – Chamilo LMS is a learning management system. From 1.11.0 to 2.0-beta.1, anyone c...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2025-66447">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk low">Low</span> CVE-2025-66447</strong></p>
+<p>Chamilo LMS is a learning management system. From 1.11.0 to 2.0-beta.1, anyone can trigger a malicious redirect through the use of the redirect parameter to /login. This vulnerability is fixed in 2.0-beta.2.</p>
+<p><strong>CVSS:</strong> 0.0 · <strong>CWE:</strong> CWE-601</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66447">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-40200 – An issue was discovered in musl libc 0.7.10 through 1.2.6. Stack-based memory co...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40200">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-40200</strong></p>
+<p>An issue was discovered in musl libc 0.7.10 through 1.2.6. Stack-based memory corruption can occur during qsort of very large arrays, due to incorrectly implemented double-word primitives. The number of elements must exceed about seven million, i.e., the 32nd Leonardo number on 32-bit platforms (or the 64th Leonardo number on 64-bit platforms, which is not practical).</p>
+<p><strong>CVSS:</strong> 8.1 · <strong>CWE:</strong> CWE-670</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40200">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-40160 – PraisonAIAgents is a multi-agent teams system. Prior to 1.5.128, web_crawl's htt...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40160">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-40160</strong></p>
+<p>PraisonAIAgents is a multi-agent teams system. Prior to 1.5.128, web_crawl's httpx fallback path passes user-supplied URLs directly to httpx.AsyncClient.get() with follow_redirects=True and no host validation. An LLM agent tricked into crawling an internal URL can reach cloud metadata endpoints (169.254.169.254), internal services, and localhost. The response content is returned to the agent and…</p>
+<p><strong>CVSS:</strong> 7.1 · <strong>CWE:</strong> CWE-918</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40160">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-40159 – PraisonAI is a multi-agent teams system. Prior to 4.5.128, PraisonAI’s MCP (Mode...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40159">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-40159</strong></p>
+<p>PraisonAI is a multi-agent teams system. Prior to 4.5.128, PraisonAI’s MCP (Model Context Protocol) integration allows spawning background servers via stdio using user-supplied command strings (e.g., MCP("npx -y @smithery/cli ...")). These commands are executed through Python’s subprocess module. By default, the implementation forwards the entire parent process environment to the spawned subproce…</p>
+<p><strong>CVSS:</strong> 5.5 · <strong>CWE:</strong> CWE-200</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40159">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-40158 – PraisonAI is a multi-agent teams system. Prior to 4.5.128, PraisonAI's AST-based...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40158">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-40158</strong></p>
+<p>PraisonAI is a multi-agent teams system. Prior to 4.5.128, PraisonAI's AST-based Python sandbox can be bypassed using type.__getattribute__ trampoline, allowing arbitrary code execution when running untrusted agent code. The _execute_code_direct function in praisonaiagents/tools/python_tools.py uses AST filtering to block dangerous Python attributes like __subclasses__, __globals__, and __bases__…</p>
+<p><strong>CVSS:</strong> 8.6 · <strong>CWE:</strong> CWE-94</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40158">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Critical] CVE-2026-40157 – PraisonAI is a multi-agent teams system. Prior to 4.5.128, cmd_unpack in the rec...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40157">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk critical">Critical</span> CVE-2026-40157</strong></p>
+<p>PraisonAI is a multi-agent teams system. Prior to 4.5.128, cmd_unpack in the recipe CLI extracts .praison tar archives using raw tar.extract() without validating archive member paths. A .praison bundle containing ../../ entries will write files outside the intended output directory. An attacker who distributes a malicious bundle can overwrite arbitrary files on the victim's filesystem when they r…</p>
+<p><strong>CVSS:</strong> 9.4 · <strong>CWE:</strong> CWE-22</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40157">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-40156 – PraisonAI is a multi-agent teams system. Prior to 4.5.128, PraisonAI automatical...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40156">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-40156</strong></p>
+<p>PraisonAI is a multi-agent teams system. Prior to 4.5.128, PraisonAI automatically loads a file named tools.py from the current working directory to discover and register custom agent tools. This loading process uses importlib.util.spec_from_file_location and immediately executes module-level code via spec.loader.exec_module() without explicit user consent, validation, or sandboxing. The tools.py…</p>
+<p><strong>CVSS:</strong> 7.8 · <strong>CWE:</strong> CWE-94</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40156">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-40103 – Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40103">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-40103</strong></p>
+<p>Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, Vikunja's scoped API token enforcement for custom project background routes is method-confused. A token with only projects.background can successfully delete a project background, while a token with only projects.background_delete is rejected. This is a scoped-token authorization bypass. This vulnerability is fixed in…</p>
+<p><strong>CVSS:</strong> 4.3 · <strong>CWE:</strong> CWE-836</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40103">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-40100 – FastGPT is an AI Agent building platform. Prior to 4.14.10.3, the /api/core/app/...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40100">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-40100</strong></p>
+<p>FastGPT is an AI Agent building platform. Prior to 4.14.10.3, the /api/core/app/mcpTools/runTool endpoint accepts arbitrary URLs without authentication. The internal IP check in isInternalAddress() only blocks private IPs when CHECK_INTERNAL_IP=true, which is not the default. This allows unauthenticated attackers to perform SSRF against internal network resources. This vulnerability is fixed in 4…</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-918</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40100">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Low] CVE-2026-40097 – Step CA is an online certificate authority for secure, automated certificate man...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40097">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk low">Low</span> CVE-2026-40097</strong></p>
+<p>Step CA is an online certificate authority for secure, automated certificate management for DevOps. From 0.24.0 to before 0.30.0-rc3, an attacker can trigger an index out-of-bounds panic in Step CA by sending a crafted attestation key (AK) certificate with an empty Extended Key Usage (EKU) extension during TPM device attestation. When processing a device-attest-01 ACME challenge using TPM attesta…</p>
+<p><strong>CVSS:</strong> 3.7 · <strong>CWE:</strong> CWE-129</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40097">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-40086 – Rembg is a tool to remove images background. Prior to 2.0.75, a path traversal v...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40086">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-40086</strong></p>
+<p>Rembg is a tool to remove images background. Prior to 2.0.75, a path traversal vulnerability in the rembg HTTP server allows unauthenticated remote attackers to read arbitrary files from the server's filesystem. By sending a crafted request with a malicious model_path parameter, an attacker can force the server to attempt loading any file as an ONNX model, revealing file existence, permissions, a…</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-22</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40086">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-40074 – SvelteKit is a framework for rapidly developing robust, performant web applicati...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40074">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-40074</strong></p>
+<p>SvelteKit is a framework for rapidly developing robust, performant web applications using Svelte. Prior to 2.57.1, redirect, when called from inside the handle server hook with a location parameter containing characters that are invalid in a HTTP header, will cause an unhandled TypeError. This could result in DoS on some platforms, especially if the location passed to redirect contains unsanitize…</p>
+<p><strong>CVSS:</strong> 6.3 · <strong>CWE:</strong> CWE-755</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40074">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-40073 – SvelteKit is a framework for rapidly developing robust, performant web applicati...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40073">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-40073</strong></p>
+<p>SvelteKit is a framework for rapidly developing robust, performant web applications using Svelte. Prior to 2.57.1, under certain circumstances, requests could bypass the BODY_SIZE_LIMIT on SvelteKit applications running with adapter-node. This bypass does not affect body size limits at other layers of the application stack, so limits enforced in the WAF, gateway, or at the platform level are unaf…</p>
+<p><strong>CVSS:</strong> 8.2 · <strong>CWE:</strong> CWE-770</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40073">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35670 – OpenClaw before 2026.3.22 contains a webhook reply delivery vulnerability that a...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35670">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35670</strong></p>
+<p>OpenClaw before 2026.3.22 contains a webhook reply delivery vulnerability that allows attackers to rebind chat replies to unintended users by exploiting mutable username matching instead of stable numeric user identifiers. Attackers can manipulate username changes to redirect webhook-triggered replies to different users, bypassing the intended recipient binding recorded in webhook events.</p>
+<p><strong>CVSS:</strong> 5.9 · <strong>CWE:</strong> CWE-807</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35670">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35669 – OpenClaw before 2026.3.25 contains a privilege escalation vulnerability in gatew...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35669">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35669</strong></p>
+<p>OpenClaw before 2026.3.25 contains a privilege escalation vulnerability in gateway-authenticated plugin HTTP routes that incorrectly mint operator.admin runtime scope regardless of caller-granted scopes. Attackers can exploit this scope boundary bypass to gain elevated privileges and perform unauthorized administrative actions.</p>
+<p><strong>CVSS:</strong> 8.8 · <strong>CWE:</strong> CWE-648</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35669">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35668 – OpenClaw before 2026.3.24 contains a path traversal vulnerability in sandbox enf...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35668">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35668</strong></p>
+<p>OpenClaw before 2026.3.24 contains a path traversal vulnerability in sandbox enforcement allowing sandboxed agents to read arbitrary files from other agents' workspaces via unnormalized mediaUrl or fileUrl parameter keys. Attackers can exploit incomplete parameter validation in normalizeSandboxMediaParams and missing mediaLocalRoots context to access sensitive files including API keys and configu…</p>
+<p><strong>CVSS:</strong> 7.7 · <strong>CWE:</strong> CWE-22</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35668">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35667 – OpenClaw before 2026.3.24 contains an incomplete fix for CVE-2026-27486 where th...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35667">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35667</strong></p>
+<p>OpenClaw before 2026.3.24 contains an incomplete fix for CVE-2026-27486 where the !stop chat command uses an unpatched killProcessTree function from shell-utils.ts that sends SIGKILL immediately without graceful SIGTERM shutdown. Attackers can trigger process termination via the !stop command, causing data corruption, resource leaks, and skipped security-sensitive cleanup operations.</p>
+<p><strong>CVSS:</strong> 6.1 · <strong>CWE:</strong> CWE-404</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35667">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35666 – OpenClaw before 2026.3.22 contains an allowlist bypass vulnerability in system.r...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35666">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35666</strong></p>
+<p>OpenClaw before 2026.3.22 contains an allowlist bypass vulnerability in system.run approvals that fails to unwrap /usr/bin/time wrappers. Attackers can bypass executable binding restrictions by using an unregistered time wrapper to reuse approval state for inner commands.</p>
+<p><strong>CVSS:</strong> 8.8 · <strong>CWE:</strong> CWE-706</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35666">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35665 – OpenClaw before 2026.3.24 contains an incomplete fix for CVE-2026-32011 where th...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35665">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35665</strong></p>
+<p>OpenClaw before 2026.3.24 contains an incomplete fix for CVE-2026-32011 where the Feishu webhook handler accepts request bodies with permissive limits of 1MB and 30-second timeout before signature verification. An unauthenticated attacker can exhaust server connection resources by sending concurrent slow HTTP POST requests to the Feishu webhook endpoint, blocking legitimate webhook deliveries.</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-405</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35665">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35664 – OpenClaw before 2026.3.25 contains an authentication bypass vulnerability in raw...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35664">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35664</strong></p>
+<p>OpenClaw before 2026.3.25 contains an authentication bypass vulnerability in raw card send surface that allows unpaired recipients to mint legacy callback payloads. Attackers can send raw card commands to bypass DM pairing restrictions and reach callback handling without proper authorization.</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-288</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35664">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35663 – OpenClaw before 2026.3.25 contains a privilege escalation vulnerability allowing...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35663">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35663</strong></p>
+<p>OpenClaw before 2026.3.25 contains a privilege escalation vulnerability allowing non-admin operators to self-request broader scopes during backend reconnect. Attackers can bypass pairing requirements to reconnect as operator.admin, gaining unauthorized administrative privileges.</p>
+<p><strong>CVSS:</strong> 8.8 · <strong>CWE:</strong> CWE-648</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35663">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35662 – OpenClaw before 2026.3.22 fails to enforce controlScope restrictions on the send...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35662">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35662</strong></p>
+<p>OpenClaw before 2026.3.22 fails to enforce controlScope restrictions on the send action, allowing leaf subagents to message controlled child sessions beyond their authorized scope. Attackers can exploit this by using the send action to communicate with child sessions without proper scope validation, bypassing intended access control restrictions.</p>
+<p><strong>CVSS:</strong> 4.3 · <strong>CWE:</strong> CWE-862</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35662">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35661 – OpenClaw before 2026.3.25 contains an authorization bypass vulnerability in Tele...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35661">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35661</strong></p>
+<p>OpenClaw before 2026.3.25 contains an authorization bypass vulnerability in Telegram callback query handling that allows attackers to mutate session state without satisfying normal DM pairing requirements. Remote attackers can exploit weaker callback-only authorization in direct messages to bypass DM pairing and modify session state.</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-288</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35661">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35660 – OpenClaw before 2026.3.23 contains an insufficient access control vulnerability ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35660">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35660</strong></p>
+<p>OpenClaw before 2026.3.23 contains an insufficient access control vulnerability in the Gateway agent /reset endpoint that allows callers with operator.write permission to reset admin sessions. Attackers with operator.write privileges can invoke /reset or /new messages with an explicit sessionKey to bypass operator.admin requirements and reset arbitrary sessions.</p>
+<p><strong>CVSS:</strong> 8.1 · <strong>CWE:</strong> CWE-862</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35660">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35659 – OpenClaw before 2026.3.22 contains a service discovery vulnerability where TXT m...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35659">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35659</strong></p>
+<p>OpenClaw before 2026.3.22 contains a service discovery vulnerability where TXT metadata from Bonjour and DNS-SD could influence CLI routing even when actual service resolution failed. Attackers can exploit unresolved hints to steer routing decisions to unintended targets by providing malicious discovery metadata.</p>
+<p><strong>CVSS:</strong> 4.6 · <strong>CWE:</strong> CWE-345</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35659">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35658 – OpenClaw before 2026.3.2 contains a filesystem boundary bypass vulnerability in ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35658">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35658</strong></p>
+<p>OpenClaw before 2026.3.2 contains a filesystem boundary bypass vulnerability in the image tool that fails to honor tools.fs.workspaceOnly restrictions. Attackers can traverse sandbox bridge mounts outside the workspace to read files that other filesystem tools would reject.</p>
+<p><strong>CVSS:</strong> 6.5 · <strong>CWE:</strong> CWE-668</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35658">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35657 – OpenClaw before 2026.3.25 contains an authorization bypass vulnerability in the ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35657">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35657</strong></p>
+<p>OpenClaw before 2026.3.25 contains an authorization bypass vulnerability in the HTTP /sessions/:sessionKey/history route that skips operator.read scope validation. Attackers can access session history without proper operator read permissions by sending HTTP requests to the vulnerable endpoint.</p>
+<p><strong>CVSS:</strong> 6.5 · <strong>CWE:</strong> CWE-863</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35657">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35656 – OpenClaw before 2026.3.22 contains an authentication bypass vulnerability in the...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35656">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35656</strong></p>
+<p>OpenClaw before 2026.3.22 contains an authentication bypass vulnerability in the X-Forwarded-For header processing when trustedProxies is configured, allowing attackers to spoof loopback hops. Remote attackers can inject forged forwarding headers to bypass canvas authentication and rate-limiting protections by masquerading as loopback clients.</p>
+<p><strong>CVSS:</strong> 6.5 · <strong>CWE:</strong> CWE-290</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35656">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35655 – OpenClaw before 2026.3.22 contains an identity spoofing vulnerability in ACP per...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35655">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35655</strong></p>
+<p>OpenClaw before 2026.3.22 contains an identity spoofing vulnerability in ACP permission resolution that trusts conflicting tool identity hints from rawInput and metadata. Attackers can spoof tool identities through rawInput parameters to suppress dangerous-tool prompting and bypass security restrictions.</p>
+<p><strong>CVSS:</strong> 5.7 · <strong>CWE:</strong> CWE-807</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35655">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35654 – OpenClaw before 2026.3.25 contains an authorization bypass vulnerability in Micr...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35654">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35654</strong></p>
+<p>OpenClaw before 2026.3.25 contains an authorization bypass vulnerability in Microsoft Teams feedback invokes that allows unauthorized senders to record session feedback. Attackers can bypass sender allowlist checks via feedback invoke endpoints to trigger unauthorized feedback recording or reflection.</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-288</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35654">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35653 – OpenClaw before 2026.3.24 contains an incorrect authorization vulnerability in t...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35653">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35653</strong></p>
+<p>OpenClaw before 2026.3.24 contains an incorrect authorization vulnerability in the POST /reset-profile endpoint that allows authenticated callers with operator.write access to browser.request to bypass profile mutation restrictions. Attackers can invoke POST /reset-profile through the browser.request surface to stop the running browser, close Playwright connections, and move profile directories t…</p>
+<p><strong>CVSS:</strong> 8.1 · <strong>CWE:</strong> CWE-863</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35653">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35652 – OpenClaw before 2026.3.22 contains an authorization bypass vulnerability in inte...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35652">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35652</strong></p>
+<p>OpenClaw before 2026.3.22 contains an authorization bypass vulnerability in interactive callback dispatch that allows non-allowlisted senders to execute action handlers. Attackers can bypass sender authorization checks by dispatching callbacks before normal security validation completes, enabling unauthorized actions.</p>
+<p><strong>CVSS:</strong> 6.5 · <strong>CWE:</strong> CWE-696</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35652">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35651 – OpenClaw versions 2026.2.13 through 2026.3.24 contain an ANSI escape sequence in...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35651">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35651</strong></p>
+<p>OpenClaw versions 2026.2.13 through 2026.3.24 contain an ANSI escape sequence injection vulnerability in approval prompts that allows attackers to spoof terminal output. Untrusted tool metadata can carry ANSI control sequences into approval prompts and permission logs, enabling attackers to manipulate displayed information through malicious tool titles.</p>
+<p><strong>CVSS:</strong> 4.3 · <strong>CWE:</strong> CWE-150</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35651">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35650 – OpenClaw before 2026.3.22 contains an environment variable override handling vul...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35650">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35650</strong></p>
+<p>OpenClaw before 2026.3.22 contains an environment variable override handling vulnerability that allows attackers to bypass the shared host environment policy through inconsistent sanitization paths. Attackers can supply blocked or malformed override keys that slip through inconsistent validation to execute arbitrary code with unintended environment variables.</p>
+<p><strong>CVSS:</strong> 7.5 · <strong>CWE:</strong> CWE-15</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35650">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35649 – OpenClaw before 2026.3.22 contains a settings reconciliation vulnerability that ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35649">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35649</strong></p>
+<p>OpenClaw before 2026.3.22 contains a settings reconciliation vulnerability that allows attackers to bypass intended deny-all revocations by exploiting empty allowlist handling. The vulnerability treats explicit empty allowlists as unset during reconciliation, silently undoing intended access control denials and restoring previously revoked permissions.</p>
+<p><strong>CVSS:</strong> 6.5 · <strong>CWE:</strong> CWE-183</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35649">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Low] CVE-2026-35648 – OpenClaw before 2026.3.22 contains a policy bypass vulnerability where queued no...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35648">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk low">Low</span> CVE-2026-35648</strong></p>
+<p>OpenClaw before 2026.3.22 contains a policy bypass vulnerability where queued node actions are not revalidated against current command policy when delivered. Attackers can exploit stale allowlists or declarations that survive policy tightening to execute unauthorized commands.</p>
+<p><strong>CVSS:</strong> 3.7 · <strong>CWE:</strong> CWE-367</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35648">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35647 – OpenClaw before 2026.3.25 contains an access control vulnerability where verific...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35647">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35647</strong></p>
+<p>OpenClaw before 2026.3.25 contains an access control vulnerability where verification notices bypass DM policy checks and reply to unpaired peers. Attackers can send verification notices to users outside allowed direct message policies by exploiting insufficient access validation before message transmission.</p>
+<p><strong>CVSS:</strong> 5.3 · <strong>CWE:</strong> CWE-288</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35647">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35643 – OpenClaw before 2026.3.22 contains an unvalidated WebView JavascriptInterface vu...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35643">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35643</strong></p>
+<p>OpenClaw before 2026.3.22 contains an unvalidated WebView JavascriptInterface vulnerability allowing attackers to inject arbitrary instructions. Untrusted pages can invoke the canvas bridge to execute malicious code within the Android application context.</p>
+<p><strong>CVSS:</strong> 8.8 · <strong>CWE:</strong> CWE-940</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35643">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35641 – OpenClaw before 2026.3.24 contains an arbitrary code execution vulnerability in ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35641">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35641</strong></p>
+<p>OpenClaw before 2026.3.24 contains an arbitrary code execution vulnerability in local plugin and hook installation that allows attackers to execute malicious code by crafting a .npmrc file with a git executable override. During npm install execution in the staged package directory, attackers can leverage git dependencies to trigger execution of arbitrary programs specified in the attacker-control…</p>
+<p><strong>CVSS:</strong> 7.8 · <strong>CWE:</strong> CWE-349</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35641">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35621 – OpenClaw before 2026.3.24 contains a privilege escalation vulnerability where th...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35621">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35621</strong></p>
+<p>OpenClaw before 2026.3.24 contains a privilege escalation vulnerability where the /allowlist command fails to re-validate gateway client scopes for internal callers, allowing operator.write-scoped clients to mutate channel authorization policy. Attackers can exploit chat.send to build an internal command-authorized context and persist channel allowFrom and groupAllowFrom policy changes reserved f…</p>
+<p><strong>CVSS:</strong> 6.5 · <strong>CWE:</strong> CWE-862</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35621">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35620 – OpenClaw before 2026.3.24 contains missing authorization vulnerabilities in the ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35620">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35620</strong></p>
+<p>OpenClaw before 2026.3.24 contains missing authorization vulnerabilities in the /send and /allowlist chat command handlers. The /send command allows non-owner command-authorized senders to change owner-only session delivery policy settings, and the /allowlist mutating commands fail to enforce operator.admin scope. Attackers with operator.write scope can invoke /send on|off|inherit to persistently…</p>
+<p><strong>CVSS:</strong> 5.4 · <strong>CWE:</strong> CWE-862</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35620">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35619 – OpenClaw before 2026.3.24 contains an authorization bypass vulnerability in the ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35619">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35619</strong></p>
+<p>OpenClaw before 2026.3.24 contains an authorization bypass vulnerability in the HTTP /v1/models endpoint that fails to enforce operator read scope requirements. Attackers with only operator.approvals scope can enumerate gateway model metadata through the HTTP compatibility route, bypassing the stricter WebSocket RPC authorization checks.</p>
+<p><strong>CVSS:</strong> 4.3 · <strong>CWE:</strong> CWE-863</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35619">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35602 – Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35602">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35602</strong></p>
+<p>Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, the Vikunja file import endpoint uses the attacker-controlled Size field from the JSON metadata inside the import zip instead of the actual decompressed file content length for the file size enforcement check. By setting Size to 0 in the JSON while including large compressed file entries in the zip, an attacker bypass…</p>
+<p><strong>CVSS:</strong> 5.4 · <strong>CWE:</strong> CWE-770</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35602">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35601 – Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35601">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35601</strong></p>
+<p>Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, the CalDAV output generator builds iCalendar VTODO entries via raw string concatenation without applying RFC 5545 TEXT value escaping. User-controlled task titles containing CRLF characters break the iCalendar property boundary, allowing injection of arbitrary iCalendar properties such as ATTACH, VALARM, or ORGANIZER.…</p>
+<p><strong>CVSS:</strong> 4.1 · <strong>CWE:</strong> CWE-93</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35601">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35600 – Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35600">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35600</strong></p>
+<p>Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, task titles are embedded directly into Markdown link syntax in overdue email notifications without escaping Markdown special characters. When rendered by goldmark and sanitized by bluemonday (which allows <a> and <img> tags), injected Markdown constructs produce phishing links and tracking pixels in legitimate notific…</p>
+<p><strong>CVSS:</strong> 5.4 · <strong>CWE:</strong> CWE-79</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35600">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35599 – Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35599">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35599</strong></p>
+<p>Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, the addRepeatIntervalToTime function uses an O(n) loop that advances a date by the task's RepeatAfter duration until it exceeds the current time. By creating a repeating task with a 1-second interval and a due date far in the past, an attacker triggers billions of loop iterations, consuming CPU and holding a database…</p>
+<p><strong>CVSS:</strong> 6.5 · <strong>CWE:</strong> CWE-407</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35599">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35598 – Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35598">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35598</strong></p>
+<p>Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, the CalDAV GetResource and GetResourcesByList methods fetch tasks by UID from the database without verifying that the authenticated user has access to the task's project. Any authenticated CalDAV user who knows (or guesses) a task UID can read the full task data from any project on the instance. This vulnerability is…</p>
+<p><strong>CVSS:</strong> 4.3 · <strong>CWE:</strong> CWE-862</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35598">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35597 – Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35597">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35597</strong></p>
+<p>Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, the TOTP failed-attempt lockout mechanism is non-functional due to a database transaction handling bug. When a TOTP validation fails, the login handler in pkg/routes/api/v1/login.go calls HandleFailedTOTPAuth and then unconditionally rolls back. HandleFailedTOTPAuth in pkg/user/totp.go uses an in-memory counter (key-v…</p>
+<p><strong>CVSS:</strong> 5.9 · <strong>CWE:</strong> CWE-307</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35597">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-35596 – Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35596">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-35596</strong></p>
+<p>Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, the hasAccessToLabel function contains a SQL operator precedence bug that allows any authenticated user to read any label that has at least one task association, regardless of project access. Label titles, descriptions, colors, and creator information are exposed. This vulnerability is fixed in 2.3.0.</p>
+<p><strong>CVSS:</strong> 4.3 · <strong>CWE:</strong> CWE-863</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35596">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[High] CVE-2026-35595 – Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, ...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-35595">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk high">High</span> CVE-2026-35595</strong></p>
+<p>Vikunja is an open-source self-hosted task management platform. Prior to 2.3.0, the CanUpdate check at pkg/models/project_permissions.go:139-148 only requires CanWrite on the new parent project when changing parent_project_id. However, Vikunja's permission model uses a recursive CTE that walks up the project hierarchy to compute permissions. Moving a project under a different parent changes the p…</p>
+<p><strong>CVSS:</strong> 8.3 · <strong>CWE:</strong> CWE-269</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35595">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Unknown] CVE-2026-22560 – An open redirect vulnerability in Rocket.Chat versions prior to 8.4.0 allows use...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-22560">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk unknown">Unknown</span> CVE-2026-22560</strong></p>
+<p>An open redirect vulnerability in Rocket.Chat versions prior to 8.4.0 allows users to be redirected to arbitrary URLs by manipulating parameters within a SAML endpoint.</p>
+<p><strong>CVSS:</strong> N/A · <strong>CWE:</strong> CWE-601</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-22560">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Low] CVE-2026-40228 – In systemd 259, systemd-journald can send ANSI escape sequences to the terminals...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40228">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk low">Low</span> CVE-2026-40228</strong></p>
+<p>In systemd 259, systemd-journald can send ANSI escape sequences to the terminals of arbitrary users when a "logger -p emerg" command is executed, if ForwardToWall=yes is set.</p>
+<p><strong>CVSS:</strong> 2.9 · <strong>CWE:</strong> CWE-669</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40228">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">[Medium] CVE-2026-40227 – In systemd 260 before 261, a local unprivileged user can trigger an assert via a...</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40227">
+<div class="article-summary-box-inner">
+<span>
+<p><strong><span class="badge risk medium">Medium</span> CVE-2026-40227</strong></p>
+<p>In systemd 260 before 261, a local unprivileged user can trigger an assert via an IPC API call with an array or map that has a null element.</p>
+<p><strong>CVSS:</strong> 6.2 · <strong>CWE:</strong> CWE-1025</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40227">View on NVD</a></p>
+</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+<li class="source">
+<section>
+<h3 class="source-name">Latest Vulnerabilities</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40199 - Net::CIDR::Lite versions before 0.23 for Perl mishandles IPv4 mapped IPv6 addresses, which may allow IP ACL bypass</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40199">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40199
+<br/>
+<strong>Published :</strong> April 10, 2026, 10:16 p.m. | 52 minutes ago
+<br/>
+<strong>Description :</strong>Net::CIDR::Lite versions before 0.23 for Perl mishandles IPv4 mapped IPv6 addresses, which may allow IP ACL bypass.
+_pack_ipv6() includes the sentinel byte from _pack_ipv4() when building the packed representation of IPv4 mapped addresses like ::ffff:192.168.1.1. This produces an 18 byte value instead of 17 bytes, misaligning the IPv4 part of the address.
+The wrong length causes incorrect results in mask operations (bitwise AND truncates to the shorter operand) and in find() / bin_find() which use Perl string comparison (lt/gt). This can cause find() to incorrectly match or miss addresses.
+Example:
+my $cidr = Net::CIDR::Lite->new("::ffff:192.168.1.0/120");
+$cidr->find("::ffff:192.168.2.0"); # incorrectly returns true
+This is triggered by valid RFC 4291 IPv4 mapped addresses (::ffff:x.x.x.x).
+See also CVE-2026-40198, a related issue in the same function affecting malformed IPv6 addresses.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40198 - Net::CIDR::Lite versions before 0.23 for Perl does not validate IPv6 group count, which may allow IP ACL bypass</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40198">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40198
+<br/>
+<strong>Published :</strong> April 10, 2026, 10:16 p.m. | 52 minutes ago
+<br/>
+<strong>Description :</strong>Net::CIDR::Lite versions before 0.23 for Perl does not validate IPv6 group count, which may allow IP ACL bypass.
+_pack_ipv6() does not check that uncompressed IPv6 addresses (without ::) have exactly 8 hex groups. Inputs like "abcd", "1:2:3", or "1:2:3:4:5:6:7" are accepted and produce packed values of wrong length (3, 7, or 15 bytes instead of 17).
+The packed values are used internally for mask and comparison operations. find() and bin_find() use Perl string comparison (lt/gt) on these values, and comparing strings of different lengths gives wrong results. This can cause find() to incorrectly report an address as inside or outside a range.
+Example:
+my $cidr = Net::CIDR::Lite->new("::/8");
+$cidr->find("1:2:3"); # invalid input, incorrectly returns true
+This is the same class of input validation issue as CVE-2021-47154 (IPv4 leading zeros) previously fixed in this module.
+See also CVE-2026-40199, a related issue in the same function affecting IPv4 mapped IPv6 addresses.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-33119 - Microsoft Edge (Chromium-based) for Android Spoofing Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-33119">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-33119
+<br/>
+<strong>Published :</strong> April 10, 2026, 10:16 p.m. | 52 minutes ago
+<br/>
+<strong>Description :</strong>User interface (ui) misrepresentation of critical information in Microsoft Edge (Chromium-based) allows an unauthorized attacker to perform spoofing over a network.
+<br/>
+<strong>Severity:</strong> 5.4 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-33118 - Microsoft Edge (Chromium-based) Spoofing Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-33118">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-33118
+<br/>
+<strong>Published :</strong> April 10, 2026, 10:16 p.m. | 52 minutes ago
+<br/>
+<strong>Description :</strong>Microsoft Edge (Chromium-based) Spoofing Vulnerability
+<br/>
+<strong>Severity:</strong> 4.3 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-5724 - Missing Authentication on Streaming gRPC Replication Endpoint</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-5724">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-5724
+<br/>
+<strong>Published :</strong> April 10, 2026, 9:16 p.m. | 1 hour, 51 minutes ago
+<br/>
+<strong>Description :</strong>The frontend gRPC server's streaming interceptor chain did not include the authorization interceptor. When a ClaimMapper and Authorizer are configured, unary RPCs enforce authentication and authorization, but the streaming AdminService/StreamWorkflowReplicationMessages endpoint accepted requests without credentials. This endpoint is registered on the same port as WorkflowService and cannot be disabled independently. An attacker with network access to the frontend port could open the replication stream without authentication. Data exfiltration is possible, but  only when a configured replication target is correctly configured and the attacker has knowledge of the cluster configuration, as the history service validates cluster IDs and peer membership before returning replication data.
+Temporal Cloud is not affected.
+<br/>
+<strong>Severity:</strong> 6.3 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40252 - Broken Access Control (IDOR) Leading to Cross-Tenant Application Access in FastGPT</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40252">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40252
+<br/>
+<strong>Published :</strong> April 10, 2026, 9:16 p.m. | 1 hour, 51 minutes ago
+<br/>
+<strong>Description :</strong>FastGPT is an AI Agent building platform. Prior to 4.14.10.4, Broken Access Control vulnerability (IDOR/BOLA) allows any authenticated team to access and execute applications belonging to other teams by supplying a foreign appId. While the API correctly validates the team token, it does not verify that the requested application belongs to the authenticated team. This leads to cross-tenant data exposure and unauthorized execution of private AI workflows. This vulnerability is fixed in 4.14.10.4.
+<br/>
+<strong>Severity:</strong> 5.3 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40242 - Arcane Unauthenticated SSRF with Conditional Response Reflection in Template Fetch Endpoint</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40242">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40242
+<br/>
+<strong>Published :</strong> April 10, 2026, 9:16 p.m. | 1 hour, 51 minutes ago
+<br/>
+<strong>Description :</strong>Arcane is an interface for managing Docker containers, images, networks, and volumes. Prior to 1.17.3, the /api/templates/fetch endpoint accepts a caller-supplied url parameter and performs a server-side HTTP GET request to that URL without authentication and without URL scheme or host validation. The server's response is returned directly to the caller. type. This constitutes an unauthenticated SSRF vulnerability affecting any publicly reachable Arcane instance. This vulnerability is fixed in 1.17.3.
+<br/>
+<strong>Severity:</strong> 7.2 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40194 - phpseclib has a variable-time HMAC comparison in SSH2::get_binary_packet() using != instead of hash_equals()</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40194">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40194
+<br/>
+<strong>Published :</strong> April 10, 2026, 9:16 p.m. | 1 hour, 51 minutes ago
+<br/>
+<strong>Description :</strong>phpseclib is a PHP secure communications library. Prior to 3.0.51, 2.0.53, and 1.0.28, phpseclib\Net\SSH2::get_binary_packet() uses PHP's != operator to compare a received SSH packet HMAC against the locally computed HMAC. != on equal-length binary strings in PHP uses memcmp(), which short-circuits on the first differing byte. This is a real variable-time comparison (CWE-208), proven by scaling benchmarks. This vulnerability is fixed in 3.0.51, 2.0.53, and 1.0.28.
+<br/>
+<strong>Severity:</strong> 3.7 | LOW
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40191 - ClearanceKit has a policy bypass via dual-path Endpoint Security events checking only source path</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40191">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40191
+<br/>
+<strong>Published :</strong> April 10, 2026, 9:16 p.m. | 1 hour, 51 minutes ago
+<br/>
+<strong>Description :</strong>ClearanceKit intercepts file-system access events on macOS and enforces per-process access policies. Prior to 5.0.4-beta-1f46165, ClearanceKit's Endpoint Security event handler only checked the source path of dual-path file operations against File Access Authorization (FAA) rules and App Jail policies. The destination path was ignored entirely. This allowed any local process to bypass file-access protection by using rename, link, copyfile, exchangedata, or clone operations to place or replace files inside protected directories. This vulnerability is fixed in 5.0.4-beta-1f46165.
+<br/>
+<strong>Severity:</strong> 6.8 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40190 - LangSmith Client SDKs has Prototype Pollution in langsmith-sdk via Incomplete `__proto__` Guard in Internal lodash `set()`</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40190">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40190
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>LangSmith Client SDKs provide SDK's for interacting with the LangSmith platform. Prior to 0.5.18, the LangSmith JavaScript/TypeScript SDK (langsmith) contains an incomplete prototype pollution fix in its internally vendored lodash set() utility. The baseAssignValue() function only guards against the __proto__ key, but fails to prevent traversal via constructor.prototype. This allows an attacker who controls keys in data processed by the createAnonymizer() API to pollute Object.prototype, affecting all objects in the Node.js process. This vulnerability is fixed in 0.5.18.
+<br/>
+<strong>Severity:</strong> 5.6 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40189 - goshs has a file-based ACL authorization bypass in goshs state-changing routes</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40189">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40189
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>goshs is a SimpleHTTPServer written in Go. Prior to 2.0.0-beta.4, goshs enforces the documented per-folder .goshs ACL/basic-auth mechanism for directory listings and file reads, but it does not enforce the same authorization checks for state-changing routes. An unauthenticated attacker can upload files with PUT, upload files with multipart POST /upload, create directories with ?mkdir, and delete files with ?delete inside a .goshs-protected directory. By deleting the .goshs file itself, the attacker can remove the folder's auth policy and then access previously protected content without credentials. This results in a critical authorization bypass affecting confidentiality, integrity, and availability. This vulnerability is fixed in 2.0.0-beta.4.
+<br/>
+<strong>Severity:</strong> 9.3 | CRITICAL
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40188 - goshs is Missing Write Protection for Parametric Data Values</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40188">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40188
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>goshs is a SimpleHTTPServer written in Go. From 1.0.7 to before 2.0.0-beta.4, the SFTP command rename sanitizes only the source path and not the destination, so it is possible to write outside of the root directory of the SFTP. This vulnerability is fixed in 2.0.0-beta.4.
+<br/>
+<strong>Severity:</strong> 7.7 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40185 - Missing Authorization on Immich Trip Photo Routes in TREK</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40185">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40185
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>TREK is a collaborative travel planner. Prior to 2.7.2, TREK was missing authorization checks on the Immich trip photo management routes. This vulnerability is fixed in 2.7.2.
+<br/>
+<strong>Severity:</strong> 7.1 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40184 - Unauthenticated Access to Uploaded Files in TREK</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40184">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40184
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>TREK is a collaborative travel planner. Prior to 2.7.2, TREK served uploaded photos without requiring authentication. This vulnerability is fixed in 2.7.2.
+<br/>
+<strong>Severity:</strong> 3.7 | LOW
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40180 - Zip Slip Path Traversal in quarkus-openapi-generator ApicurioCodegenWrapper class</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40180">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40180
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>Quarkus OpenAPI Generator is Quarkus' extensions for generation of Rest Clients and server stubs generation. Prior to 2.16.0 and 2.15.0-lts, the unzip() method in ApicurioCodegenWrapper.java extracts ZIP entries without validating that the resolved file path stays within the intended output directory. At line 101, the destination is constructed as new File(toOutputDir, entry.getName()) and the content is written immediately. A malicious ZIP archive containing entries with path traversal sequences (e.g., ../../malicious.java) would write files outside the target directory. This vulnerability is fixed in 2.16.0 and 2.15.0-lts.
+<br/>
+<strong>Severity:</strong> 7.7 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40178 - ajenti.plugin.core has a race conditions in 2FA</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40178">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40178
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>ajenti.plugin.core defines all necessary core elements to allow Ajenti to run properly. Prior to 0.112, if the 2FA was activated, it was possible during a short moment after the authentication of an user to bypass its authentication. This vulnerability is fixed in 0.112.
+<br/>
+<strong>Severity:</strong> 6.9 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40177 - Password bypass when 2FA is activated</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40177">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40177
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>ajenti.plugin.core defines all necessary core elements to allow Ajenti to run properly. Prior to 0.112, if the 2FA was activated, it was possible to bypass the password authentication This vulnerability is fixed in 0.112.
+<br/>
+<strong>Severity:</strong> 9.3 | CRITICAL
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40175 - Axios has Unrestricted Cloud Metadata Exfiltration via Header Injection Chain</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40175">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40175
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.0, the Axios library is vulnerable to a specific "Gadget" attack chain that allows Prototype Pollution in any third-party dependency to be escalated into Remote Code Execution (RCE) or Full Cloud Compromise (via AWS IMDSv2 bypass). This vulnerability is fixed in 1.15.0.
+<br/>
+<strong>Severity:</strong> 10.0 | CRITICAL
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-40168 - Postiz has Server-Side Request Forgery via Redirect Bypass in /api/public/stream</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-40168">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-40168
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>Postiz is an AI social media scheduling tool. Prior to 2.21.5, the /api/public/stream endpoint is vulnerable to SSRF. Although the application validates the initially supplied URL and blocks direct private/internal hosts, it does not re-validate the final destination after HTTP redirects. As a result, an attacker can supply a public HTTPS URL that passes validation and then redirects the server-side request to an internal resource.
+<br/>
+<strong>Severity:</strong> 8.2 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-39922 - GeoNode < 4.4.5, 5.0.2 SSRF via Service Registration</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-39922">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-39922
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>GeoNode versions 4.0 before 4.4.5 and 5.0 before 5.0.2 contain a server-side request forgery vulnerability in the service registration endpoint that allows authenticated attackers to trigger outbound network requests to arbitrary URLs by submitting a crafted service URL during form validation. Attackers can probe internal network targets including loopback addresses, RFC1918 private IP ranges, link-local addresses, and cloud metadata services by exploiting insufficient URL validation in the WMS service handler without private IP filtering or allowlist enforcement.
+<br/>
+<strong>Severity:</strong> 5.3 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-39921 - GeoNode < 4.4.5, 5.0.2 SSRF via Document Upload</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-39921">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-39921
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>GeoNode versions 4.0 before 4.4.5 and 5.0 before 5.0.2 contain a server-side request forgery vulnerability that allows authenticated users with document upload permissions to trigger arbitrary outbound HTTP requests by providing a malicious URL via the doc_url parameter during document upload. Attackers can supply URLs pointing to internal network targets, loopback addresses, RFC1918 addresses, or cloud metadata services to cause the server to make requests to internal resources without SSRF mitigations such as private IP filtering or redirect validation.
+<br/>
+<strong>Severity:</strong> 5.3 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-32252 - Chartbrew Cross-Tenant Template Export and Secret Disclosure in `GET /team/:team_id/template/generate/:project_id`</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-32252">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-32252
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 4.9.0, a cross-tenant authorization bypass exists in Chartbrew in GET /team/:team_id/template/generate/:project_id. The GET handler calls checkAccess(req, "updateAny", "chart") without awaiting the returned promise, and it does not verify that the supplied project_id belongs to req.params.team_id or to the caller's team. As a result, an authenticated attacker with valid template-generation permissions in their own team can request the template model for a project belonging to another team and receive victim project data. This vulnerability is fixed in 4.9.0.
+<br/>
+<strong>Severity:</strong> 7.7 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-30232 - Chartbrew has SSRF in API Data Connection - No IP Validation on User-Provided URLs</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-30232">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-30232
+<br/>
+<strong>Published :</strong> April 10, 2026, 8:16 p.m. | 2 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 4.8.5, Chartbrew allows authenticated users to create API data connections with arbitrary URLs. The server fetches these URLs using request-promise without any IP address validation, enabling Server-Side Request Forgery attacks against internal networks and cloud metadata endpoints. This vulnerability is fixed in 4.8.5.
+<br/>
+<strong>Severity:</strong> 7.8 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-3446 - Base64 decoding stops at first padded quad by default</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-3446">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-3446
+<br/>
+<strong>Published :</strong> April 10, 2026, 7:16 p.m. | 3 hours, 51 minutes ago
+<br/>
+<strong>Description :</strong>When calling base64.b64decode() or related functions the decoding process would stop after encountering the first padded quad regardless of whether there was more information to be processed. This can lead to data being accepted which may be processed differently by other implementations. Use "validate=True" to enable stricter processing of base64 data.
+<br/>
+<strong>Severity:</strong> 6.0 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-33737 - Chamilo LMS has an XML External Entity (XXE) Injection</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-33737">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-33737
+<br/>
+<strong>Published :</strong> April 10, 2026, 7:16 p.m. | 3 hours, 52 minutes ago
+<br/>
+<strong>Description :</strong>Chamilo LMS is a learning management system. Prior to 1.11.38 and 2.0.0-RC.3, multiple files use simplexml_load_string() without XXE protection. With LIBXML_NOENT flag, arbitrary server files can be read. This vulnerability is fixed in 1.11.38 and 2.0.0-RC.3.
+<br/>
+<strong>Severity:</strong> 5.3 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+<li class="source">
+<section>
+<h3 class="source-name">darkreading</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Hims Breach Exposes the Most Sensitive Kinds of PHI</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/hims-breach-exposes-sensitive-phi">
+<div class="article-summary-box-inner">
+<span>Threat actors breached the telehealth brand, and now they may know who's bald, overweight, and impotent. What could they do with that information?</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Your Next Breach Will Look Like Business as Usual</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/identity-access-management-security/your-next-breach-business-as-usual">
+<div class="article-summary-box-inner">
+<span>These are the fundamental detection model shifts cybersecurity teams need to make to keep up with the rising number of credential-based attacks.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">FINRA Launches Financial Intelligence Fusion Center to Combat Cybersecurity and Fraud Threats</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/finra-launches-financial-intelligence-fusion-center">
+<div class="article-summary-box-inner">
+<span></span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Orange Business Reimagines Enterprise Voice Communications With Trust and AI</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/orange-business-enterprise-voice-comms">
+<div class="article-summary-box-inner">
+<span></span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Industrial Controllers Still Vulnerable As Conflicts Move to Cyber</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/industrial-controllers-vulnerable-conflicts-cyber">
+<div class="article-summary-box-inner">
+<span>The US government warns programmable logic controllers are being targeted, and research turns up 179 vulnerable operational technology (OT) devices.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Can Anthropic Keep Its Exploit-Writing AI Out of the Wrong Hands?</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/anthropic-exploit-writing-mythos-ai-safe">
+<div class="article-summary-box-inner">
+<span>Its Mythos Preview model, which can allegedly find and exploit critical zero-days, also comes with certain controls, the vendor said.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Russia's 'Fancy Bear' APT Continues Its Global Onslaught</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/russias-fancy-bear-apt-continues-global-onslaught">
+<div class="article-summary-box-inner">
+<span>Victims don't need to match the cyber espionage group's technical sophistication, experts say. But patching and some form of zero trust are now non-negotiable.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">'BlueHammer' Windows Zero-Day Exploit Signals Microsoft Bug Disclosure Issues</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/bluehammer-windows-exploit-microsoft-bug-disclosure-issues">
+<div class="article-summary-box-inner">
+<span>Under the alias 'Chaotic Eclipse,' a researcher released a PoC exploit for a zero-day flaw that allows for system takeover by a local user, citing an undisclosed beef with Microsoft.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Do Ceasefires Slow Cyberattacks? History Suggests Not</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-analytics/ceasefires-slow-cyberattacks-history">
+<div class="article-summary-box-inner">
+<span>The cybersecurity community is waiting with bated breath to see if Iranian hackers will honor a ceasefire that doesn't actually name or directly involve them.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Russia's Forest Blizzard Nabs Rafts of Logins via SOHO Routers</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/russia-forest-blizzard-logins-soho-routers">
+<div class="article-summary-box-inner">
+<span>Heard of fileless malware? How about malwareless cyber espionage? Russia's APT28 is spying on global organizations by modifying just one DNS setting in vulnerable routers.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Threat Actors Get Crafty With Emojis to Escape Detection</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/emojis-power-covert-threat-actor-communications">
+<div class="article-summary-box-inner">
+<span>When 🤖 means &quot;bot available,&quot; 🧰 signifies &quot;toolkit,&quot; or 💰💰💰 translates to &quot;big ransom,&quot; bad actors can evade filters and keep it all on the down-low.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI-Led Remediation Crisis Prompts HackerOne to Pause Bug Bounties</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-led-remediation-crisis-prompts-hackerone-pause-bug-bounties">
+<div class="article-summary-box-inner">
+<span>Discovery used to be the bottleneck for open source bugs, but with automated discovery, remediation's the bottleneck, which bounties don't fund.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Fraud Rockets Higher in Mobile-First Latin America</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/fraud-mobile-first-latin-america">
+<div class="article-summary-box-inner">
+<span>Cyber-fraudsters move quickly from compromised devices to account takeover to funds transfer, shifting money before many financial institutions can react.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Full Sail University to Open IBM Cyber Defense Range Powered by AWS and Cloud Range on Campus</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/full-sail-university-ibm-cyber-defense-range-aws-cloud-range">
+<div class="article-summary-box-inner">
+<span></span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Niobium Introduces The Fog</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/niobium-introduces-the-fog">
+<div class="article-summary-box-inner">
+<span></span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Pluralsight Launches SecureReady to Help Organizations Build Job-Ready Cybersecurity Teams</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/remote-workforce/pluralsight-launches-secureready-cybersecurity-teams">
+<div class="article-summary-box-inner">
+<span></span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Iranian Threat Actors Disrupt US Critical Infrastructure via Exposed PLCs</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/iranian-threat-actors-us-critical-infrastructure-exposed-plcs">
+<div class="article-summary-box-inner">
+<span>Attackers compromised Internet-facing OT devices and caused file and display manipulation, operational disruption, and financial losses across sectors.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Storm-1175 Deploys Medusa Ransomware at 'High Velocity'</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/storm-1175-medusa-ransomware-high-velocity">
+<div class="article-summary-box-inner">
+<span>Microsoft says the financially motivated cybercrime group has exploited n-day and zero-day vulnerabilities in campaigns predicated on speed.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Grafana Patches AI Bug That Could Have Leaked User Data</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/grafana-patches-ai-bug-leaked-user-data">
+<div class="article-summary-box-inner">
+<span>By hiding malicious instructions on an attacker-controlled Web page, AI could ingest orders that appear benign but return sensitive data to the attacker's server.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">RSAC 2026: How AI Is Reshaping Cybersecurity Faster Than Ever</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/rsac-2026-how-ai-is-reshaping-cybersecurity-faster-than-ever">
+<div class="article-summary-box-inner">
+<span>Dark Reading's Kelly Jackson Higgins shares insights on the past, present, and future of cybersecurity after attending RSAC 2026 Conference.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Human vs. AI: Debates Shape RSAC 2026 Cybersecurity Trends</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/human-vs-ai-debates-shape-rsac-2026-cybersecurity-trends">
+<div class="article-summary-box-inner">
+<span>As AI dominated RSAC 2026, CISOs and industry leaders debated its role in security, from agentic applications to the challenges of scaling human involvement in decision-making.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Lies, Damned Lies, and Cybersecurity Metrics</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/lies-damned-lies-cybersecurity-metrics">
+<div class="article-summary-box-inner">
+<span>A panel of five C-suite leaders discuss how cybersecurity success is measured and why it isn't improving results.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Focusing on the People in Cybersecurity at RSAC 2026 Conference</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/focusing-people-cybersecurity-rsac2026">
+<div class="article-summary-box-inner">
+<span>AI dominated RSAC 2026 Conference, but it's still the humans in cybersecurity who matter most.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI-Assisted Supply Chain Attack Targets GitHub</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-assisted-supply-chain-attack-targets-github">
+<div class="article-summary-box-inner">
+<span>PRT-scan is the second campaign in recent months where a threat actor appears to have leveraged AI for automated targeting of a widespread GitHub misconfiguration.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Axios Attack Shows How Complex Social Engineering Is Industrialized</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/axios-attack-complex-social-engineering-industrialized">
+<div class="article-summary-box-inner">
+<span>The attack on the popular NPM package Axios is just one of many targeting maintainers and has shone a light on how threat actors can scale sophisticated social engineering campaigns.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Fortinet Issues Emergency Patch for FortiClient Zero-Day</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/fortinet-emergency-patch-forticlient-zero-day">
+<div class="article-summary-box-inner">
+<span>The authentication bypass flaw, tracked as CVE-2026-35616, is the latest in a series of Fortinet vulnerabilities that have been exploited in the wild.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Automated Credential Harvesting Campaign Exploits React2Shell Flaw</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/automated-credential-harvesting-campaign-react2shell">
+<div class="article-summary-box-inner">
+<span>An emerging threat cluster tracked as UAT-10608 is exploiting vulnerable Web-exposed Next.js apps and using an automated tool to exfiltrate credentials, secrets, and other system data.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Shadow AI in Healthcare Is Here to Stay</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/shadow-ai-in-healthcare-is-here-to-stay">
+<div class="article-summary-box-inner">
+<span>Medical professionals are not going to stop using AI tools to manage growing workloads. Organizations should prioritize bolstering security protocols to limit their blast radius.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">OWASP GenAI Security Project Gets Update, New Tools Matrix</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/owasp-genai-security-project-update-matrix">
+<div class="article-summary-box-inner">
+<span>In recognition of 21 generative AI risks, the standards group recommends that companies take separate but linked approaches to defending GenAI and agentic AI systems.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Inconsistent Privacy Labels Don't Tell Users What They Are Getting</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/data-privacy/inconsistent-privacy-labels-not-enough">
+<div class="article-summary-box-inner">
+<span>Data privacy labels are a great idea for mobile apps, but the current versions just aren't good enough.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Apple Breaks Precedent, Patches DarkSword for iOS 18</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/apple-patches-darksword-ios-18">
+<div class="article-summary-box-inner">
+<span>Even organizations with users unwilling or unable to adopt iOS 26 can now protect themselves from a severe mobile OS-cracking tool.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Blast Radius of TeamPCP Attacks Expands Amid Hacker Infighting</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/teampcp-attacks-hacker-infighting">
+<div class="article-summary-box-inner">
+<span>As organizations disclose breaches tied to TeamPCP's supply chain attacks, ShinyHunters and Lapsus$ are getting involved, taking credit, and creating a murky situation for enterprises.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Picking Up 'Skull Vibrations'? Could Be XR Headset Authentication</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/remote-workforce/skull-vibrations-could-be-xr-headset-authentication">
+<div class="article-summary-box-inner">
+<span>&quot;Skull vibration harmonics generated by vital signs&quot; can be used to sign in to VR, AR, and MR headsets, according to emerging research.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Claude Source Code Leak Highlights Big Supply Chain Missteps</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/source-code-leaks-highlight-lack-supply-chain-oversight">
+<div class="article-summary-box-inner">
+<span>Or, why the software supply chain should be treated as critical infrastructure with guardrails built in at every layer.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Chainguard Unveils Factory 2.0 to Automate Hardening the Software Supply Chain</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/chainguard-factory-automate-hardening-software-supply-chain">
+<div class="article-summary-box-inner">
+<span>The rebuilt Chainguard platform adds deeper security designed to continuously reconcile open source artifacts across containers, libraries, agent skills, and GitHub Actions.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CrowdStrike Next-Gen SIEM Can Now Ingest Microsoft Defender Telemetry</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/crowdstrike-falcon-ingest-microsoft-defender-telemetry">
+<div class="article-summary-box-inner">
+<span>Once CrowdStrike's nemesis, Microsoft is now a collaborator. A shared interest in Formula 1 helped thaw the years-long fierce rivalry.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Geopolitics, AI, and Cybersecurity: Insights From RSAC 2026</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/geopolitics-ai-cybersecurity-insights-rsac-2026">
+<div class="article-summary-box-inner">
+<span>AI-driven threats, global leadership shifts, and the future of cybersecurity in a rapidly evolving landscape were among the discussions at RSAC 2026 Conference.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Not Toying Around: Hasbro Attack May Take 'Weeks' to Remediate</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/toying-around-hasbro-attack-remediate">
+<div class="article-summary-box-inner">
+<span>The company's 8-K filing notes &quot;unauthorized access&quot; and that it has activated business continuity plans and taken some systems offline.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Security Bosses Are All in on AI: Here's Why</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/security-bosses-all-in-ai">
+<div class="article-summary-box-inner">
+<span>CISOs are bullish on AI and have big plans to roll out future tools. We talk to Reddit CISO Frederick Lee and Omdia principal analyst Dave Gruber about how AI is working out in the real world, as well as its future promise.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">RSAC 2026: AI Dominates, But Community Remains Key to Security</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/rsac-2026-ai-dominates-community">
+<div class="article-summary-box-inner">
+<span>As AI took center stage at this year's conference, experts debated automation, oversight and the evolving role of human intelligence in cybersecurity — despite the US government's notable absence.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Bank Trojan 'Casbaneiro' Worms Through Latin America</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/bank-trojan-casbaneiro-worms-latin-america">
+<div class="article-summary-box-inner">
+<span>Augmented Marauder's multipronged banking-Trojan cyber campaigns are targeting Spanish speakers, evading detection, and replicating rapidly.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Ransomware Will Hit Hospitals. Rehearsals Are Key to Defense</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/ransomware-hospitals-preparation-key-defense">
+<div class="article-summary-box-inner">
+<span>A chief medical information officer describes what hospitals face when they inevitably suffer a ransomware attack—whether it leads to short- or long-term outages.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">LatAm's Self-Taught Cyber Talent Overlooked Amid Cyberattack Glut</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/remote-workforce/latam-cyber-talent-overlooked-cyberattack-glut">
+<div class="article-summary-box-inner">
+<span>A newly released study exclusively shared with Dark Reading details the unique circumstances that make up Latin America's labor pool, and why organizations may want to expand their talent search.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Cyberattacks Intensify Pressure on Latin American Governments</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/cyberattacks-latin-american-governments">
+<div class="article-summary-box-inner">
+<span>Cyber threats across Latin America are increasingly targeting government systems, from disruptive attacks in Puerto Rico to a surge of probes against Colombia’s health sector.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Venom Stealer MaaS Platform Commoditizes ClickFix Attacks</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/venom-stealer-maas-commoditizes-clickfix-attacks">
+<div class="article-summary-box-inner">
+<span>A new service on the cybercrime market provides automated capabilities to create persistent information-stealing social engineering attacks.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Are We Training AI Too Late?</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-analytics/are-we-training-ai-too-late">
+<div class="article-summary-box-inner">
+<span>Ask the Expert: Cybersecurity teams need to expand their field of view to include new, unique threat sources, rather than relying on past, proven threat actors.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">The Forgotten Endpoint: Security Risks of Dormant Devices</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/forgotten-endpoint-security-risks-dormant-devices">
+<div class="article-summary-box-inner">
+<span>Technology Talk: That forgotten notebook holds plenty of secrets to enterprise access.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Axios NPM Package Compromised in Precision Attack</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/axios-npm-package-compromised-precision-attack">
+<div class="article-summary-box-inner">
+<span>The NPM package for Axios, a popular JavaScript HTTP client library, was briefly compromised this week, possibly by North Korean threat actors.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Google's Vertex AI Is Over-Privileged. That's a Problem</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/googles-vertex-ai-over-privilege-problem">
+<div class="article-summary-box-inner">
+<span>Palo Alto Networks researchers show how attackers could exploit AI agents on Google's Vertex AI to steal data and break into restricted cloud infrastructure.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">TeamPCP Breaches Cloud, SaaS Instances With Stolen Credentials</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cloud-security/teampcp-breaches-cloud-saas-instances-stolen-credentials">
+<div class="article-summary-box-inner">
+<span>The threat group's shift to speedy attacks on AWS, Azure, and SaaS instances shows organizations need to respond quickly to compromised credentials.</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+</ul>
+</section>
+<section class="daily-content">
+<h2 class="daily-heading">
 <time datetime="2026-04-09T23:16:26.139394678Z">04-09</time>
 </h2>
 <ul class="sources card">
