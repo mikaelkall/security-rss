@@ -12,6 +12,977 @@
 <body>
 <section class="daily-content">
 <h2 class="daily-heading">
+<time datetime="2026-08-12T23:14:40.813067911Z">08-12</time>
+</h2>
+<ul class="sources card">
+<li class="source">
+<section>
+<h3 class="source-name">Latest Vulnerabilities</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-7366 - IBM DataPower Gateway affected by HTTP request header leakage in XML-Firewall</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-7366">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-7366
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:19 p.m. | 11 minutes ago
+<br/>
+<strong>Description :</strong>IBM DataPower Gateway 11.0.0.0 through 11.0.0.1 and IBM DataPower Gateway 10.5.0.0 through 10.5.0.21 and IBM DataPower Gateway 10.6.0.0 through 10.6.0.9 allows a race condition that results in improper isolation of request state when handling the built‑in X‑Client‑IP header. Under concurrent request processing, X‑Client‑IP values may be contaminated across requests, enabling IP spoofing and disclosure of other clients’ IP addresses.
+<br/>
+<strong>Severity:</strong> 4.2 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-73491 - Loofah `allowed_uri?` does not detect `javascript:` URIs split by named whitespace character references</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-73491">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-73491
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. From 2.25.0 until 2.25.2, Loofah::HTML5::Scrub.allowed_uri? does not reject javascript: URIs whose scheme is split or prefixed with the HTML5 named whitespace character references &Tab; or &NewLine;. CGI.unescapeHTML leaves those references intact, so allowed_uri? reports the URL safe even though a browser decodes and strips the tab or line feed and executes the resulting javascript: URL. This issue affects only callers that pass HTML-encoded strings directly to allowed_uri?; Loofah's default sanitize() path is not affected. This issue is fixed in version 2.25.2.
+<br/>
+<strong>Severity:</strong> 2.3 | LOW
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-73490 - Loofah: SVG `href` attribute bypasses local-reference restriction</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-73490">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-73490
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. Prior to 2.25.2, Loofah's HTML5 sanitizer applies its local-reference restriction only to the xlink:href attribute on SVG use and feImage elements, while browsers also accept the plain href attribute. A crafted sanitized SVG can therefore reference an arbitrary same-origin external document; use may render external SVG content containing scripts or other dangerous content, and feImage may load external images for tracking. Applications that sanitize user-supplied SVG with Loofah's default allowlist are affected. This issue is fixed in version 2.25.2.
+<br/>
+<strong>Severity:</strong> 4.7 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-73430 - Russh: Pre-auth remote panic via all-zero Curve25519 peer public value (encode_mpint OOB)</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-73430">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-73430
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>Russh is a Rust SSH client & server library. Prior to 0.62.4, an unauthenticated SSH client can cause a denial of service by sending SSH_MSG_KEX_ECDH_INIT with a 32-byte all-zero Q_C value. Curve25519Kex::server_dh in russh/src/kex/curve25519.rs accepts the all-zero peer public value and computes an all-zero shared secret, after which compute_exchange_hash calls encode_mpint in russh/src/kex/mod.rs and indexes beyond the end of the input while skipping leading zero bytes. The resulting panic occurs before authentication and terminates the server key-exchange task. This issue is fixed in version 0.62.4.
+<br/>
+<strong>Severity:</strong> 5.3 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-73429 - Russh: client wrong-length X25519 `clone_from_slice` panic (pre-auth DoS)</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-73429">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-73429
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>Russh is a Rust SSH client & server library. Prior to 0.62.4, a malicious SSH server can crash a russh client session with a malformed KEX_ECDH_REPLY containing a server ephemeral value that is not 32 bytes long. The client-side Curve25519Kex::compute_shared_secret function in russh/src/kex/curve25519.rs passes the decoded exchange.server_ephemeral value to clone_from_slice without validating its length, causing a deterministic panic before the server host key is verified. The panic terminates the spawned client session task and surfaces as a JoinError, while the embedding process normally remains running. This issue is fixed in version 0.62.4.
+<br/>
+<strong>Severity:</strong> 5.3 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-73427 - Trix: XSS via JSON deserialization bypass in drag-and-drop (Level0InputController)</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-73427">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-73427
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>Trix is a what-you-see-is-what-you-get rich text editor for everyday writing. Prior to 2.1.18, Trix is vulnerable to cross-site scripting when a crafted application/x-trix-document JSON payload is dropped into an editor using the fallback Level0InputController, such as an embedded WebView without Input Events Level 2 support. The StringPiece.fromJSON method trusts href attributes from the JSON payload without sanitization, allowing a draggable element containing a javascript: URI to bypass DOMPurify sanitization and inject executable JavaScript into the DOM. Exploitation requires the victim to drag and drop attacker-controlled content, and server-side HTML sanitization can neutralize the payload on save. This issue is fixed in version 2.1.18.
+<br/>
+<strong>Severity:</strong> 2.1 | LOW
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-73425 - @astrojs/netlify generates an overly-broad Netlify Image CDN allowlist because remotePatterns.pathname metacharacters are not escaped</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-73425">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-73425
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>Astro is a web framework for content-driven websites. Prior to 8.1.2, the Astro Netlify adapter converts each image.remotePatterns entry into a regular expression written to .netlify/v1/config.json under images.remote_images for Netlify's Image CDN allowlist. In packages/integrations/netlify/src/index.ts, remotePatternToRegex() escapes dots in hostname values but interpolates literal pathname values without escaping regular expression metacharacters such as ., +, ?, (, and [, so a restrictive pathname such as /img/v1.0/file also matches metacharacter-adjacent paths, including paths that cross a segment. Netlify enforces the generated regular expression directly and Astro's matchPattern() helper does not revalidate the request, allowing optimization of images on an already-allowed host that the declared pathname was intended to exclude. This issue is fixed in version 8.1.2.
+<br/>
+<strong>Severity:</strong> 3.7 | LOW
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-73423 - Astro: composable `astro/hono` pipeline bypasses `security.checkOrigin` when `middleware()` is absent or misordered</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-73423">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-73423
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>Astro is a web framework for content-driven websites. From 7.0.0 until 7.0.6, the composable astro/hono pipeline installs security.checkOrigin only through the middleware() primitive, while actions() and pages() can dispatch to user code independently. Mounting actions() before middleware(), as in the examples/advanced-routing example and Cloudflare Hono documentation, allows cross-origin form-encoded action requests to execute before the origin check, and using pages() without middleware() drops the check for on-demand endpoints and pages. The flaw enables blind write-only cross-site request forgery using the victim's cookies against ActionHandler.handle and PagesHandler.handleWithErrorFallback when manifest.checkOrigin is enabled; the attacker can trigger a state-mutating action or endpoint handler but cannot read the cross-origin response. The default non-composable astro() pipeline is not affected. This issue is fixed in version 7.0.6.
+<br/>
+<strong>Severity:</strong> 5.1 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-73422 - Astro: Reflected XSS via unescaped View Transition animation properties</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-73422">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-73422
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>Astro is a web framework for content-driven websites. From 2.9.0 until 7.1.0, Astro's server-side View Transition CSS generator interpolates animation properties into an inline style element without escaping them for CSS and HTML contexts. An attacker-controlled View Transition animation value such as duration can terminate the generated style element and inject arbitrary HTML or JavaScript. The affected code is packages/astro/src/runtime/server/transition.ts; renderTransition passes sheet.toString() into markHTMLString(), while addAnimationProperty serializes duration through toTimeValue() and also handles easing, direction, delay, fillMode, and name. Exploitation requires an on-demand or server-rendered route to pass attacker-controlled data into a View Transition animation definition and can execute arbitrary JavaScript in the affected application's origin, allowing access to sensitive page data and authenticated actions available to the victim. This issue is fixed in version 7.1.0.
+<br/>
+<strong>Severity:</strong> 5.3 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-73419 - NextAuth.js: OAuth state, nonce, and PKCE check cookies are not bound to the provider that created them</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-73419">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-73419
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>NextAuth.js provides authentication for Next.js. Prior to@auth/core 0.41.3 and next-auth 4.24.15 and 5.0.0-beta.32, Auth.js stores the OAuth/OIDC anti-CSRF checks state, nonce, and the PKCE verifier in global cookies that are not bound to the provider that created them. On callback, a check value minted during a sign-in started with one provider can satisfy the callback for a different provider because the stored cookie is not verified against the callback provider's identity, including the provider ID, issuer, client ID, or redirect URI. In a multi-provider application that permits account linking while logged in, when one provider's authorization request is observable and a target provider callback can be satisfied without a PKCE verifier, an attacker can lure a victim into starting a legitimate same-origin flow and link the attacker's target-provider account to the victim's Auth.js user. The linked provider grants the attacker persistent sign-in to the victim's account, while cross-site request forgery alone is insufficient. This issue is fixed in @auth/core 0.41.3 and next-auth 4.24.15 and 5.0.0-beta.32.
+<br/>
+<strong>Severity:</strong> 6.8 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-73418 - NextAuth.js: getToken() throws an uncaught exception on malformed Bearer authorization headers</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-73418">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-73418
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>NextAuth.js provides authentication for Next.js. Prior to @auth/core 0.41.3 and next-auth 4.24.15 and 5.0.0-beta.32, the exported getToken() helper in the next-auth/jwt and @auth/core/jwt modules can throw an uncaught exception when it reads a malformed Authorization: Bearer header. When no session cookie is present, getToken() URL-decodes the bearer value before validating it, and malformed percent encoding causes decodeURIComponent() to throw instead of treating the token as invalid. Because getToken() is commonly called in API routes, middleware, and server-side request handlers, a single unauthenticated request can trigger an unhandled exception in code paths that authenticate requests, causing a per-request denial of service without exposing tokens, sessions, or other data and without bypassing authentication. This issue is fixed in @auth/core 0.41.3 and next-auth 4.24.15 and 5.0.0-beta.32.
+<br/>
+<strong>Severity:</strong> 7.5 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-66898 - Path traversal via unvalidated instance name in backup tarball restore enables root file write / RCE</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-66898">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-66898
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>A path traversal vulnerability in LXD allows an attacker to manipulate file system paths during backup import and restore operations. When importing or restoring a backup archive, LXD fails to validate instance and storage volume names contained within the archive metadata. An attacker can exploit this flaw by supplying a crafted backup archive with malicious instance or volume names containing path traversal sequences, potentially allowing file access or overwriting outside the designated restore directory.
+<br/>
+<strong>Severity:</strong> 9.9 | CRITICAL
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-65370 - ServiceTalk HTTP Request Smuggling Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-65370">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-65370
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>ServiceTalk HTTP/1.x incorrectly handles malformed Transfer-Encoding which could result in request smuggling attacks. This vulnerability is addressed in servicetalk version 0.42.65.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-64826 - rConfig < 8.2.13 Path Traversal File Read via FileDownloadController</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-64826">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-64826
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>rConfig before 8.2.13 contains a path traversal vulnerability that allows authenticated attackers to read arbitrary files by supplying unsanitized directory traversal sequences in the filename GET parameter of the download_export() method. Attackers can craft requests with ../ sequences to escape the exports base directory and access sensitive files readable by the web server process, including application environment files containing encryption keys, database credentials, and mail configuration.
+<br/>
+<strong>Severity:</strong> 7.1 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-62421 - Rejected reason: Voluntarily withdrawn</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-62421">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-62421
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>Rejected reason: Voluntarily withdrawn
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-19654 - Rsyslog: a configuration-dependent issue in rsyslog's optional imptcp input module can allow an unauthenticated remote peer to crash rsyslogd</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-19654">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-19654
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>A unauthenticated remote peer may lead rsyslogd to crash due to a flaw in the optional imptcp module. A crafted input sequence during oversize-frame recovery can cause an invalid internal message length and terminate rsyslogd. No confidentiality or integrity impact, privilege escalation, or code execution has been identified. imtcp and the default imptcp framing modes are not affected.
+<br/>
+<strong>Severity:</strong> 7.5 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-19503 - Insufficient OIDC endpoint validation could invoke unintended local protocol handlers</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-19503">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-19503
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>MongoDB Schema Manager and MongoDB Atlas SQL ODBC Driver do not validate the scheme of the authorization and token endpoints returned by an OIDC issuer's discovery document. A user induced to connect to an uncontrolled MongoDB deployment using MONGODB-OIDC authentication may have an uncontrolled URI dispatched to their operating system's default protocol handler, potentially exposing credentials or, under certain conditions, resulting in code execution in the user's context.
+<br/>
+<strong>Severity:</strong> 6.3 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-19502 - Insufficient redaction of sensitive configuration values in diagnostic output of MongoDB SQL Schema Builder CLI</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-19502">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-19502
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>MongoDB SQL Schema Builder CLI records its startup configuration to standard output and, when file logging is enabled, to a log file on disk. Certain connection settings were written without redaction, so authentication material supplied by the operator could appear in plaintext in that diagnostic output. A local user with read access to the terminal session or the log directory, or anyone with access to a location where those logs are subsequently collected, could obtain those values.
+<br/>
+<strong>Severity:</strong> 6.8 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-19130 - Provider-credential-controller: provider-credential-controller: cross-namespace credential propagation via attacker-controlled copiedfrom labels bypasses authorization</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-19130">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-19130
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>A flaw was found in the provider-credential-controller component of multicluster-engine (MCE). An attacker with specific permissions on the hub cluster, and knowledge of a prior credential value, could exploit an authorization bypass vulnerability. By manipulating `copiedFrom` labels, the attacker could intercept newly rotated provider credentials, leading to unauthorized information disclosure. This allows access to sensitive credentials that should otherwise be protected.
+<br/>
+<strong>Severity:</strong> 5.8 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-19004 - MongoDB BI Connector ODBC Driver Memory-Safety Issue When Handling Stored Procedure Output Parameters</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-19004">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-19004
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>An application using the MongoDB BI Connector ODBC Driver may experience a memory-safety issue when processing output parameters from a stored procedure. Triggering this issue requires connecting to an untrusted or impersonated database server that returns crafted metadata. This may result in process termination, disclosure of process memory, or, under certain conditions, arbitrary code execution.
+<br/>
+<strong>Severity:</strong> 8.8 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-19002 - Crafted database metadata may cause memory corruption in MongoDB BI Connector ODBC Driver</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-19002">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-19002
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>A missing bounds check when parsing stored procedure parameter metadata in the MongoDB BI Connector ODBC Driver can result in an out-of-bounds write in the client application process. Triggering this issue requires control over the server the driver connects to, or the ability to respond in its place, in order to return malformed metadata. The resulting memory corruption may cause the client application to terminate abnormally or, under certain conditions, execute unintended code.
+<br/>
+<strong>Severity:</strong> 8.8 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-19001 - MongoDB BI Connector ODBC driver may write outside an allocated buffer when handling oversized catalog object names</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-19001">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-19001
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>The MongoDB BI Connector ODBC Driver may write outside the bounds of a fixed-size buffer when an application supplies an unusually long catalog, schema, or object name to a metadata retrieval function. This may result in memory corruption within the calling application's process, leading to abnormal termination and, under certain conditions, the potential for arbitrary code execution.
+<br/>
+<strong>Severity:</strong> 9.8 | CRITICAL
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-18888 - MongoDB BI Connector ODBC driver may write outside an allocated buffer when retrieving large floating point values as character data</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-18888">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-18888
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>The MongoDB BI Connector ODBC Driver converts floating point column values into text without checking that the result fits within the destination buffer. When an application reads a sufficiently large floating point value as text, the driver may write beyond the end of that buffer and corrupt adjacent memory. A user who can store data in a collection read through the BI Connector could use this to crash the application performing the read.
+<br/>
+<strong>Severity:</strong> 7.1 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-18097 - IBM® Db2® federated server could allow a local attacker to obtain sensitive information due to the logging of plain text passwords in trace files.</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-18097">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-18097
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.5 for Linux, UNIX and Windows (includes DB2 Connect Server) could allow a local attacker to obtain sensitive information due to the logging of plain text passwords in trace files.
+<br/>
+<strong>Severity:</strong> 5.5 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-18096 - IBM® Db2® could allow a local attacker to cause a denial of service due to a memory leak</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-18096">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-18096
+<br/>
+<strong>Published :</strong> Aug. 12, 2026, 9:17 p.m. | 13 minutes ago
+<br/>
+<strong>Description :</strong>IBM Db2 12.1.5 for Linux, UNIX and Windows (includes DB2 Connect Server) could allow a local attacker to cause a denial of service due to a memory leak.
+<br/>
+<strong>Severity:</strong> 3.3 | LOW
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+<li class="source">
+<section>
+<h3 class="source-name">darkreading</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Long-running Data Theft Campaign Targeting Salesforce, ServiceNow</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/long-running-data-theft-campaign-salesforce-servicenow">
+<div class="article-summary-box-inner">
+<span>The &quot;City-Forum&quot; campaign has been active since at least March 2025 and has targeted organizations across multiple sectors with custom tooling.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Walmart's &quot;Trusted Agent&quot; Approach to Purple Teaming</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/walmart-trusted-agent-approach-purple-teaming">
+<div class="article-summary-box-inner">
+<span>Walmart co-locates red and blue teams to build trust and improve security through collaborative purple teaming exercises</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Ransomware Hits Colombian Justice Ministry Days Before Presidential Transition</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/ransomware-hits-colombian-justice-ministry-presidential-transition">
+<div class="article-summary-box-inner">
+<span>Attackers continue to target critical infrastructure and government-linked organizations in the country, mirroring the increased activity across Latin America.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Walmart Leaders Transform Security Operations Without Going Bananas</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/walmart-leaders-transform-security-operations-without-going-bananas">
+<div class="article-summary-box-inner">
+<span>The big-box giant has scaled its defenses by encouraging trust and innovation. Good communications, transparency, and team spirit are key factors.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Microsoft's Patch Tuesday Deluge Continues With August Updates</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/microsofts-patch-tuesday-deluge-continues">
+<div class="article-summary-box-inner">
+<span>Security experts say prioritization should be the main focus for the August updates, not the massive CVE volume.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Gunra Ransomware Gang Exploits Fortinet Flaws, Bypasses MFA</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/gunra-ransomware-gang-fortinet-flaws-bypasses-mfa">
+<div class="article-summary-box-inner">
+<span>The ransomware-as-a-service operation is finding success against critical infrastructure targets with leaked Conti code and old flaws in firewalls and VPN appliances.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">'GhostJacking' Exposes Identity Governance Gaps in AI Agents</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/ghostjacking-identity-governance-gaps-ai-agents">
+<div class="article-summary-box-inner">
+<span>New research shows how attackers can use security alerts and blocked events to manipulate and hijack AI agents.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Multistate Water System Attacks Widen, Iran Suspected</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/multistate-water-system-attacks-widen-iran-suspected">
+<div class="article-summary-box-inner">
+<span>Attacks targeting water systems just keep flowing across a dozen states, against ill-secured, Internet-exposed PLCs.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Metabase SQL Zero-Day Attacks Could Have Wide Blast Radius</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/metabase-sql-zero-day-attacks-wide-blast-radius">
+<div class="article-summary-box-inner">
+<span>The maximum-severity vulnerability, which still has no CVE, allows malicious, remote administrator access to the business-analytics platform and its downstream users.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">The Patch Gap: Why Defenders Need to Think in Chains, Not Checklists</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/patch-gap-defenders-chains-not-checklists">
+<div class="article-summary-box-inner">
+<span>It's time to turn from CVSS-backed patching to choke-point patching focused on breaking chains to critical assets.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Coruna, DarkSword iOS Exploits Proliferate Globally</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/coruna-darksword-ios-exploits-proliferate-globally">
+<div class="article-summary-box-inner">
+<span>Sophisticated iPhone exploit chains previously limited to nation-states are spreading far and wide to organized cybercrime groups.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Outdated Cybercrime Laws Put Security Researchers at Risk</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/outdated-cybercrime-laws-security-researchers-risk">
+<div class="article-summary-box-inner">
+<span>A public policy expert mapped global cybercrime laws to develop a five-point framework for protecting ethical hackers and good-faith security research.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Sherlock Holmes Was the 'OG' Social Engineer</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/sherlock-holmes-was-the-og-social-engineer">
+<div class="article-summary-box-inner">
+<span>The crime solver wore disguises, spied on targets, and built intelligence networks long before modern-day tactics emerged. He has lessons for today's ethical- and unethical hackers.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI-Generated Patches Fail Half the Time</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-generated-patches-fail-half-time">
+<div class="article-summary-box-inner">
+<span>A study of more than 6,000 patches found that even working patches can introduce new bugs, break something else, or are open to bypass.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">The Coordination Gap: How Attackers Are Outpacing Law Enforcement</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/coordination-gap-attackers-outpacing-law-enforcement">
+<div class="article-summary-box-inner">
+<span>The fight against cybercrime continues because threat actors have adapted their strategies to avoid deterrents, but law enforcement still operates in silos.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Déjà Vu? Meta's AI Escapes Testing Lab in Hacking Joyride</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/meta-ai-escapes-lab-hacking-joyride">
+<div class="article-summary-box-inner">
+<span>In the span of three weeks, OpenAI, Anthropic, and Meta have all disclosed AI agent sandbox escape events affecting real organizations.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Researcher Claims Control of ChatGPT Secure Sandbox</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cloud-security/researcher-claims-control-chatgpt-secure-sandbox">
+<div class="article-summary-box-inner">
+<span>A researcher demonstrated a proof-of-concept attack chain that provided C2-style influence over ChatGPT's isolated sandbox during a session at Black Hat USA 2026.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">From Bobmojis to Bobbleheads: How the Democratic Party Built a Security-First Culture</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/from-bobmojis-to-bobbleheads-how-the-democratic-party-built-a-security-first-culture">
+<div class="article-summary-box-inner">
+<span>Two former chief security officers of the Democratic National Committee explain that a strong security-first mindset requires executive support — and a dose of absurdity.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI Sends Global Crime Syndicates Into Fraud Nirvana</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/ai-global-crime-syndicates-fraud-nirvana">
+<div class="article-summary-box-inner">
+<span>Organized crime is convincingly scamming at scale, making billions thanks to AI-enabled voice cloning, deepfake real-time video overlays, LLM-driven persona management, and automated translation.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI Browsers Vulnerable to 'PleaseFix' Zero-Click Agent Hijacking</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/ai-browsers-zero-click-agent-hijacking">
+<div class="article-summary-box-inner">
+<span>Attackers can take control of agents through malicious instructions hidden in content supplied to AI browsers, and there's no simple fix for the threat.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">No Perfect Fix for AI Browser Prompt Injection Flaws</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/no-perfect-fix-ai-browser-prompt-injection-flaws">
+<div class="article-summary-box-inner">
+<span>AI browsers from top vendors remain vulnerable to prompt injection attacks despite multiple security guardrails, according to new research.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CSS: The Hidden Threat Lurking in Your Inbox</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/css-hidden-threat-lurking-inbox">
+<div class="article-summary-box-inner">
+<span>CSS was once just about design. Now researchers warn it's powerful enough to exfiltrate data from webmail — and some vendors aren't prepared.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">15 TP-Link Bugs Expose Risks in Zero-Trust Provisioning</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/15-tp-link-bugs-risks-zero-trust-provisioning">
+<div class="article-summary-box-inner">
+<span>Researchers are calling attention to the risks inherent in automated network device provisioning, using a world-leading device manufacturer as a case study.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Flaws in Google APK for Python Unlock Agent-to-Agent Attack</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/flaws-google-apk-python-agent-to-agent-attack">
+<div class="article-summary-box-inner">
+<span>Google has fixed the issues, which exploited a trust boundary between two AI agents with different privilege levels to trigger automation that could compromise the supply chain.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Angola's Largest Telco Breached Hours Before IPO</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/angolas-largest-telco-breached-hours-before-ipo">
+<div class="article-summary-box-inner">
+<span>Unitel, Angola's dominant mobile operator, continues to recover from a cyberattack that caused outages the day of the government-owned telco's public offering.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Smoke#Screen RMM Takeover Gambit Exposes Threat Actor Playbook</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/latest-rmm-fueled-phishing-attack-exposes-threat-actor-playbook">
+<div class="article-summary-box-inner">
+<span>The attacks use diverse social engineering lures and rotating payloads to deliver ScreenConnect for persistent remote access to compromised networks.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI Notetaker Lets Hackers Spy on Government, Corporate Video Calls</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-notetaker-spy-government-corporate-video-calls">
+<div class="article-summary-box-inner">
+<span>A Google Firebase misconfiguration lets users of tl;dv, an AI meeting tool, query any other users' meeting information and potentially join calls.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Device Code Phishing Up 1,500% in 2026; Vishing Doubles</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-analytics/device-code-phishing-vishing-doubles">
+<div class="article-summary-box-inner">
+<span>Newer social engineering techniques help attackers ignore entrenched security controls and limit the evidence they leave behind.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Attackers Exploit N-able Patch Bypass Flaw on RMM Servers</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/attackers-exploit-n-able-patch-bypass-flaw">
+<div class="article-summary-box-inner">
+<span>Over the weekend, the vendor discovered another vector of authentication bypass CVE-2026-18577 that gives attackers administrator access.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">New Tool Traces AI Videos Back to Their Source</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/new-tool-advances-ai-generated-video-detection">
+<div class="article-summary-box-inner">
+<span>Researchers dug into the root of the problem with the goal of promoting industry collaboration on improved protective measures.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Anthropic: Claude Attacks Result of Security Gaps, Not Model Issues</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/anthropic-ai-issues-result-security-gaps">
+<div class="article-summary-box-inner">
+<span>Last month's incidents in which the AI model breached real-world systems derived from over-permissioning, especially with Internet access.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Chinese Actor Weaponizes Deepseek AI Agent to Attack Security Firm</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/chinese-actor-deepseek-ai-agent-attack-security-firm">
+<div class="article-summary-box-inner">
+<span>Researchers intercepted and investigated the model, which was attempting to compromise more than 1,200 hosts for proxyjacking to launch further attacks.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Is There Really a Fix for CISO Fatigue?</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/fix-for-ciso-fatigue">
+<div class="article-summary-box-inner">
+<span>Accountability without any real authority is driving CISO burnout, and organizations need to take notice.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CISA Issues Fresh SBOM Guidance. Did They Get It Right?</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/cisa-issues-fresh-sbom-guidance">
+<div class="article-summary-box-inner">
+<span>A couple dozen changes to SBOM fields will make them more comprehensive, but some argue that the framework lacks real risk-management improvements.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">The Morning After We Pull a Root of Trust, Nobody Owns It</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/morning-after-we-pull-root-of-trust-nobody-owns-it">
+<div class="article-summary-box-inner">
+<span>The most valuable move any security team can make is building a certificate and key inventory.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Interpol Leverages Global System to Curtail Fraud Payments</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/interpol-leverages-global-system-curtail-fraud-payments">
+<div class="article-summary-box-inner">
+<span>When a fraudulent transaction occurs, law enforcement agencies must work quickly to halt payments before cybercriminals cash out.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">DROP Platform Lets Californians Reduce Digital Footprint</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/data-privacy/drop-platform-lets-californians-ditch-their-data">
+<div class="article-summary-box-inner">
+<span>Hundreds of thousands of California residents have already registered for the Delete Request and Opt-out Platform (DROP), which launches Aug. 1. Other states could follow if the process goes smoothly.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">USA Fencing Lunges Into the Hidden Identity Challenge in Amateur Sports</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/identity-access-management-security/usa-fencing-hidden-identity-challenge-amateur-sports">
+<div class="article-summary-box-inner">
+<span>The organization behind Team USA's Olympic/Paralympic fencing teams has automated identity verification to handle growing membership, cutting manual review time while ensuring athletes compete in the correct categories.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Minnesota Water Utility Attacks Expose Sector's Cyber-Risks</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/minnesota-water-utility-attacks-expose-sector-cyber-risks">
+<div class="article-summary-box-inner">
+<span>A likely Iran-backed actor targeted more than 30 community water systems in Minnesota in a sobering reminder of rising threats to US critical infrastructure.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI Harnesses Burst With Potential Exploit Opps</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-harnesses-potential-exploit-opps">
+<div class="article-summary-box-inner">
+<span>A myriad of software makes up the typical AI harness, and trust issues between the components can create concerning attack vectors.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Claude Mythos — Hype vs. Reality: What Security Teams Need to Know</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/claude-mythos-hype-vs-reality">
+<div class="article-summary-box-inner">
+<span>In this edition of Reporters' Notebook, our journalists discuss the ins and outs of Anthropic's Claude Mythos rollout. How seriously should we take its risks? How big of a deal is it?</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">SE Asian Cybercriminal Syndicates Become a Global Power</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/se-asian-cybercriminal-syndicates-global-power">
+<div class="article-summary-box-inner">
+<span>The organized crime groups have moved from goods to services and continue to traffic people from at least 80 countries, costing nations in the region at least $88 billion in 2025 alone.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">'Flying Eagle' Full-Service Mobile RAT Builder Wings Across China</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/flying-eagle-mobile-rat-builder-china">
+<div class="article-summary-box-inner">
+<span>A premium-grade malware-as-a-service offering takes flight with multiple threat groups, building infostealers that drain victims' bank accounts.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Cybersecurity, Then &amp; Now: A Visual Look at 20 Years of Change</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/cybersecurity-then-now">
+<div class="article-summary-box-inner">
+<span>Since 2006, Dark Reading has been at the forefront of covering cybersecurity. The more things change, the more they stay the same.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">OpenAI's Rogue Model Claims More Victims Beyond Hugging Face</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/openai-rogue-model-claims-more-victims-beyond-hugging-face">
+<div class="article-summary-box-inner">
+<span>OpenAI's goal-seeking agent compromised a Modal customer environment and others during its sandbox escape.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Red Agents vs. Blue Agents: How to Make AI Better at Defense</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/red-agents-vs-blue-agents-make-ai-better-defense">
+<div class="article-summary-box-inner">
+<span>The agentic AI playing field was heavily tilted toward offense, so researchers began using red team agents to help teach their blue counterparts.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Who's Liable When AI Agents Escape? Hugging Face Breach Raises Hard Questions</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/liable-ai-agents-escape-hugging-face-breach-questions">
+<div class="article-summary-box-inner">
+<span>Dark Reading walks through the many twists and turns in the bizarre story of how OpenAI's agent AI system broke out of its sandbox and decided to target Hugging Face, and what CISOs should be aware of.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Hugging Face Hack: Lessons for Cyber Defenders</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/hugging-face-hack-lessons-cyber-defenders">
+<div class="article-summary-box-inner">
+<span>Dark Reading Confidential Episode 20: Expert Rich Mogull reflects on lessons cyber teams should pull from the OpenAI agent's attack on Hugging Face.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">When AppSec Scanners Become a Supply Chain Attack Vector</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/when-appsec-scanners-become-supply-chain-attack-vector">
+<div class="article-summary-box-inner">
+<span>New research shows how security scanners embedded in the software supply chain can be attacked to serve as a foothold for downstream attacks.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Patch-Resistant 'RufRoot' Flaw Can Unleash Malicious AI Agent Swarms</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/patch-resistant-rufroot-flaw-malicious-ai-agent-swarms">
+<div class="article-summary-box-inner">
+<span>The vulnerability in the AI hosting platform Ruflo allows an unauthenticated attacker to take over the system and corrupt memory, so bad behavior can persist after patching.</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+</ul>
+</section>
+<section class="daily-content">
+<h2 class="daily-heading">
 <time datetime="2026-08-11T23:15:25.696928262Z">08-11</time>
 </h2>
 <ul class="sources card">
@@ -5411,979 +6382,8 @@ Visit the link for more details, such as CVSS details, affected products, timeli
 </li>
 </ul>
 </section>
-<section class="daily-content">
-<h2 class="daily-heading">
-<time datetime="2026-08-04T23:22:45.939828222Z">08-04</time>
-</h2>
-<ul class="sources card">
-<li class="source">
-<section>
-<h3 class="source-name">Latest Vulnerabilities</h3>
-<section class="articles-per-source">
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-70620 - Odysseus SSRF via Embedding Endpoint Configuration</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-70620">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-70620
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>Odysseus before commit 87babb5 contains a server-side request forgery vulnerability that allows admin-privileged attackers to direct the server to probe internal network resources by supplying arbitrary URLs to the embedding endpoint configuration without scheme, host, IP range, or DNS rebind validation. Attackers can submit loopback addresses, RFC 1918 ranges, or link-local addresses through the embedding endpoint API to partially read responses from cloud instance metadata services, internal APIs, and other hosts reachable from the server.
-<br/>
-<strong>Severity:</strong> 6.8 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-70619 - Odysseus Missing Admin Authorization via Embedding Endpoint Routes</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-70619">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-70619
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>Odysseus before commit bf325f6 contains a missing authorization vulnerability that allows authenticated non-admin users to manage server-wide embedding backend configuration by invoking endpoint management routes that verify session authentication but omit the admin authorization guard. Attackers can supply an attacker-controlled URL to overwrite the embedding backend persisted in the endpoint configuration file and process environment, causing all subsequent embedding operations including chat messages, RAG queries, memory entries, and vault text to be transmitted in plaintext to the attacker-controlled destination, or delete the endpoint configuration to deny embedding service to all users.
-<br/>
-<strong>Severity:</strong> 8.8 | HIGH
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-70594 - Ghost: Session Fixation in Ghost Admin</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-70594">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-70594
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>Ghost is a Node.js content management system. From 2.2.0 until 6.54.1, Ghost Admin did not invalidate existing sessions on login which could have allowed for session fixation attacks. Successful exploitation would have required another vulnerability on the same domain where Ghost Admin was hosted. This issue is fixed in version 6.54.1.
-<br/>
-<strong>Severity:</strong> 6.7 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-70593 - Ghost: Theme Upload Path Traversal</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-70593">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-70593
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>Ghost is a Node.js content management system. From 0.10.0 until 6.54.1, a vulnerability in custom themes allowed a staff user to write files outside of the uploads directory. This could be used to alter the behavior of the installation through custom theme upload path traversal in LocalStorageBase and theme storage name handling. This issue is fixed in version 6.54.1.
-<br/>
-<strong>Severity:</strong> 6.6 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-70592 - Ghost: Database Backup Path Traversal</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-70592">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-70592
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>Ghost is a Node.js content management system. From 1.20.1 until 6.54.1, an Administrator-level user could remotely overwrite certain files on the filesystem through the database backup filename, leading to integrity and availability issues. The database export endpoint failed to reject path separators in the caller-supplied filename. This issue is fixed in version 6.54.1.
-<br/>
-<strong>Severity:</strong> 5.5 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-70591 - Ghost: Server-Side Request Forgery in Image Fetching</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-70591">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-70591
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>Ghost is a Node.js content management system. From 0.10.0 until 6.54.1, a Server-Side Request Forgery in Ghost Admin image fetching allowed any staff-level user to perform a blind HTTP GET request against internal hosts. No output was returned, but this could have been used to probe open ports on internal hosts. This issue is fixed in version 6.54.1.
-<br/>
-<strong>Severity:</strong> 4.1 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-70590 - Ghost: Blind Password Hash Disclosure in Ghost Admin API</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-70590">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-70590
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>Ghost is a Node.js content management system. Prior to 6.54.1, any staff-level user was able to leak the hashed passwords of other staff users through the Ghost Admin API. An offline password-guessing attack against the hashes could lead to account takeover if successful, but Device Verification should have prevented an attacker from logging in with a recovered password. Depending on the database used, leaked hashes may not have had the correct casing for all characters, increasing the difficulty of a password-guessing attack. This issue is fixed in version 6.54.1.
-<br/>
-<strong>Severity:</strong> 4.8 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-70589 - Ghost: Archived Offers can be Redeemed</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-70589">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-70589
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>Ghost is a Node.js content management system. From 4.22.0 until 6.54.1, a missing validation check allowed users to redeem subscription offers that were no longer active. This issue is fixed in version 6.54.1.
-<br/>
-<strong>Severity:</strong> 4.8 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-67862 - open62541 Buffer Overflow in Attribute Reading Logic</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-67862">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-67862
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>open62541 1.5.5 contains a buffer-overflow in the high-level attribute reading logic in src/client/ua_client_highlevel.c. This allows a remote attacker to cause a denial of service.
-<br/>
-<strong>Severity:</strong> 0.0 | NA
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-67861 - open62541 Denial of Service Vulnerability</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-67861">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-67861
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>An issue in open62541 v.1.5.5 and before allows a remote attacker to cause a denial of service via the UA_Client_getRemoteDataTypes component
-<br/>
-<strong>Severity:</strong> 7.5 | HIGH
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-67860 - open62541 Heap-based Buffer Overflow</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-67860">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-67860
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>open62541 1.5.5 contains a heap-based buffer overflow in the default HistoryRead path when the default history database is used with the memory backend.
-<br/>
-<strong>Severity:</strong> 0.0 | NA
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-67859 - open62541 Discovery Service Buffer Overflow</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-67859">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-67859
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>Buffer Overflow vulnerability in open62541 v1.5.5 allows a remote attacker to cause a denial of service via the Discovery/LDS handling.
-<br/>
-<strong>Severity:</strong> 7.5 | HIGH
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-67858 - open62541 Local Discovery Server Buffer Overflow</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-67858">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-67858
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>Buffer Overflow vulnerability exists in open62541 1.5.5 when the Local Discovery Server (LDS) is built with multicast discovery enabled through the MDNSD backend. An unauthenticated remote attacker can send a RegisterServer or RegisterServer2 request containing many unique discoveryUrls. This allows remote attackers to cause a denial of service.
-<br/>
-<strong>Severity:</strong> 7.5 | HIGH
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-67857 - open62541 Out-of-Bounds Read</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-67857">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-67857
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>open62541 1.5.5 contains an out-of-bounds read in the client-side function responseReadNamespacesArray() in src/client/ua_client_connect.c.
-<br/>
-<strong>Severity:</strong> 7.5 | HIGH
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-67856 - open62541 Denial of Service Vulnerability</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-67856">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-67856
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>An issue in open62541 v.1.5.5 and before allows a remote attacker to cause a denial of service via crafted CreateSubscription, CreateMonitoredItems(Sampling), Publish, TransferSubscriptions, and DeleteSubscriptions requests
-<br/>
-<strong>Severity:</strong> 0.0 | NA
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-67855 - open62541 GDS PushManagement Heap Use-After-Free</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-67855">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-67855
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>open62541 contains a heap use-after-free in the GDS PushManagement certificate update workflow when UA_ENABLE_GDS_PUSHMANAGEMENT is enabled. This allows a remote attacker to cause a denial of service.
-<br/>
-<strong>Severity:</strong> 0.0 | NA
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-52370 - O2OA Forum Reflected Cross-Site Scripting</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-52370">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-52370
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>A reflected cross-site scripting (XSS) vulnerability in the Forum posting function of O2OA v10 allows attackers to execute arbitrary Javascript in the context of the victim's browser via a crafted URL.
-<br/>
-<strong>Severity:</strong> 0.0 | NA
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-51144 - Soliton Systems MailZen Management Portal Cross-Site Scripting Vulnerability</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-51144">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-51144
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>Cross Site Scripting vulnerability in Soliton Systems MailZen Management Protal v.2.62, v.2.63 allows a remote attacker to execute arbitrary code via the Role Name, First Name, Last Name, and Username fields.
-<br/>
-<strong>Severity:</strong> 0.0 | NA
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-45103 - OpenSIPS: SIP Message Smuggling via TCP Content-Length Integer Overflow</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-45103">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-45103
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>OpenSIPS is a Session Initiation Protocol (SIP) server implementation. In versions prior to 3.6.6 and 4.0.0-rc1, the TCP message framing layer parses the Content-Length header using unsigned int arithmetic with no overflow check. When an attacker sends a Content-Length value that overflows unsigned int (e.g., 4294967296), the framing layer computes a wrapped-around value (e.g., 0) and splits the TCP stream at the wrong boundary, causing the body of the first SIP message to be processed as a separate message and enabling SIP message smuggling. Because Content-Length is parsed in the transport layer before authentication, an unauthenticated, network-based attacker can smuggle arbitrary SIP messages over any TCP-based transport (proto_tcp, proto_tls, proto_ws, proto_wss) on any instance with TCP enabled, with no routing-script preconditions. This allows smuggled messages to bypass front-end SBC/proxy security policies, inherit the connection's authentication context, and evade rate limiting. This issue has been fixed in versions 3.6.6 and 4.0.0-rc1.
-<br/>
-<strong>Severity:</strong> 7.5 | HIGH
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-45100 - OpenSIPS: Buffer Overflow in Base64 Encode Transformation</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-45100">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-45100
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>OpenSIPS is a Session Initiation Protocol (SIP) server implementation. Versions 3.4.0-beta through 3.6.5 and 4.0.0-beta contain a buffer overflow in the {s.b64encode} string transformation. The size check for {s.b64encode} only verifies that the input fits within the 64 KB transformation buffer, but base64 encoding expands the data by roughly a third, so an input between about 49,153 and 65,535 bytes produces more output than the buffer can hold and overflows it by up to 21,844 bytes. Because these transformation buffers sit next to each other in memory and are reused for chained transformations, the overflow writes attacker-controlled data into the adjacent buffer and corrupts values used by later transformations processing the same SIP message. A remote attacker can trigger this by sending a SIP message with a large header value (roughly 50,000 bytes or more) when the routing script applies  {s.b64encode}  to attacker-controlled input, making exploitability dependent on the deployment's routing configuration. This issue has been fixed in versions 3.6.6 and 4.0.0-rc1.
-<br/>
-<strong>Severity:</strong> 9.1 | CRITICAL
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-45084 - OpenSIPS: Denial of service in presence.handle_publish() from unchecked Content-Type state</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-45084">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-45084
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>OpenSIPS is a Session Initiation Protocol (SIP) server implementation. Versions 3.4.0 through 3.6.5 contain a denial of service vulnerability in the presence module. When the presence module's handle_publish() function processes a SIP PUBLISH request with an Event: presence header and a message body while the configuration option enable_sphere_check=1 is set, it invokes the get_content_type() macro without first calling parse_content_type_hdr(), causing it to dereference uninitialized or NULL Content-Type parsing state and crash. If a Content-Type header is present but unparsed, msg->content_type->parsed is NULL and is dereferenced as a content_t pointer; if the request lacks a Content-Type header entirely, msg->content_type itself is NULL, and both cases lead to a crash. A remote attacker can therefore cause a denial of service against an affected instance with a single PUBLISH request over UDP or TCP, using either a valid Content-Type: application/pidf+xml request or one with the header removed, and the vulnerable code path itself does not enforce authentication (though a deployment's routing configuration may require it before this route is reached). The issue has been fixed in version 3.6.6 and 4.0.0-rc1.
-<br/>
-<strong>Severity:</strong> 8.7 | HIGH
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-18817 - Baserow Inactive Non-Staff User serializers.py BaserowImpersonateAuthTokenSerializer improper authorization</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-18817">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-18817
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>A security flaw has been discovered in Baserow up to 2.3.2. Affected by this issue is the function BaserowImpersonateAuthTokenSerializer of the file backend/src/baserow/api/admin/users/serializers.py of the component Inactive Non-Staff User Handler. Performing a manipulation results in improper authorization. Remote exploitation of the attack is possible. The complexity of an attack is rather high. The exploitation is known to be difficult. The presence of this vulnerability remains uncertain at this time. Upgrading to version 2.3.3 can resolve this issue. The affected component should be upgraded. The project maintainer explains: "While the problem exists, I'm not really sure if it's a vulnerability. (....) Even though the back gives a token for a deactivate user, none of the endpoints actually work. That said, we will fix it, but so far it seems more like a bug instead of a vulnerability."
-<br/>
-<strong>Severity:</strong> 2.2 | LOW
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-18816 - Baserow 2FA Verify Endpoint views.py verify improper authentication</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-18816">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-18816
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>A vulnerability was identified in Baserow up to 2.3.2. Affected by this vulnerability is the function verify of the file backend/src/baserow/api/two_factor_auth/views.py of the component 2FA Verify Endpoint. Such manipulation leads to improper authentication. The attack may be launched remotely. This attack is characterized by high complexity. The exploitation appears to be difficult. Upgrading to version 2.3.3 addresses this issue. You should upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.
-<br/>
-<strong>Severity:</strong> 5.0 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-18814 - H3C NX15 esps reload.reload_config command injection</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-18814">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-18814
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 10:17 p.m. | 18 minutes ago
-<br/>
-<strong>Description :</strong>A vulnerability was found in H3C NX15 V100R017. This impacts the function reload.reload_config of the file /api/esps. The manipulation results in command injection. The attack can be launched remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure.
-<br/>
-<strong>Severity:</strong> 8.3 | HIGH
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-70588 - Ghost: Cross-Site Scripting in Universal Import</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-70588">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-70588
-<br/>
-<strong>Published :</strong> Aug. 4, 2026, 9:16 p.m. | 1 hour, 19 minutes ago
-<br/>
-<strong>Description :</strong>Ghost is a Node.js content management system. From 5.26.0 until 6.54.1, the Universal Import feature in Ghost Admin failed to properly sanitize imported content resulting in XSS in post content. This issue is fixed in version 6.54.1.
-<br/>
-<strong>Severity:</strong> 5.0 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-</section>
-</section>
-</li>
-<li class="source">
-<section>
-<h3 class="source-name">darkreading</h3>
-<section class="articles-per-source">
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Smoke#Screen RMM Takeover Gambit Exposes Threat Actor Playbook</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/latest-rmm-fueled-phishing-attack-exposes-threat-actor-playbook">
-<div class="article-summary-box-inner">
-<span>The attacks use diverse social engineering lures and rotating payloads to deliver ScreenConnect for persistent remote access to compromised networks.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">AI Notetaker Lets Hackers Spy on Government, Corporate Video Calls</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-notetaker-spy-government-corporate-video-calls">
-<div class="article-summary-box-inner">
-<span>A Google Firebase misconfiguration lets users of tl;dv, an AI meeting tool, query any other users' meeting information and potentially join calls.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Device Code Phishing Up 1,500% in 2026; Vishing Doubles</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-analytics/device-code-phishing-vishing-doubles">
-<div class="article-summary-box-inner">
-<span>Newer social engineering techniques help attackers ignore entrenched security controls and limit the evidence they leave behind.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Attackers Exploit N-able Patch Bypass Flaw on RMM Servers</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/attackers-exploit-n-able-patch-bypass-flaw">
-<div class="article-summary-box-inner">
-<span>Over the weekend, the vendor discovered another vector of authentication bypass CVE-2026-18577 that gives attackers administrator access.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">New Tool Traces AI Videos Back to Their Source</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/new-tool-advances-ai-generated-video-detection">
-<div class="article-summary-box-inner">
-<span>Researchers dug into the root of the problem with the goal of promoting industry collaboration on improved protective measures.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Anthropic: Claude Attacks Result of Security Gaps, Not Model Issues</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/anthropic-ai-issues-result-security-gaps">
-<div class="article-summary-box-inner">
-<span>Last month's incidents in which the AI model breached real-world systems derived from over-permissioning, especially with Internet access.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Chinese Actor Weaponizes Deepseek AI Agent to Attack Security Firm</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/chinese-actor-deepseek-ai-agent-attack-security-firm">
-<div class="article-summary-box-inner">
-<span>Researchers intercepted and investigated the model, which was attempting to compromise more than 1,200 hosts for proxyjacking to launch further attacks.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Is There Really a Fix for CISO Fatigue?</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/fix-for-ciso-fatigue">
-<div class="article-summary-box-inner">
-<span>Accountability without any real authority is driving CISO burnout, and organizations need to take notice.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CISA Issues Fresh SBOM Guidance. Did They Get It Right?</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/cisa-issues-fresh-sbom-guidance">
-<div class="article-summary-box-inner">
-<span>A couple dozen changes to SBOM fields will make them more comprehensive, but some argue that the framework lacks real risk-management improvements.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">The Morning After We Pull a Root of Trust, Nobody Owns It</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/morning-after-we-pull-root-of-trust-nobody-owns-it">
-<div class="article-summary-box-inner">
-<span>The most valuable move any security team can make is building a certificate and key inventory.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Interpol Leverages Global System to Curtail Fraud Payments</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/interpol-leverages-global-system-curtail-fraud-payments">
-<div class="article-summary-box-inner">
-<span>When a fraudulent transaction occurs, law enforcement agencies must work quickly to halt payments before cybercriminals cash out.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">DROP Platform Lets Californians Reduce Digital Footprint</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/data-privacy/drop-platform-lets-californians-ditch-their-data">
-<div class="article-summary-box-inner">
-<span>Hundreds of thousands of California residents have already registered for the Delete Request and Opt-out Platform (DROP), which launches Aug. 1. Other states could follow if the process goes smoothly.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">USA Fencing Lunges Into the Hidden Identity Challenge in Amateur Sports</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/identity-access-management-security/usa-fencing-hidden-identity-challenge-amateur-sports">
-<div class="article-summary-box-inner">
-<span>The organization behind Team USA's Olympic/Paralympic fencing teams has automated identity verification to handle growing membership, cutting manual review time while ensuring athletes compete in the correct categories.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Minnesota Water Utility Attacks Expose Sector's Cyber-Risks</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/minnesota-water-utility-attacks-expose-sector-cyber-risks">
-<div class="article-summary-box-inner">
-<span>A likely Iran-backed actor targeted more than 30 community water systems in Minnesota in a sobering reminder of rising threats to US critical infrastructure.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">AI Harnesses Burst With Potential Exploit Opps</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-harnesses-potential-exploit-opps">
-<div class="article-summary-box-inner">
-<span>A myriad of software makes up the typical AI harness, and trust issues between the components can create concerning attack vectors.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Claude Mythos — Hype vs. Reality: What Security Teams Need to Know</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/claude-mythos-hype-vs-reality">
-<div class="article-summary-box-inner">
-<span>In this edition of Reporters' Notebook, our journalists discuss the ins and outs of Anthropic's Claude Mythos rollout. How seriously should we take its risks? How big of a deal is it?</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">SE Asian Cybercriminal Syndicates Become a Global Power</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/se-asian-cybercriminal-syndicates-global-power">
-<div class="article-summary-box-inner">
-<span>The organized crime groups have moved from goods to services and continue to traffic people from at least 80 countries, costing nations in the region at least $88 billion in 2025 alone.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">'Flying Eagle' Full-Service Mobile RAT Builder Wings Across China</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/flying-eagle-mobile-rat-builder-china">
-<div class="article-summary-box-inner">
-<span>A premium-grade malware-as-a-service offering takes flight with multiple threat groups, building infostealers that drain victims' bank accounts.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Cybersecurity, Then &amp; Now</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/cybersecurity-then-now">
-<div class="article-summary-box-inner">
-<span>Since 2006, Dark Reading has been at the forefront of covering cybersecurity. The more things change, the more they stay the same.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">OpenAI's Rogue Model Claims More Victims Beyond Hugging Face</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/openai-rogue-model-claims-more-victims-beyond-hugging-face">
-<div class="article-summary-box-inner">
-<span>OpenAI's goal-seeking agent compromised a Modal customer environment and others during its sandbox escape.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Red Agents vs. Blue Agents: How to Make AI Better at Defense</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/red-agents-vs-blue-agents-make-ai-better-defense">
-<div class="article-summary-box-inner">
-<span>The agentic AI playing field was heavily tilted toward offense, so researchers began using red team agents to help teach their blue counterparts.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Who's Liable When AI Agents Escape? Hugging Face Breach Raises Hard Questions</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/liable-ai-agents-escape-hugging-face-breach-questions">
-<div class="article-summary-box-inner">
-<span>Dark Reading walks through the many twists and turns in the bizarre story of how OpenAI's agent AI system broke out of its sandbox and decided to target Hugging Face, and what CISOs should be aware of.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Hugging Face Hack: Lessons for Cyber Defenders</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/hugging-face-hack-lessons-cyber-defenders">
-<div class="article-summary-box-inner">
-<span>Dark Reading Confidential Episode 20: Expert Rich Mogull reflects on lessons cyber teams should pull from the OpenAI agent's attack on Hugging Face.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">When AppSec Scanners Become a Supply Chain Attack Vector</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/when-appsec-scanners-become-supply-chain-attack-vector">
-<div class="article-summary-box-inner">
-<span>New research shows how security scanners embedded in the software supply chain can be attacked to serve as a foothold for downstream attacks.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Patch-Resistant 'RufRoot' Flaw Can Unleash Malicious AI Agent Swarms</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/patch-resistant-rufroot-flaw-malicious-ai-agent-swarms">
-<div class="article-summary-box-inner">
-<span>The vulnerability in the AI hosting platform Ruflo allows an unauthenticated attacker to take over the system and corrupt memory, so bad behavior can persist after patching.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Ghost Credentials Expose Cloud Systems to Hidden Identity Risks</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cloud-security/non-human-identity-sprawl-creates-a-new-cloud-attack-path">
-<div class="article-summary-box-inner">
-<span>Dormant nonhuman identities can create security blind spots, says security researcher Aleksandr Krasnov, who plans to release an open source tool next week at Black Hat USA 2026 that sniffs out trust paths.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Thousands of Data Center Controllers Open to Takeover</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/flaw-exposes-data-centers-server-takeover">
-<div class="article-summary-box-inner">
-<span>A host of Internet-exposed remote hardware management processors are subject to offline password-cracking attacks — and adversaries have taken note.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">When AI Agents Escape Sandboxes, Old Security Rules Apply</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-agents-escape-sandboxes-old-security-rules-apply">
-<div class="article-summary-box-inner">
-<span>OpenAI's recent AI agent sandbox escape proves traditional security principles matter more than ever: limit access, isolate execution, log everything.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Stronger AI Safety Requires Peeking Inside the 'Black Box'</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-analytics/stronger-ai-safety-requires-peeking-inside-black-box">
-<div class="article-summary-box-inner">
-<span>Researchers propose focusing on identification of certain cognitive elements in LLMs that indicate when AI systems may take an unwanted action.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">'Certighost' Flaw Haunts Microsoft Active Directory Certificates</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/certighost-flaw-microsoft-active-directory-certificates">
-<div class="article-summary-box-inner">
-<span>Microsoft patched a high-severity vulnerability earlier this month that allows a threat actor to escalate privileges and compromise an AD environment.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Former Citigroup CISO Blauner on What Makes A Great Security Leader</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/former-citigroup-ciso-blauner-great-security-leader">
-<div class="article-summary-box-inner">
-<span>The cybersecurity pioneer discusses the evolution of the CISO role, AI's impact on careers, and why operational resilience is the profession's next frontier.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">AI Agent Drives Espionage Attack on Thai Ministry of Finance</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/ai-agent-espionage-attack-thai-ministry-finance">
-<div class="article-summary-box-inner">
-<span>Attackers used Hermes, an autonomous open source tool, in unrestricted &quot;YOLO mode&quot; to conduct espionage against Thailand's Ministry of Finance.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Agentic Browsers Rewind Web Security by 20 Years</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/agentic-browsers-rewind-web-security-20-years">
-<div class="article-summary-box-inner">
-<span>PleaseFix class of flaws makes it easy to socially engineer agentic browsers and highlights weaknesses in how they handle cross-origin requests.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">'Confused Deputy' Flaws Persist in Google Cloud, Microsoft Azure</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cloud-security/confused-deputy-flaws-google-cloud-microsoft-azure">
-<div class="article-summary-box-inner">
-<span>This category of vulnerabilities allows an attacker to easily acquire administrative level permissions and bypass cloud providers' access controls.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">FBI: Breaking Affiliate Trust Sped Along LockBit's Takedown</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/fbi-breaking-affiliate-trust-lockbit-takedown">
-<div class="article-summary-box-inner">
-<span>An FBI agent explains how the mulitnational law-enforcement Operation Cronos was successful in disrupting the largest ransomware group of its time.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Why Resetting Passwords No Longer Stops Attackers</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/why-resetting-passwords-no-longer-stop-attacks">
-<div class="article-summary-box-inner">
-<span>As attackers shift from password theft to session and token theft to bypass multifactor authentication controls, organizations must move beyond login security and protect authenticated sessions.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Adversaries Don't Need a Zero-Day — They Read Your Rulebook</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/adversaries-do-not-need-zero-day-they-read-your-rulebook">
-<div class="article-summary-box-inner">
-<span>Confidence in autonomous security tools is declining, and here's why.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CISOs vs. Boards: Myth or Misunderstanding?</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/cisos-vs-boards-myth-or-misunderstanding-">
-<div class="article-summary-box-inner">
-<span>Escalating threats are forcing boards to prioritize security, but communication gaps persist. Boards and security teams each say they need more support to bridge the divide.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Escape Artists: 'Incorrigible' AI Models Resist Rehabilitation</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/incorrigible-ai-models-resist-rehabilitation">
-<div class="article-summary-box-inner">
-<span>The hacking of Hugging Face by a rogue OpenAI agent is significant, but unsurprising — and preventing the next AI model escape will be difficult, at best.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Vatican's Official Prayer App Leaks 700K+ Global Users' PII</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/vatican-official-prayer-app-leaks-700k-pii">
-<div class="article-summary-box-inner">
-<span>A porous API endpoint exposes, names, email addresses, country, and site status, all of which can be easily gleaned by anyone with a browser.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Default Azure Automation Setting Enables Cross-Tenant Identity Takeover</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cloud-security/default-azure-automation-setting-cross-tenant-identity-takeover">
-<div class="article-summary-box-inner">
-<span>Microsoft addresses a public-by-default configuration and chain of code flaws in Azure Automation that could have let attackers seize another tenant's identity and access others' data, credentials, and cloud workloads.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Europe's Multilingual Reality Exposes AI Security Gaps</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/europes-multilingual-reality-exposes-ai-security-gaps">
-<div class="article-summary-box-inner">
-<span>The AI security layer and guardrails for many AI products don't evenly protect against jailbreaking and unsafe actions in every single language.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Russian Hackers Exploit Zimbra Zero-Day Against US, Ukraine Targets</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/russian-hackers-zimbra-zero-day-us-ukraine-targets">
-<div class="article-summary-box-inner">
-<span>A state-sponsored threat group, dubbed &quot;Laundry Bear,&quot; sends &quot;half-click&quot; phishing emails that require a victim only to open or preview the message.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Agentic AI Challenges Progress in Confidential Computing</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/agentic-ai-challenges-progress-in-confidential-computing">
-<div class="article-summary-box-inner">
-<span>Core issues that slowed down adoption of secure data vaults are being resolved by technology, but artificial intelligence poses new ones. Experts have some answers.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Brazilian Banking Trojan Actively Spreading in Portugal</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/brazilian-banking-trojan-spreading-portugal">
-<div class="article-summary-box-inner">
-<span>Portuguese businesses operate in the same native language as Brazilian hackers, making those businesses easy targets.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Ransomware Attack Puts a Chill on Japanese Frozen-Food Chain</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/ransomware-attack-japanese-frozen-food-chain">
-<div class="article-summary-box-inner">
-<span>A cyberattack on a food and logistics firm disrupts the supply of frozen food to thousands of clients, including major franchises like Kentucky Fried Chicken.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Flaws in Passkey Implementation Show Old Attacks Still Work</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/identity-access-management-security/flaws-passkeys-implementation-old-attacks-work">
-<div class="article-summary-box-inner">
-<span>Ahead of Black Hat USA, researchers find exploitable flaws in how Microsoft handles passkeys that could allow attackers to impersonate privileged users.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Attackers Are Learning to Live Off the AI Toolchain</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/attackers-live-off-ai-toolchain">
-<div class="article-summary-box-inner">
-<span>Sandworm_Mode is an early example of malware that exploits trusted AI tools and workflows to make malicious activity virtually indistinguishable from normal activity.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Fake Bahrain Alert App Deploys Android Surveillance Malware</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/mobile-security/fake-bahrain-alert-apps-android-surveillance-malware">
-<div class="article-summary-box-inner">
-<span>A malicious application delivers four-stage Android spyware via phony Google Play sites, exploiting civilian fear during Iranian missile strikes.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">When AI Attacks: OpenAI Models Autonomously Hack Hugging Face</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/openai-models-autonomously-hack-hugging-face">
-<div class="article-summary-box-inner">
-<span>Advanced LLMs escaped their sandboxes while attempting to achieve a non-malicious benchmark test objective.</span>
-</div>
-</a>
-</details>
-</article>
-</section>
-</section>
-</li>
-</ul>
-</section>
 <footer>
-<time id="build-timestamp" datetime="2026-08-11 23:15:25.775417658 UTC">2026-08-11 23:15:25 UTC</time>
+<time id="build-timestamp" datetime="2026-08-12 23:14:40.968622821 UTC">2026-08-12 23:14:40 UTC</time>
 <span><a class="footer-link" href="https://github.com/NotCraft/NotFeed"> notfeed 0.2.9</a></span>
 </footer>
 <script src="index.js"></script>
