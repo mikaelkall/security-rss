@@ -12,6 +12,986 @@
 <body>
 <section class="daily-content">
 <h2 class="daily-heading">
+<time datetime="2026-08-25T23:07:30.054518706Z">08-25</time>
+</h2>
+<ul class="sources card">
+<li class="source">
+<section>
+<h3 class="source-name">Latest Vulnerabilities</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-77357 - Mesop: DoS in /hot-reload endpoint allows unauthenticated attacker to exhaust worker threads and crash the server</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-77357">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-77357
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:40 p.m. | 27 minutes ago
+<br/>
+<strong>Description :</strong>Mesop is a Python-based UI framework that allows users to build web applications. Prior to 1.3.3, applications running in debug mode expose a GET /hot-reload endpoint whose unbounded loop depends on the user-supplied counter parameter, allowing an unauthenticated attacker to hold worker threads with high counter values until the worker pool is exhausted and the server becomes unavailable. A single unauthenticated attacker can crash the Mesop server with minimal effort. Because the attack leverages worker exhaustion, the server remains unresponsive until it is manually restarted. This issue is fixed in version 1.3.3.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-53965 - MCP PHP SDK: Unbounded SSE buffer in HttpTransport enables client-side denial of service</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-53965">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-53965
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:36 p.m. | 31 minutes ago
+<br/>
+<strong>Description :</strong>The MCP PHP SDK (Composer package mcp/sdk) is the official Model Context Protocol SDK for PHP. In versions 0.5.0 through 0.7.0, the HTTP client transport reads a Server-Sent Events response stream incrementally and appends each chunk to an in-memory buffer with no upper bound. The buffer is only flushed when an SSE event delimiter, a double newline, is found, so a remote MCP server that streams response bytes without ever sending the delimiter causes the buffer to grow without limit. A malicious, compromised, or man-in-the-middle-controlled server that the client connects to over the HTTP transport can exploit this to exhaust the client process's memory, triggering a fatal allocation error or OS out-of-memory kill and denying service to the MCP client. The issue affects any client using HttpTransport against an untrusted server endpoint and does not require authentication or user interaction beyond initiating the connection. This issue is fixed in version 0.7.1.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-80101 - Gimp: multiple heap out-of-bounds reads in xwd loader from unrelated width and bytes-per-line validation</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-80101">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-80101
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:36 p.m. | 31 minutes ago
+<br/>
+<strong>Description :</strong>A flaw was found in the file-xwd plugin in GIMP. When processing a specially crafted XWD image file, the plugin validates the image width and bytes-per-line parameters independently rather than ensuring their combined values are consistent with the allocated buffer size. This incorrect validation leads to improper bounds checking, causing a heap out-of-bounds read. This issue can result in an application crash, leading to a denial of service, or a limited information disclosure of heap memory contents into the produced image.
+<br/>
+<strong>Severity:</strong> 4.4 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-77680 - Libsoup3: libsoup: quadratic cpu denial of service in http range coalescing after cve-2025-32907 fix</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-77680">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-77680
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:36 p.m. | 31 minutes ago
+<br/>
+<strong>Description :</strong>An algorithmic complexity flaw exists in libsoup's HTTP Range header processing that persists after the CVE-2025-32907 fix.
+CVE-2025-32907 addressed memory amplification when a client repeated the same range many times in a single Range header. Commit 9bb92f7a corrected merge correctness in soup_message_headers_get_ranges_internal() in libsoup/soup-message-headers.c, but the coalescing loop still removes merged ranges using g_array_remove_index() for each coalesced element. Because GArray is contiguous, each mid-array removal performs an O(N) memmove. When many identical satisfiable ranges are supplied (for example bytes=0-0 repeated thousands of times), the loop performs O(N²) work coalescing them into a single range.
+The vulnerable path is reachable server-side from handle_partial_get() in libsoup/server/http1/soup-server-message-io-http1.c when a SoupServer handler returns HTTP 200 with a non-empty body. No authentication is required. The number of ranges is bounded only by the maximum request header size (~100 KiB), allowing roughly 25,000 ranges per request. Reporter measurements on libsoup HEAD containing the CVE-2025-32907 fix show ~90 ms single-core CPU per such request at the wire maximum, blocking the server's event loop for that duration.
+This is a CPU exhaustion / availability issue only. No memory corruption or information disclosure occurs.
+Affected: libsoup versions containing the CVE-2025-32907 fix but not merge request !550.
+Fixed upstream: MR !550 merged 2026-08-20, replacing per-element removal with O(N) in-place compaction and rejecting Range headers requesting more than 200 ranges.
+Upstream report: https://gitlab.gnome.org/GNOME/libsoup/-/issues/538
+Related: CVE-2025-32907
+<br/>
+<strong>Severity:</strong> 5.3 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-55588 - ORAS CLI: Cyclic Referrer Graph Can Cause Unbounded Recursion and Resource Consumption</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-55588">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-55588
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:32 p.m. | 35 minutes ago
+<br/>
+<strong>Description :</strong>ORAS (OCI Registry As Storage) is a CLI and library for managing artifacts in OCI registries. In ORAS CLI versions up to and including 1.3.2, the recursive referrer traversal does not track visited descriptors, so a malicious OCI registry that returns a cyclic referrer graph causes unbounded recursion and memory growth. This affects oras discover, whose recursive traversal is enabled by default because the --depth option defaults to 0 (unlimited), as well as the recursive referrer counting used by the oras backup and oras restore workflows. A cyclic graph can be as simple as A referring to B and B referring back to A. A malicious registry can use this to cause a client-side denial of service, exhausting CPU and memory and hanging automation or CI/CD pipelines that run ORAS against untrusted registry metadata. The vulnerability does not extend to code execution, artifact substitution, or integrity bypass. This issue has been fixed in version 1.3.3.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-79792 - zackees transcribe-anything Yt-dlp Download ytldp_download.py ytdlp_download os command injection</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-79792">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-79792
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:30 p.m. | 37 minutes ago
+<br/>
+<strong>Description :</strong>A flaw has been found in zackees transcribe-anything up to 4.1.0. Affected is the function ytdlp_download of the file src/transcribe_anything/ytldp_download.py of the component Yt-dlp Download. This manipulation of the argument url causes os command injection. The attack may be initiated remotely. The attack's complexity is rated as high. The exploitability is told to be difficult. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-80104 - DB-GPT 0.8.0 Path Traversal Arbitrary File Write via Skill Upload Filename</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-80104">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-80104
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:18 p.m. | 49 minutes ago
+<br/>
+<strong>Description :</strong>DB-GPT builds the destination path for an uploaded skill from the multipart filename without constraining it to the upload directory. skill_upload in packages/dbgpt-app/src/dbgpt_app/openapi/api_v1/agentic_data_api.py takes file.filename as given and writes the request body to upload_dir / filename. A path composed with that operator discards the left operand when the right one is absolute and follows parent references otherwise, so a filename such as ../../../tmp/x or /tmp/x resolves outside the intended directory; nothing canonicalises the result, checks that it remains under the upload root, or prevents a .py suffix. The route's only dependency is get_user_from_headers in dbgpt_serve/utils/auth.py, which returns a request carrying the admin role whether or not a user_id header is supplied, so the endpoint is reachable without credentials. A remote attacker holding no account can therefore write attacker-controlled bytes to any path the server process can write, place a new Python module inside the application package or replace one the application already imports, and obtain code execution in the server process when that module is next imported.
+<br/>
+<strong>Severity:</strong> 9.8 | CRITICAL
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-77585 - Improper Validation of SSH Target in Okta Privileged Access Client</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-77585">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-77585
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:17 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>The Okta Privileged Access client does not reject a leading hyphen in the username portion of an SSH target. As a result, the value may be interpreted as a command-line option by the underlying SSH process.
+<br/>
+<strong>Severity:</strong> 5.3 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-74932 - WP Fastest Cache 0.9.0.3 - 1.5.0 - Unauthenticated Stored XSS via Host Header Cache Poisoning</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-74932">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-74932
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:17 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>The WP Fastest Cache WordPress plugin before 1.5.1 does not validate the Host header before using it to build the URLs of the asset files it embeds in the pages it caches, and does not include that header in the cache key, allowing unauthenticated attackers to poison cached pages with references to a server they control and have arbitrary JavaScript run for every subsequent visitor.
+<br/>
+<strong>Severity:</strong> 7.5 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-68515 - OpenEXR: Heap out-of-bounds write in exrmultiview with subsampled channel union</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-68515">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-68515
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:17 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>OpenEXR is the reference implementation and specification for the EXR image format, widely used in the motion picture industry. In versions before 3.2.11, 3.3.0 through 3.3.12, and 3.4.0 through 3.4.13, exrmultiview can write past a heap allocation when it combines two attacker-supplied, individually valid scanline EXR files whose union dataWindow is not aligned to one view's channel subsampling. The utility allocates sampled channel storage using a truncated union_width / xSampling, then reads the sampled input through a Slice based on the misaligned union window, producing a heap out-of-bounds write. The trigger is normal public-tool processing, such as exrmultiview left A.exr right B.exr out.exr with crafted but valid inputs, so this is not solely an API or caller-precondition issue. This issue is fixed in versions 3.2.11, 3.3.13, and 3.4.14.
+<br/>
+<strong>Severity:</strong> 7.1 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-68514 - OpenEXR: Heap buffer overflow in PyOpenEXR from literal/prefixed RGB channel name collision in deep images</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-68514">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-68514
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:17 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>OpenEXR is the reference implementation and specification for the EXR image file format, widely used in the motion picture industry. In versions 3.3.0 through 3.3.12 and 3.4.0 through 3.4.13, the PyOpenEXR Python bindings contain a heap out-of-bounds write triggered when reading a crafted deep scanline EXR file. When a deep file declares a literal channel named left alongside layer-prefixed RGB channels left.R, left.G, and left.B, the wrapper processes the literal left channel first and allocates a scalar deep sample array for it, then reuses that same array as the coalesced destination for the prefixed RGB group. The deep reader registers sample slices with an RGB stride (three lanes) into storage that was allocated with scalar shape, so decoding the deep samples writes past the allocation. Opening such a file through the default public Python API, OpenEXR.File(path), causes a heap buffer overflow during normal deep sample decode, leading to memory corruption and a crash. This issue is fixed in versions 3.3.13 and 3.4.14.
+<br/>
+<strong>Severity:</strong> 5.5 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-68513 - OpenEXR: Heap buffer overflow in PyOpenEXR from literal/prefixed RGB channel name collision</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-68513">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-68513
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:17 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>OpenEXR is the reference implementation and specification for the EXR image format, widely used in the motion picture industry. Versions 3.3.0 through 3.3.12 and 3.4.0 through 3.4.13 contain a heap buffer overflow in PyOpenEXR triggered by a channel-name key collision between literal and prefixed RGB channels. When separate_channels=false, PyOpenEXR maps each physical channel name through channelNameToRGBA() and coalesces the results into a shared RGB array. A crafted flat scanline EXR that contains both a literal channel such as left and prefixed channels such as left.R, left.G, and left.B causes these names to collide, so the wrapper reuses an undersized two-dimensional NumPy array for the coalesced RGB slices and writes out of bounds when OpenEXR.File(path) decodes the pixels. This issue is fixed in versions 3.3.13 and 3.4.14.
+<br/>
+<strong>Severity:</strong> 7.1 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-66153 - SonicWall NetExtender Linux Client Insecure Temporary File Handling Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-66153">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-66153
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:17 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>The NEService auto-upgrade process insecurely handles temporary files in SonicWall NetExtender Linux client which allows an attacker to manipulate file paths.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-66152 - SonicWall NetExtender Path Traversal Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-66152">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-66152
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:17 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>A Path traversal vulnerability in OPSWAT tarball in the SonicWall NetExtender Linux client allows an attacker to write arbitrary file as root.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-65367 - Apple iOS and iPadOS Null Pointer Dereference Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-65367">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-65367
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:17 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>A null pointer dereference was addressed with improved input validation. This issue is fixed in iOS 18.7.9 and iPadOS 18.7.9, iOS 26.5 and iPadOS 26.5. An app may be able to cause unexpected system termination.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-64705 - Apple macOS Kernel Buffer Overflow</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-64705">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-64705
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:17 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>A buffer overflow was addressed with improved bounds checking. This issue is fixed in macOS Sequoia 15.7.7, macOS Sonoma 14.8.7. An app may be able to cause unexpected system termination or write kernel memory.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-59981 - OpenEXR: Heap OOB read in SampleCountChannel row when using nonzero dataWindow</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-59981">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-59981
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:16 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>OpenEXR is the reference implementation and specification for the EXR image file format, widely used in the motion picture industry. In versions through 3.2.10, 3.3.0 through 3.3.12, and 3.4.0 through 3.4.13, the OpenEXRUtil library returns an out-of-bounds pointer from the SampleCountChannel::row() API when a deep image has a non-zero dataWindow origin. The row() accessor is documented as 0-based and computes its address from an internal base that is offset for absolute pixel coordinates, so the two coordinate models conflict whenever dataWindow.min is non-zero. For a deep image whose data window has a large negative vertical origin, row(0) points far outside the allocated sample-count buffer. An application that opens an attacker-controlled deep EXR file and accesses sample counts through row() performs an out-of-bounds read, which can crash the process or, under a controlled heap layout, return adjacent heap memory as sample-count values. This issue is fixed in versions 3.2.11, 3.3.13, and 3.4.14.
+<br/>
+<strong>Severity:</strong> 7.1 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-55099 - icalendar: Algorithmic Complexity in Equality</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-55099">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-55099
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:16 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>icalendar is an RFC 5545 compatible parser and generator of iCalendar files for Python. From 7.1.0 until 7.1.3, the Component equality method in src/icalendar/cal/component.py compares nested subcomponents with two membership loops, and each membership test invokes the same method on child components, causing O(2^n) work relative to nesting depth. Component.from_ical accepts arbitrarily nested BEGIN:VEVENT blocks without a depth limit, so an attacker can submit a sub-kilobyte .ics file containing equal nested subtrees and trigger the cost when an application performs equality, inequality, membership, deduplication, test-assertion, round-trip, or normalization comparisons. Parsing alone does not trigger the issue, and comparisons that differ early short-circuit, but a few hundred bytes can pin a CPU core for minutes or indefinitely, causing denial of service in calendar sync or import endpoints, invite processing, and other comparison paths. This issue is fixed in version 7.1.3.
+<br/>
+<strong>Severity:</strong> 7.5 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-45019 - Chainlit: SSRF via MCP SSE and streamable-http transports allows unauthenticated internal network access</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-45019">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-45019
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:16 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>Chainlit is a Python framework for building production-ready conversational AI applications. From 2.4.0rc0 until 2.12.0, Chainlit deployments with features.mcp.enabled set to true in .chainlit/config.toml expose the POST /mcp endpoint without requiring authentication. For sse and streamable-http transports, ConnectSseMCPRequest and ConnectStreamableHttpMCPRequest in backend/chainlit/types.py accept a user-controlled url and optional headers dictionary without scheme validation, private-address filtering, or an allowlist. The connect_mcp handler in backend/chainlit/server.py passes these values to sse_client() or streamablehttp_client(), allowing the Chainlit server to make blind outbound requests to arbitrary internal or external services, including cloud metadata endpoints, with attacker-controlled Authorization and Cookie headers. The SSE URL sink has existed since 2.4.0rc0, while attacker-controlled header forwarding and streamable-http support were added in 2.6.4. The response is consumed internally and not returned, but the attacker can issue state-changing authenticated requests, discover internal services, scan ports, and probe metadata endpoints. This issue is fixed in version 2.12.0.
+<br/>
+<strong>Severity:</strong> 7.2 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-45018 - Chainlit: Command injection via MCP stdio transport allows unauthenticated remote code execution</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-45018">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-45018
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:16 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>Chainlit is a Python framework for building production-ready conversational AI applications. From 2.4.0rc0 until 2.12.0, Chainlit deployments with features.mcp.enabled set to true in .chainlit/config.toml expose the POST /mcp endpoint without requiring authentication. For stdio transport, the endpoint accepts a user-controlled fullCommand string. The validate_mcp_command() function in backend/chainlit/mcp.py checks only the executable name against config.features.mcp.stdio.allowed_executables and passes unchecked arguments to StdioServerParameters in backend/chainlit/server.py. Because npx supports the -c argument, an attacker can execute arbitrary shell commands with the privileges of the Chainlit process. If allowed_executables is unset, its None default is treated as allowing every executable. This issue is fixed in version 2.12.0.
+<br/>
+<strong>Severity:</strong> 9.8 | CRITICAL
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-43670 - Apple WebKit Content Security Policy Bypass</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-43670">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-43670
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:16 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>A Content Security Policy bypass was addressed with improved enforcement in AudioWorklet contexts. This issue is fixed in Safari 26.5, iOS 18.7.9 and iPadOS 18.7.9, iOS 26.5 and iPadOS 26.5, macOS Tahoe 26.5. Processing maliciously crafted web content may bypass Content Security Policy.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-43657 - Apple iOS and iPadOS Improper Authorization Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-43657">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-43657
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:16 p.m. | 51 minutes ago
+<br/>
+<strong>Description :</strong>A permissions issue was addressed with additional restrictions. This issue is fixed in iOS 26.5 and iPadOS 26.5. A malicious app may be able to enumerate installed apps.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-65105 - NVIDIA NemoClaw Inference Server Authentication Bypass</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-65105">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-65105
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:15 p.m. | 52 minutes ago
+<br/>
+<strong>Description :</strong>NVIDIA NemoClaw for Linux contains a vulnerability in its inference server setup, where a remote attacker may access the inference service without authentication. A successful exploit of this vulnerability may lead to information disclosure and denial of service.
+<br/>
+<strong>Severity:</strong> 8.1 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-65088 - NVIDIA NemoClaw Sensitive Information Disclosure</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-65088">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-65088
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:15 p.m. | 52 minutes ago
+<br/>
+<strong>Description :</strong>NVIDIA NemoClaw contains a vulnerability where an attacker could cause
+invocation of process using visible sensitive information. A successful exploit of this vulnerability might lead to information disclosure.
+<br/>
+<strong>Severity:</strong> 5.5 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-65087 - NVIDIA NemoClaw Credential Improper Authorization Vulnerability</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-65087">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-65087
+<br/>
+<strong>Published :</strong> Aug. 25, 2026, 8:15 p.m. | 52 minutes ago
+<br/>
+<strong>Description :</strong>NVIDIA NemoClaw contains a vulnerability where an attacker could cause
+insufficiently protected credentials . A successful exploit of this vulnerability might lead to information disclosure and data tampering.
+<br/>
+<strong>Severity:</strong> 5.6 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+<li class="source">
+<section>
+<h3 class="source-name">darkreading</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Hidden Prompts Trick AI Into False Email Summaries</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/hidden-prompts-trick-ai-false-email-summaries">
+<div class="article-summary-box-inner">
+<span>With some simple HTML that's invisible to users, attackers can manipulate AI-powered email summarizers into producing malicious information.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Finding Nemo(Claw): Networking Issue Allows for LLM Poisoning in OpenClaw</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/nemo-claw-networking-llm-poisoning-openclaw">
+<div class="article-summary-box-inner">
+<span>Attackers can exploit a security bug in NVIDIA's tool to gain unauthenticated access to the local model server through the Ollama API, paving the way for persistent AI agent corruption.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Is Cyber Facing an Affordability Crisis?</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/is-cyber-facing-an-affordability-crisis-">
+<div class="article-summary-box-inner">
+<span>As breach costs reach record highs and defense spending nears $240 billion, small businesses are dangerously exposed, threatening supply chain security.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Exploited Zimbra Flaw Highlights Shrinking Window to Patch</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/zimbra-flaw-exploitation-shrinking-window-patch">
+<div class="article-summary-box-inner">
+<span>CISA issued a three-day deadline for agencies to patch a Zimbra security vulnerability, CVE-2026-73570, which allows full takeover of a user's communications.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Foul Language: WordlistLoader Disguises Malware as Ordinary Text</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/data-privacy/wordlistloader-disguises-malware-ordinary-text">
+<div class="article-summary-box-inner">
+<span>ClickFix-style threat campaigns are using a new trick to evade detection and deliver Amatera, an increasingly prevalent infostealer.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Tricky 'SynkLoader' Multitool May Herald Ransomware</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/tricky-synkloader-multitool-ransomware">
+<div class="article-summary-box-inner">
+<span>An advanced, multilingual malware family brings back a trick from yesteryear — screen hijacking — for effective password theft, along with a slew of novel features.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">ToxicPanda Banking Trojan Matures Into Enterprise Threat</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/mobile-security/toxicpanda-banking-trojan-matures-enterprise-threat">
+<div class="article-summary-box-inner">
+<span>The latest version of the Android malware has new features that expand its global reach and put more than users' financial applications at risk.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">The Vulnerability Gap: Why Discovery Is Outrunning Repair</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/vulnerability-gap-why-discovery-is-outrunning-repair">
+<div class="article-summary-box-inner">
+<span>AI is discovering more vulnerabilities, faster, and under a tightening regulatory environment, making this an all-hands-on-deck moment for the cybersecurity community.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">How an Emerging Industrial Protocol Family Could Put OT at Risk</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/how-emerging-industrial-protocol-family-put-ot-at-risk">
+<div class="article-summary-box-inner">
+<span>New research shows how attacks against some unprotected TSN protocols could allow attackers to disrupt or manipulate physical processes.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">OWASP Flags Top AI Skill Risks in New Security Blueprint</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/owasp-flags-top-ai-skill-risks-security-blueprint">
+<div class="article-summary-box-inner">
+<span>The Open Worldwide Application Security Project has a brand-new top 10 security list tailored for the modern era, and it debuts a Universal Skill Format to add consistency and security to the AI add-ons.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Calling on Cyber Pros to Help Defend City Hall</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/cyber-pros-help-city-hall">
+<div class="article-summary-box-inner">
+<span>Government agencies with smaller budgets need support — and here's how you can help.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">OpenAI Adds Controls That Should've Been There Already</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/openai-adds-controls-already">
+<div class="article-summary-box-inner">
+<span>The new AI security controls follow the Hugging Face incident last month, though experts say many of these additions should have been in place prior to the frontier models escaping.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Hardware Makers Implement Post-Quantum Cryptography as Security Threats Near</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/hardware-makers-implement-post-quantum-cryptography">
+<div class="article-summary-box-inner">
+<span>The coming threat of super-powerful computers capable of cracking today's algorithms requires upgrading encryption now. Tech companies have begun building defenses.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">New CUSTODY Framework Constrains AI Agents Inside the Network</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/perimeter/new-custody-framework-constrains-ai-agents-inside-network">
+<div class="article-summary-box-inner">
+<span>Enterprise cybersecurity expert Jake Williams joins the Dark Reading News Desk to explain why he decided to release his new agentic AI framework in the wake of the OpenAI attacks on Hugging Face.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">What We Missed: Delta Flight Disrupted With Wi-Fi Hack</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/delta-flight-disrupted-wi-fi-hack">
+<div class="article-summary-box-inner">
+<span>In this video, Dark Reading editors discuss some of the news they didn't get a chance to cover, including some scary airplane security risks and the US government's newest &quot;hack back&quot; strategy.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">N-able Bug Exposes Password Vault Master Keys</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/n-able-bug-password-vault-master-keys">
+<div class="article-summary-box-inner">
+<span>The popular &quot;Passportal&quot; password manager, favored by MSPs and SMBs, remains risky even after its patch, thanks to its cloud-based design. Should these products stay away from the cloud entirely?</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Money and Mindset: The Two Biggest Roadblocks to Cyber Policing</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/money-and-mindset-the-two-biggest-roadblocks-to-cyber-policing">
+<div class="article-summary-box-inner">
+<span>Law enforcement training is falling behind the volume and rapid evolution of cybercrimes. Officers really only need to learn the basics, but lack of focus and budget hinder progress.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Pakistan's Transparent Tribe Refreshes Toolset for Afghan Cyberattacks</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/pakistan-transparent-tribe-afghan-cyberattacks">
+<div class="article-summary-box-inner">
+<span>A nation-state threat actor is picking on immature organizations run by the Taliban, but failing against more prepared government agencies in India.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">'Grandoreiro' Malware Resurfaces With Mexico Campaign</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/grandoreiro-resurfaces-mexico-campaign">
+<div class="article-summary-box-inner">
+<span>The banking Trojan, post-law enforcement takedown, is sprucing itself up with features that make detection and analysis harder.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">No-Filter 'Kriminal' AI Platform Raises Cybercrime Concerns</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/no-filter-kriminal-ai-platform-cybercrime-concerns">
+<div class="article-summary-box-inner">
+<span>The AI company officially forbids illicit use, while offering guardrail-free social engineering, offensive cybercrime, and OSINT scanning to anyone with a bit of cryptocurrency.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Agentic AI Presents New Insider Threat Model for Orgs</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/agentic-ai-new-insider-threat-model">
+<div class="article-summary-box-inner">
+<span>Katie Moussouris of Luta Security talks with the Dark Reading News Desk about how enterprises will now need to monitor risks posed by their own agents in the wake of the recent Hugging Face attack.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">SilkParasite Threatens Central Asian Orgs With Flurry of RATs</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/silkparasite-central-asian-orgs-flurry-rats">
+<div class="article-summary-box-inner">
+<span>A spear-phishing campaign by a China-nexus group linked to FamousSparrow provides insight into geopolitical, technical, and strategic global moves by the country's APTs.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">China-Linked Hacker Shows AI Capabilities in APAC Attack</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/china-linked-hacker-ai-capabilities-apac-attack">
+<div class="article-summary-box-inner">
+<span>In the first purported &quot;near-autonomous&quot; attack on a nation-state, a Chinese-language operator used a complex AI framework to target and compromise government agencies, likely in Taiwan.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Critical GitLab Zero-Click Flaw Poses Mitigation Challenges</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/critical-gitlab-zero-click-flaw-mitigation-challenges">
+<div class="article-summary-box-inner">
+<span>A lack of technical details could make it hard for organizations running self-managed GitLab versions to detect potential exploitation of CVE-2026-19478.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">'CoSnitch' Attack Tricked Copilot Into Mapping Out Architecture</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/cosnitch-attack-copilot-mapping-out-architecture">
+<div class="article-summary-box-inner">
+<span>Researchers discovered a &quot;meta-hacking&quot; technique that can manipulate the AI service into revealing its own security weaknesses.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">The 'Industrial Accidents' Behind Rogue AI Agent Attacks — and the Sandbox Failures Exposed</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/industrial-accidents-rogue-ai-agent-attacks-sandbox-failures">
+<div class="article-summary-box-inner">
+<span>Rich Mogull, chief analyst with the Cloud Security Alliance, joins the Dark Reading News Desk with what defenders need to take away from AI agents escaping their environments to launch attacks.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CISOs Break Their Silence in 'Declassified' Docuseries</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/cisos-break-their-silence-in-declassified-docuseries">
+<div class="article-summary-box-inner">
+<span>Million-dollar heists, divorce, and career-ending burnout are all stories told in the latest docuseries revealing a behind-the-scenes look at the cybersecurity community.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Silent 'TwinLoot' Cyber Threat Operates Entirely From Microsoft's Cloud</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cloud-security/silent-twinloot-threat-operates-microsoft-cloud">
+<div class="article-summary-box-inner">
+<span>The Python-based malware framework takes living-off-the-land tactics to a new heights of stealth, with a modular implant that steals credentials and achieves persistence.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">'Ransom Busters': Ransomware Actor Poses as Incident-Recovery Service</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/ransom-busters-ransomware-actor-incident-recovery-service">
+<div class="article-summary-box-inner">
+<span>A ransomware affiliate appears to be sidling up to victims with offers of aid, masking its true intention of diverting ransom payments.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Video Call Exploit Chains Two Flaws in Unisoc Modems</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/mobile-security/video-call-exploit-chains-two-flaws-unisoc-modems">
+<div class="article-summary-box-inner">
+<span>Researchers found that by combining two vulnerabilities, they could take over an Android device by delivering a payload and getting the victim to answer their phone.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">'Turf War' Between Claude Agents Leads to Self-Replicating Malware</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/turf-war-claude-agents-self-replicating-malware">
+<div class="article-summary-box-inner">
+<span>Three testing models with the same goal but different directives engaged in &quot;increasingly aggressive&quot; territorial attacks on one another, according to Anthropic.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Hugging Face Breach Raises Big Questions About AI Security Controls</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/adam-shostack-talks-hugging-face-phantom-b">
+<div class="article-summary-box-inner">
+<span>Adam Shostack, president of Shostack &amp; Associates and an affiliate professor at the University of Washington, talks with the Dark Reading News Desk about why he was &quot;blown away&quot; by OpenAI's revelations regarding the Hugging Face attack.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Linux Botnet Evooo1Bot Expands Mirai Capabilities Well Beyond DDoS</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/linux-botnet-evooo1bot-mirai-capabilities-beyond-ddos">
+<div class="article-summary-box-inner">
+<span>The botnet adds exploitation modules, credential theft, and reverse SOCKS relays to turn compromised devices into persistent attacker infrastructure.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Mission-Driven Security: Inside a Global Bank's Defense</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/mission-driven-security-inside-global-bank-defense">
+<div class="article-summary-box-inner">
+<span>In this video interview, Standard Chartered's group CISO shares insights on transitioning from technical roles to strategic leadership, the importance of business-savvy security executives, and how AI is reshaping both defensive capabilities and adversarial tactics in banking.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Amid AI-Driven Bug-Hunt Tsunami, NIST Looks to … AI</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/ai-driven-bug-tsunami-nist-looks-to-ai">
+<div class="article-summary-box-inner">
+<span>Driven by AI-augmented research and scanning, vulnerability volumes continue to surge, driving the National Institute of Standards and Technology to ask whether AI could be the answer.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Scottish Govt Suffers Potentially Widening Data Breach at Prosecutor's Office</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/scottish-govt-data-breach-prosecutors-office">
+<div class="article-summary-box-inner">
+<span>One Caledonian government agency reported a breach, thanks to a third party that may have serviced other agencies as well.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">What Boards Need to Know About Tech Risk</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/what-boards-must-know-tech-risk">
+<div class="article-summary-box-inner">
+<span>Why do so many boards underestimate technology risk until it becomes a crisis?</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Cyera's Oasis Security Buy Is All About AI Agent Control</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/identity-access-management-security/cyera-oasis-security-acquisition-ai-agent-control">
+<div class="article-summary-box-inner">
+<span>The $1 billion deal aims to converge data security and identity into a single control plane for agents, with privileged access redefined around business context rather than static roles.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Global Threat Campaign Hits Critical VMware vCenter Flaw</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/global-threat-campaign-critical-vmware-vcenter-flaw">
+<div class="article-summary-box-inner">
+<span>Exploitation against CVE-2026–59310 began earlier this month, and patching the vulnerability may not be enough to fully mitigate the threat.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">'Jewelbug' APT Balances State Espionage &amp; Cryptocurrency Theft</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/jewelbug-apt-state-espionage-cryptocurrency-theft">
+<div class="article-summary-box-inner">
+<span>Researchers discovered hackers-for-hire performing cyber espionage and financially motivated heists from the same Web panel.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Belgium's eID Authentication Opens Citizen Accounts to RCE</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/belgium-eid-authentication-citizen-accounts-rce">
+<div class="article-summary-box-inner">
+<span>The trust framework underlying Belgium's electronic ID system was fully compromised by severe vulnerabilities in a key browser extension, showcasing bigger problems with extensions in general.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Long-running Data Theft Campaign Targeting Salesforce, ServiceNow</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/long-running-data-theft-campaign-salesforce-servicenow">
+<div class="article-summary-box-inner">
+<span>The &quot;City-Forum&quot; campaign has been active since at least March 2025 and has targeted organizations across multiple sectors with custom tooling.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Walmart Takes a 'Trusted Agent' Approach to Purple Teaming</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/walmart-trusted-agent-approach-purple-teaming">
+<div class="article-summary-box-inner">
+<span>Walmart colocates red and blue teams to build trust and improve security through collaborative purple teaming exercises</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Ransomware Hits Colombian Justice Ministry Days Before Presidential Transition</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/ransomware-hits-colombian-justice-ministry-presidential-transition">
+<div class="article-summary-box-inner">
+<span>Attackers continue to target critical infrastructure and government-linked organizations in the country, mirroring the increased activity across Latin America.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Walmart Leaders Transform Security Operations Without Going Bananas</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/walmart-leaders-transform-security-operations-without-going-bananas">
+<div class="article-summary-box-inner">
+<span>The big-box giant has scaled its defenses by encouraging trust and innovation. Good communications, transparency, and team spirit are key factors.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Microsoft's Patch Tuesday Deluge Continues With August Updates</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/microsofts-patch-tuesday-deluge-continues">
+<div class="article-summary-box-inner">
+<span>The most concerning bug in the batch is CVE-2026-62878 (CVSS: 9.8), a remote code execution (RCE) vulnerability in Windows DNS Server that requires no user interaction.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Gunra Ransomware Gang Exploits Fortinet Flaws, Bypasses MFA</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/gunra-ransomware-gang-fortinet-flaws-bypasses-mfa">
+<div class="article-summary-box-inner">
+<span>The ransomware-as-a-service operation is finding success against critical infrastructure targets with leaked Conti code and old flaws in firewalls and VPN appliances.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">'GhostJacking' Exposes Identity Governance Gaps in AI Agents</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/ghostjacking-identity-governance-gaps-ai-agents">
+<div class="article-summary-box-inner">
+<span>New research shows how attackers can use security alerts and blocked events to manipulate and hijack AI agents.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Multistate Water System Attacks Widen, Iran Suspected</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/multistate-water-system-attacks-widen-iran-suspected">
+<div class="article-summary-box-inner">
+<span>Attacks targeting water systems just keep flowing across a dozen states, against ill-secured, Internet-exposed PLCs.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Metabase SQL Zero-Day Attacks Could Have Wide Blast Radius</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/metabase-sql-zero-day-attacks-wide-blast-radius">
+<div class="article-summary-box-inner">
+<span>The maximum-severity vulnerability, which still has no CVE, allows malicious, remote administrator access to the business-analytics platform and its downstream users.</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+</ul>
+</section>
+<section class="daily-content">
+<h2 class="daily-heading">
 <time datetime="2026-08-24T23:10:22.682964798Z">08-24</time>
 </h2>
 <ul class="sources card">
@@ -4884,447 +5864,6 @@ queryparser/termgenerator_internal.cc in Xapian xapian-core before 2.1.0 and bef
                                         <summary class="article-expander__title">Anthropic: Claude Attacks Result of Security Gaps, Not Model Issues</summary>
                                         <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/anthropic-ai-issues-result-security-gaps">
                                             <div class="article-summary-box-inner">
-                                                <span>Last month's incidents in which the AI model breached real-world systems derived from over-permissioning,especially with Internet access.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Chinese Actor Weaponizes Deepseek AI Agent to Attack Security Firm</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cyberattacks-data-breaches/chinese-actor-deepseek-ai-agent-attack-security-firm"><div class="article-summary-box-inner"><span>Researchers intercepted and investigated the model,which was attempting to compromise more than 1,200hosts for proxyjacking to launch further attacks.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Is There Really a Fix for CISO Fatigue?</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cybersecurity-operations/fix-for-ciso-fatigue"><div class="article-summary-box-inner"><span>Accountability without any real authority is driving CISO burnout,and organizations need to take notice.</span></div></a></details></article></section></section></li></ul></section><section class="daily-content"><h2 class="daily-heading"><time datetime="2026-08-17T23:05:08.428915314Z">8-17</time></h2><ul class="sources card"><li class="source"><section><h3 class="source-name">Latest Vulnerabilities</h3><section class="articles-per-source"><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-75529-Stored Cross-Site Scripting via MIME-Type Confusion in PDF Downloads of Pandora</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-75529"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-75529<br/><strong>Published:</strong>Aug.17,2026,8:52p.m.|15 minutes ago<br/><strong>Description:</strong>Pandora is affected by a stored cross-site scripting vulnerability in the PDF download functionality.The/task-download/<task_id>/.../pdf endpoint verifies that the submitted file is a PDF using Pandora's content-based file-type detection, but previously returned the file using send_file(task.file.path) without explicitly specifying the MIME type or forcing it to be downloaded as an attachment. 
-
-
-Because Flask determines the response MIME type from the filename when a path is supplied, an attacker could submit a file whose content is recognized by Pandora as a PDF while its filename or extension causes the download endpoint to return it with a different, potentially active MIME type. 
-
-
-A specially crafted PDF/polyglot file could therefore be served inline and interpreted by a victim's browser as HTML or another executable web format.If a victim with access to the submitted analysis follows the PDF download link,attacker-controlled script could execute in the security context of the Pandora application,potentially allowing access to application data or actions using the victim's session.
-
-
-The patch prevents the issue by explicitly returning PDF downloads with Content-Type: application/pdf, forcing Content-Disposition: attachment, and assigning a trusted .pdf filename based on the task UUID.
-  <br />
-  <strong>Severity:</strong> 6.9 | MEDIUM
-  <br />
-  Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">CVE-2026-34398 - FreeCAD: Arbitrary Code Execution via eval() on untrusted project file metadata in BIM Workbench</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-34398">
-                                            <div class="article-summary-box-inner">
-                                                <span><strong>CVE ID :</strong>CVE-2026-34398
-  <br />
-  <strong>Published :</strong> Aug. 17, 2026, 8:51 p.m. | 15 minutes ago
-  <br />
-  <strong>Description :</strong>FreeCAD is a free and open-source multiplatform 3D parametric modeler. From 0.19 until 1.1.1, src/Mod/BIM/bimcommands/BimProjectManager.py in the BIM Project Manager Load Template flow passes attacker-controlled FCStd Meta property values for wpposition, wpu, wpv, and wpaxis directly to eval(), allowing arbitrary Python code execution when a user loads a malicious BIM project template. This issue is fixed in version 1.1.1.
-  <br />
-  <strong>Severity:</strong> 0.0 | NA
-  <br />
-  Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">CVE-2026-34399 - FreeCAD: Arbitrary Code Execution via eval() on untrusted SVG template scale field in BIM TechDraw Page</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-34399">
-                                            <div class="article-summary-box-inner">
-                                                <span><strong>CVE ID :</strong>CVE-2026-34399
-  <br />
-  <strong>Published :</strong> Aug. 17, 2026, 8:50 p.m. | 17 minutes ago
-  <br />
-  <strong>Description :</strong>FreeCAD is a free and open-source multiplatform 3D parametric modeler. From 0.19 until 1.1.1, FreeCAD's BIM Workbench contains an eval()call on untrusted data from SVG template files.When a user creates a TechDraw page from a malicious SVG template,arbitrary Python code executes.The vulnerable code is in src/Mod/BIM/bimcommands/BimTDPage.py(line 87).This issue is fixed in version 1.1.1.<br/><strong>Severity:</strong>0.0|NA<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-68765-hashcat KeePass KDBX v4 Module Heap Buffer Overflow via Token Field</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-68765"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-68765<br/><strong>Published:</strong>Aug.17,2026,8:48p.m.|19 minutes ago<br/><strong>Description:</strong>hashcat master branch builds after v7.1.2contain a heap buffer overflow vulnerability in the KeePass AESKDF/KDBX v4 module(module 34301)that allows attackers to corrupt adjacent heap memory by supplying an oversized ninth hash field token.The module accepts up to 600hex characters for the ninth token field but decodes it into a fixed 256-byte buffer with no length check,allowing a maximal input to write up to 44bytes past the buffer boundary into adjacent esalt fields and heap chunk metadata,potentially enabling heap corruption or memory access violations.<br/><strong>Severity:</strong>6.1|MEDIUM<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-34789-FreeCAD:Arbitrary code execution via unsandboxed PyImport_ImportModule in PropertyPythonObject::Restore</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-34789"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-34789<br/><strong>Published:</strong>Aug.17,2026,8:47p.m.|20 minutes ago<br/><strong>Description:</strong>FreeCAD is a free and open-source multiplatform 3D parametric modeler.Prior to 1.1.2,src/App/PropertyPythonObject.cpp in PropertyPythonObject::Restore()passes the attacker-controlled module attribute from serialized PropertyPythonObject XML directly to PyImport_ImportModule()while restoring a crafted FCStd document,which executes module-level Python code,and the legacy pickle branch also imports an attacker-controlled module and invokes its class constructor through PyObject_CallObject().This issue is fixed in version 1.1.2.<br/><strong>Severity:</strong>0.0|NA<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-65822-ERPNext:SQL Injection in"Inactive Customers"report via unvalidated`doctype`filter</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-65822"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-65822<br/><strong>Published:</strong>Aug.17,2026,8:45p.m.|22 minutes ago<br/><strong>Description:</strong>ERPNext is a free and open source Enterprise Resource Planning tool.Prior to 15.116.0and 16.23.0,erpnext/selling/report/inactive_customers/inactive_customers.py accepts an unvalidated doctype filter and interpolates it into raw SQL in get_sales_details and get_last_sales_amt,allowing an authenticated user to extract sensitive information and manipulate database queries.This issue is fixed in versions 15.116.0and 16.23.0.<br/><strong>Severity:</strong>0.0|NA<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-66795-Managedcluster-import-controller:managedcluster-import-controller:csr auto-approver does not validate certificate subject,signername,or requester identity</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-66795"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-66795<br/><strong>Published:</strong>Aug.17,2026,8:45p.m.|22 minutes ago<br/><strong>Description:</strong>A flaw was found in the managedcluster-import-controller.The Certificate Signing Request(CSR)auto-approval logic improperly validates incoming CSRs,specifically by not inspecting the signer name or decoding the PEM-encoded x509 CSR.This vulnerability allows a privileged service account on a spoke cluster to submit a malicious CSR.Successful exploitation can lead to privilege escalation,enabling the attacker to obtain administrative credentials on the hub cluster.<br/><strong>Severity:</strong>9.1|CRITICAL<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-65974-ERPNext:Server-Side Template Injection leading to Remote Code Execution</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-65974"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-65974<br/><strong>Published:</strong>Aug.17,2026,8:44p.m.|23 minutes ago<br/><strong>Description:</strong>ERPNext is a free and open source Enterprise Resource Planning tool.Prior to 15.111.0and 16.22.0,limited authenticated users can cross a permission boundary in Frappe safe execution because frappe.render_template is exposed without forcing restrict_globals,allowing server-side template injection and remote code execution.This issue is fixed in versions 15.111.0and 16.22.0.<br/><strong>Severity:</strong>0.0|NA<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-40506-OpenEMR Path Traversal Arbitrary Directory Deletion via standard_tables_manage.php</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-40506"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-40506<br/><strong>Published:</strong>Aug.17,2026,8:39p.m.|28 minutes ago<br/><strong>Description:</strong>OpenEMR before 8.2.0contains a path traversal vulnerability in the standard_tables_manage.php interface where the db GET parameter is passed without validation to temp_dir_cleanup(),which joins the value to the PHP temporary directory path and recursively deletes the resulting directory.Attackers can supply a traversal sequence in the db parameter to resolve outside the intended temporary directory,and by chaining this with an open redirect in dicom_frame.php,an unauthenticated attacker can deliver a crafted URL that triggers arbitrary recursive directory deletion within an authenticated Superuser's session.
-  <br />
-  <strong>Severity:</strong> 7.0 | HIGH
-  <br />
-  Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">CVE-2026-75483 - powerlevel10k Control Character Injection via package.json Version</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-75483">
-                                            <div class="article-summary-box-inner">
-                                                <span><strong>CVE ID :</strong>CVE-2026-75483
-  <br />
-  <strong>Published :</strong> Aug. 17, 2026, 8:36 p.m. | 31 minutes ago
-  <br />
-  <strong>Description :</strong>powerlevel10k fails to neutralize control characters in the package.json version field when rendering the package prompt segment. Attackers can inject raw escape bytes in the version string to emit arbitrary terminal control sequences on each prompt render when the shell enters affected directories.
-  <br />
-  <strong>Severity:</strong> 4.8 | MEDIUM
-  <br />
-  Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">CVE-2026-75482 - SWE-agent Trajectory Inspector Path Traversal File Disclosure</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-75482">
-                                            <div class="article-summary-box-inner">
-                                                <span><strong>CVE ID :</strong>CVE-2026-75482
-  <br />
-  <strong>Published :</strong> Aug. 17, 2026, 8:36 p.m. | 31 minutes ago
-  <br />
-  <strong>Description :</strong>SWE-agent's trajectory inspector(sweagent inspector),confirmed in v1.1.0,is an HTTP server that joins request paths to the trajectory directory in its/trajectory/handler without rejecting parent-directory('..')references,bypassing the built- in path sanitization.The server binds all interfaces(0.0.0.0),applies wildcard CORS,and requires no authentication.An unauthenticated network client(or a malicious web page via CORS)can use path traversal sequences to read files outside the intended directory.Because the read sink parses targets as trajectory JSON,disclosure is constrained to JSON files shaped like a trajectory,which can contain repository contents,command output,and secrets/API keys.<br/><strong>Severity:</strong>8.7|HIGH<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-75481-SkyPilot Authentication Bypass via Service Account Role Escalation</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-75481"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-75481<br/><strong>Published:</strong>Aug.17,2026,8:36p.m.|31 minutes ago<br/><strong>Description:</strong>SkyPilot fails to validate that authenticated users are entitled to grant administrator roles when updating service account permissions.Attackers can create a service account,escalate it to administrator role,and authenticate with its bearer token to gain administrative control over all users and workspaces.<br/><strong>Severity:</strong>8.8|HIGH<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-75480-OpenViking Debug Vector Endpoints Multi-tenant Data Exposure</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-75480"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-75480<br/><strong>Published:</strong>Aug.17,2026,8:36p.m.|31 minutes ago<br/><strong>Description:</strong>OpenViking debug vector scroll and count endpoints apply only account-level scoping without user-level access controls,allowing authenticated users to read all co-tenant records.Attackers can query these endpoints to retrieve private memories,resources,skills,and secret material belonging to other users in the same account without administrative privileges.<br/><strong>Severity:</strong>7.1|HIGH<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-75479-JimuReport Unauthenticated Report Listing and Share Token Disclosure</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-75479"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-75479<br/><strong>Published:</strong>Aug.17,2026,8:36p.m.|31 minutes ago<br/><strong>Description:</strong>JimuReport contains an authentication bypass vulnerability in the report folder template listing endpoint that allows unauthenticated attackers to enumerate all reports and retrieve share tokens.Attackers can use disclosed share tokens to access protected report endpoints and retrieve full report definitions including embedded SQL statements and live query data.<br/><strong>Severity:</strong>8.7|HIGH<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-75111-Evidently UI Path Traversal via Dataset Materialization Filename</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-75111"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-75111<br/><strong>Published:</strong>Aug.17,2026,8:36p.m.|31 minutes ago<br/><strong>Description:</strong>Evidently UI fails to properly validate the filename parameter in the dataset materialization endpoint,allowing unauthenticated attackers to read arbitrary files outside the workspace directory.Attackers can supply traversal sequences or absolute paths in the filename field to access system files,which are then materialized into datasets and retrieved through the download endpoint.<br/><strong>Severity:</strong>8.7|HIGH<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-75110-MemOS Authentication Bypass via Unset INTERNAL_SERVICE_SECRET</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-75110"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-75110<br/><strong>Published:</strong>Aug.17,2026,8:36p.m.|31 minutes ago<br/><strong>Description:</strong>MemOS is a memory operating system for LLMs and AI agents.In deployments where authentication is enabled(AUTH_ENABLED=true)but the undocumented,defaultless INTERNAL_SERVICE_SECRET environment variable is unset,the is_internal_request()check in src/memos/api/middleware/auth.py fails open:os.getenv("INTERNAL_SERVICE_SECRET")returns None and a request omitting the X-Internal-Service header also yields None,so the comparison None==None evaluates true.The request is then treated as a trusted internal principal and granted scopes:["all"].As a result,an unauthenticated remote attacker can reach the admin API-key management endpoints to mint API keys for any user,enumerate keys,revoke keys,and generate a master key for persistent privileged access,as well as all data endpoints.<br/><strong>Severity:</strong>9.8|CRITICAL<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-75109-Determined Missing Authorization Check on Generic Task Endpoints</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-75109"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-75109<br/><strong>Published:</strong>Aug.17,2026,8:36p.m.|31 minutes ago<br/><strong>Description:</strong>Determined fails to authorize requests on the generic task kill,pause,and unpause endpoints in the API handlers.Authenticated attackers can disrupt other users' workloads by terminating, pausing, or unpausing tasks they do not own.
-  <br />
-  <strong>Severity:</strong> 7.1 | HIGH
-  <br />
-  Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">CVE-2026-75108 - Next Terminal Missing Per-Asset Authorization on Portal Endpoints</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-75108">
-                                            <div class="article-summary-box-inner">
-                                                <span><strong>CVE ID :</strong>CVE-2026-75108
-  <br />
-  <strong>Published :</strong> Aug. 17, 2026, 8:36 p.m. | 31 minutes ago
-  <br />
-  <strong>Description :</strong>Next Terminal fails to enforce per-asset authorization checks on the portal ping and wake-on-LAN endpoints, allowing any authenticated user to probe and wake assets they are not granted access to. Attackers can call these endpoints with arbitrary asset identifiers to retrieve asset information including display names, reachability status, connection timing, and network addresses, or trigger wake-on-LAN packets on unauthorized assets.
-  <br />
-  <strong>Severity:</strong> 5.4 | MEDIUM
-  <br />
-  Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">CVE-2026-75106 - OpnForm Editable Submission Secret Derivation via Empty Hashids Salt</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-75106">
-                                            <div class="article-summary-box-inner">
-                                                <span><strong>CVE ID :</strong>CVE-2026-75106
-  <br />
-  <strong>Published :</strong> Aug. 17, 2026, 8:36 p.m. | 31 minutes ago
-  <br />
-  <strong>Description :</strong>OpnForm derives editable-submission secrets from sequential row identifiers using Hashids with an empty default salt, allowing unauthenticated attackers to compute hashes for any submission. Attackers can read other respondents'full submission data through the submission-fetch endpoint or overwrite submissions by supplying predicted hashes to the answer endpoint.<br/><strong>Severity:</strong>9.3|CRITICAL<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-75105-phpIPAM Temporary Subnet Share Information Disclosure via Address Parameter</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-75105"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-75105<br/><strong>Published:</strong>Aug.17,2026,8:36p.m.|31 minutes ago<br/><strong>Description:</strong>phpIPAM through 1.8.1fails to verify that a requested IP address belongs to the subnet a temporary share token was issued for.In app/temp_share/index.php and app/temp_share/address.php,when the share type is'subnets',the subnetId parameter is used directly as a database primary key to fetch an address without confirming the address belongs to the authorized subnet.An unauthenticated party holding any valid,non-expired temporary share URL can enumerate the subnetId parameter to read every IP address record across all sections and subnets,including hostnames,DNS names,MAC addresses,owner/contact fields,and notes(which may contain credentials and configuration details).<br/><strong>Severity:</strong>8.7|HIGH<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-75104-Hugging Face Transformers Path Traversal via Checkpoint Index</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-75104"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-75104<br/><strong>Published:</strong>Aug.17,2026,8:36p.m.|31 minutes ago<br/><strong>Description:</strong>Hugging Face Transformers fails to validate shard filenames in checkpoint index files,allowing attackers to read arbitrary files outside the model directory.Attackers can supply malicious index files with parent-directory references or absolute paths that are joined without validation,enabling file disclosure and filesystem reconnaissance.<br/><strong>Severity:</strong>6.8|MEDIUM<br/>Visit the link for more details,such as CVSS details,affected products,timeline,and more...</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CVE-2026-75103-Crawlab Missing Authorization on Password Change Endpoint Allows Account Takeover</summary><a class="article-summary-link article-summary-box-outer"href="https://cvefeed.io/vuln/detail/CVE-2026-75103"><div class="article-summary-box-inner"><span><strong>CVE ID:</strong>CVE-2026-75103<br/><strong>Published:</strong>Aug.17,2026,8:36p.m.|31 minutes ago<br/><strong>Description:</strong>Crawlab fails to verify user ownership or administrative role on the password-change endpoint,allowing any authenticated user to reset any account's password. Attackers can enumerate user accounts through the user listing endpoint and change administrator credentials to achieve full account takeover and arbitrary code execution.
-  <br />
-  <strong>Severity:</strong> 8.8 | HIGH
-  <br />
-  Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">CVE-2026-54356 - Budibase authenticated arbitrary S3 signed upload URL issuance via `/api/attachments/:datasourceId/url`</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-54356">
-                                            <div class="article-summary-box-inner">
-                                                <span><strong>CVE ID :</strong>CVE-2026-54356
-  <br />
-  <strong>Published :</strong> Aug. 17, 2026, 8:32 p.m. | 35 minutes ago
-  <br />
-  <strong>Description :</strong>Budibase is an open-source low-code platform. Prior to 3.41.3, POST /api/attachments/:datasourceId/url in packages/server/src/api/routes/static.ts and packages/server/src/api/controllers/static/index.ts allows an authenticated published-app user with the BASIC role to supply attacker-controlled bucket and key values and obtain signedUrl and publicUrl values backed by stored S3 datasource credentials. This issue is fixed in version 3.41.3.
-  <br />
-  <strong>Severity:</strong> 0.0 | NA
-  <br />
-  Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">CVE-2026-35219 - Budibase: SSRF in Automation Steps - Webhook, Zapier, N8N, Slack, Discord Bypass IP Blacklist</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-35219">
-                                            <div class="article-summary-box-inner">
-                                                <span><strong>CVE ID :</strong>CVE-2026-35219
-  <br />
-  <strong>Published :</strong> Aug. 17, 2026, 8:28 p.m. | 39 minutes ago
-  <br />
-  <strong>Description :</strong>Budibase is an open-source low-code platform. Prior to 3.41.3, automation steps in packages/server/src/automations/steps/outgoingWebhook.ts, packages/server/src/automations/steps/zapier.ts, packages/server/src/automations/steps/n8n.ts, packages/server/src/automations/steps/slack.ts, and packages/server/src/automations/steps/discord.ts use node-fetch on user-provided URLs without the BLACKLIST_IPS enforcement used by the REST integration, allowing an authenticated user to make server-side requests to cloud metadata and internal services. This issue is fixed in version 3.41.3.
-  <br />
-  <strong>Severity:</strong> 0.0 | NA
-  <br />
-  Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">CVE-2026-73410 - Budibase: SSRF via DNS rebinding in the REST datasource integration</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-73410">
-                                            <div class="article-summary-box-inner">
-                                                <span><strong>CVE ID :</strong>CVE-2026-73410
-  <br />
-  <strong>Published :</strong> Aug. 17, 2026, 8:27 p.m. | 40 minutes ago
-  <br />
-  <strong>Description :</strong>Budibase is an open-source low-code platform. Prior to 3.40.0, packages/backend-core/src/utils/outboundFetch.ts pinned a validated address through a Node agent, but the REST integration used getDispatcher from packages/backend-core/src/utils/fetch.ts, causing undici to ignore that agent and resolve the hostname again. A builder could use DNS rebinding to make packages/server/src/integrations/rest.ts connect to an internal address after a public address passed validation, with full response access and arbitrary REST methods. The fix adds createPinnedLookup support to the undici dispatcher and passes the validated address to custom fetch implementations. This issue is fixed in version 3.40.0.
-  <br />
-  <strong>Severity:</strong> 0.0 | NA
-  <br />
-  Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                        </section>
-                    </section>
-                </li>
-                <li class="source">
-                    <section>
-                        <h3 class="source-name">darkreading</h3>
-                        <section class="articles-per-source">
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">Video Call Exploit Chains Two Flaws in Unisoc Modems</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/mobile-security/video-call-exploit-chains-two-flaws-unisoc-modems">
-                                            <div class="article-summary-box-inner">
-                                                <span>Researchers found that by combining two vulnerabilities, they could take over an Android device by delivering a payload and getting the victim to answer their phone.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">'Turf War' Between Claude Agents Leads to Self-Replicating Malware</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/turf-war-claude-agents-self-replicating-malware">
-                                            <div class="article-summary-box-inner">
-                                                <span>Three testing models with the same goal but different directives engaged in &quot;increasingly aggressive&quot; territorial attacks on one another, according to Anthropic.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">Adam Shostack Talks Hugging Face &amp; PHANTOM-B</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/adam-shostack-talks-hugging-face-phantom-b">
-                                            <div class="article-summary-box-inner">
-                                                <span>World-class threat modeler Adam Shostack shared he was &quot;blown away&quot; by OpenAI's revelations about the Hugging Face attack,and explains why his new threat model for LLMs is both&quot;lightweight yet still usable.&quot;</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Linux Botnet Evooo1Bot Expands Mirai Capabilities Well Beyond DDoS</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cyber-risk/linux-botnet-evooo1bot-mirai-capabilities-beyond-ddos"><div class="article-summary-box-inner"><span>The botnet adds exploitation modules,credential theft,and reverse SOCKS relays to turn compromised devices into persistent attacker infrastructure.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Mission-Driven Security:Inside a Global Bank's Defense</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/mission-driven-security-inside-global-bank-defense">
-                                            <div class="article-summary-box-inner">
-                                                <span>In this video interview, Standard Chartered's group CISO shares insights on transitioning from technical roles to strategic leadership,the importance of business-savvy security executives,and how AI is reshaping both defensive capabilities and adversarial tactics in banking.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Amid AI-Driven Bug-Hunt Tsunami,NIST Looks to … AI</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/vulnerabilities-threats/ai-driven-bug-tsunami-nist-looks-to-ai"><div class="article-summary-box-inner"><span>Driven by AI-augmented research and scanning,vulnerability volumes continue to surge,driving the National Institute of Standards and Technology to ask whether AI could be the answer.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Scottish Govt Suffers Potentially Widening Data Breach at Prosecutor's Office</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/scottish-govt-data-breach-prosecutors-office">
-                                            <div class="article-summary-box-inner">
-                                                <span>One Caledonian government agency reported a breach, thanks to a third party that may have serviced other agencies as well.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">What Boards Need to Know About Tech Risk</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/what-boards-must-know-tech-risk">
-                                            <div class="article-summary-box-inner">
-                                                <span>Why do so many boards underestimate technology risk until it becomes a crisis?</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">Cyera's Oasis Security Buy Is All About AI Agent Control</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/identity-access-management-security/cyera-oasis-security-acquisition-ai-agent-control"><div class="article-summary-box-inner"><span>The $1 billion deal aims to converge data security and identity into a single control plane for agents,with privileged access redefined around business context rather than static roles.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Global Threat Campaign Hits Critical VMware vCenter Flaw</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/vulnerabilities-threats/global-threat-campaign-critical-vmware-vcenter-flaw"><div class="article-summary-box-inner"><span>Exploitation against CVE-2026–59310 began earlier this month,and patching the vulnerability may not be enough to fully mitigate the threat.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">'Jewelbug'APT Balances State Espionage&amp;Cryptocurrency Theft</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/threat-intelligence/jewelbug-apt-state-espionage-cryptocurrency-theft"><div class="article-summary-box-inner"><span>Researchers discovered hackers-for-hire performing cyber espionage and financially motivated heists from the same Web panel.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Belgium's eID Authentication Opens Citizen Accounts to RCE</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/belgium-eid-authentication-citizen-accounts-rce">
-                                            <div class="article-summary-box-inner">
-                                                <span>The trust framework underlying Belgium's electronic ID system was fully compromised by severe vulnerabilities in a key browser extension,showcasing bigger problems with extensions in general.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Long-running Data Theft Campaign Targeting Salesforce,ServiceNow</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cyberattacks-data-breaches/long-running-data-theft-campaign-salesforce-servicenow"><div class="article-summary-box-inner"><span>The&quot;City-Forum&quot;campaign has been active since at least March 2025and has targeted organizations across multiple sectors with custom tooling.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Walmart Takes a'Trusted Agent'Approach to Purple Teaming</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cybersecurity-operations/walmart-trusted-agent-approach-purple-teaming"><div class="article-summary-box-inner"><span>Walmart colocates red and blue teams to build trust and improve security through collaborative purple teaming exercises</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Ransomware Hits Colombian Justice Ministry Days Before Presidential Transition</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cyberattacks-data-breaches/ransomware-hits-colombian-justice-ministry-presidential-transition"><div class="article-summary-box-inner"><span>Attackers continue to target critical infrastructure and government-linked organizations in the country,mirroring the increased activity across Latin America.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Walmart Leaders Transform Security Operations Without Going Bananas</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cybersecurity-operations/walmart-leaders-transform-security-operations-without-going-bananas"><div class="article-summary-box-inner"><span>The big-box giant has scaled its defenses by encouraging trust and innovation.Good communications,transparency,and team spirit are key factors.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Microsoft's Patch Tuesday Deluge Continues With August Updates</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/microsofts-patch-tuesday-deluge-continues">
-                                            <div class="article-summary-box-inner">
-                                                <span>The most concerning bug in the batch is CVE-2026-62878 (CVSS: 9.8), a remote code execution (RCE) vulnerability in Windows DNS Server that requires no user interaction.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">Gunra Ransomware Gang Exploits Fortinet Flaws, Bypasses MFA</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/gunra-ransomware-gang-fortinet-flaws-bypasses-mfa">
-                                            <div class="article-summary-box-inner">
-                                                <span>The ransomware-as-a-service operation is finding success against critical infrastructure targets with leaked Conti code and old flaws in firewalls and VPN appliances.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">'GhostJacking' Exposes Identity Governance Gaps in AI Agents</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/ghostjacking-identity-governance-gaps-ai-agents">
-                                            <div class="article-summary-box-inner">
-                                                <span>New research shows how attackers can use security alerts and blocked events to manipulate and hijack AI agents.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">Multistate Water System Attacks Widen, Iran Suspected</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/multistate-water-system-attacks-widen-iran-suspected">
-                                            <div class="article-summary-box-inner">
-                                                <span>Attacks targeting water systems just keep flowing across a dozen states, against ill-secured, Internet-exposed PLCs.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">Metabase SQL Zero-Day Attacks Could Have Wide Blast Radius</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/metabase-sql-zero-day-attacks-wide-blast-radius">
-                                            <div class="article-summary-box-inner">
-                                                <span>The maximum-severity vulnerability, which still has no CVE, allows malicious, remote administrator access to the business-analytics platform and its downstream users.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">The Patch Gap: Why Defenders Need to Think in Chains, Not Checklists</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/patch-gap-defenders-chains-not-checklists">
-                                            <div class="article-summary-box-inner">
-                                                <span>It's time to turn from CVSS-backed patching to choke-point patching focused on breaking chains to critical assets.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Coruna,DarkSword iOS Exploits Proliferate Globally</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/vulnerabilities-threats/coruna-darksword-ios-exploits-proliferate-globally"><div class="article-summary-box-inner"><span>Sophisticated iPhone exploit chains previously limited to nation-states are spreading far and wide to organized cybercrime groups.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Outdated Cybercrime Laws Put Security Researchers at Risk</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/application-security/outdated-cybercrime-laws-security-researchers-risk"><div class="article-summary-box-inner"><span>A public policy expert mapped global cybercrime laws to develop a five-point framework for protecting ethical hackers and good-faith security research.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Sherlock Holmes Was the'OG'Social Engineer</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cyber-risk/sherlock-holmes-was-the-og-social-engineer"><div class="article-summary-box-inner"><span>The crime solver wore disguises,spied on targets,and built intelligence networks long before modern-day tactics emerged.He has lessons for today's ethical- and unethical hackers.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">AI-Generated Patches Fail Half the Time</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-generated-patches-fail-half-time">
-                                            <div class="article-summary-box-inner">
-                                                <span>A study of more than 6,000 patches found that even working patches can introduce new bugs, break something else, or are open to bypass.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">The Coordination Gap: How Attackers Are Outpacing Law Enforcement</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/coordination-gap-attackers-outpacing-law-enforcement">
-                                            <div class="article-summary-box-inner">
-                                                <span>The fight against cybercrime continues because threat actors have adapted their strategies to avoid deterrents, but law enforcement still operates in silos.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">Déjà Vu? Meta's AI Escapes Testing Lab in Hacking Joyride</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cyberattacks-data-breaches/meta-ai-escapes-lab-hacking-joyride"><div class="article-summary-box-inner"><span>In the span of three weeks,OpenAI,Anthropic,and Meta have all disclosed AI agent sandbox escape events affecting real organizations.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Researcher Claims Control of ChatGPT Secure Sandbox</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cloud-security/researcher-claims-control-chatgpt-secure-sandbox"><div class="article-summary-box-inner"><span>A researcher demonstrated a proof-of-concept attack chain that provided C2-style influence over ChatGPT's isolated sandbox during a session at Black Hat USA 2026.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">From Bobmojis to Bobbleheads: How the Democratic Party Built a Security-First Culture</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/from-bobmojis-to-bobbleheads-how-the-democratic-party-built-a-security-first-culture">
-                                            <div class="article-summary-box-inner">
-                                                <span>Two former chief security officers of the Democratic National Committee explain that a strong security-first mindset requires executive support — and a dose of absurdity.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">AI Sends Global Crime Syndicates Into Fraud Nirvana</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/ai-global-crime-syndicates-fraud-nirvana">
-                                            <div class="article-summary-box-inner">
-                                                <span>Organized crime is convincingly scamming at scale, making billions thanks to AI-enabled voice cloning, deepfake real-time video overlays, LLM-driven persona management, and automated translation.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">AI Browsers Vulnerable to 'PleaseFix' Zero-Click Agent Hijacking</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/ai-browsers-zero-click-agent-hijacking">
-                                            <div class="article-summary-box-inner">
-                                                <span>Attackers can take control of agents through malicious instructions hidden in content supplied to AI browsers, and there's no simple fix for the threat.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">No Perfect Fix for AI Browser Prompt Injection Flaws</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/application-security/no-perfect-fix-ai-browser-prompt-injection-flaws"><div class="article-summary-box-inner"><span>AI browsers from top vendors remain vulnerable to prompt injection attacks despite multiple security guardrails,according to new research.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">CSS:The Hidden Threat Lurking in Your Inbox</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cyberattacks-data-breaches/css-hidden-threat-lurking-inbox"><div class="article-summary-box-inner"><span>CSS was once just about design.Now researchers warn it's powerful enough to exfiltrate data from webmail — and some vendors aren't prepared.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">15TP-Link Bugs Expose Risks in Zero-Trust Provisioning</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/endpoint-security/15-tp-link-bugs-risks-zero-trust-provisioning"><div class="article-summary-box-inner"><span>Researchers are calling attention to the risks inherent in automated network device provisioning,using a world-leading device manufacturer as a case study.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Flaws in Google APK for Python Unlock Agent-to-Agent Attack</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/vulnerabilities-threats/flaws-google-apk-python-agent-to-agent-attack"><div class="article-summary-box-inner"><span>Google has fixed the issues,which exploited a trust boundary between two AI agents with different privilege levels to trigger automation that could compromise the supply chain.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Angola's Largest Telco Breached Hours Before IPO</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/angolas-largest-telco-breached-hours-before-ipo">
-                                            <div class="article-summary-box-inner">
-                                                <span>Unitel, Angola's dominant mobile operator,continues to recover from a cyberattack that caused outages the day of the government-owned telco's public offering.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">Smoke#Screen RMM Takeover Gambit Exposes Threat Actor Playbook</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/latest-rmm-fueled-phishing-attack-exposes-threat-actor-playbook">
-                                            <div class="article-summary-box-inner">
-                                                <span>The attacks use diverse social engineering lures and rotating payloads to deliver ScreenConnect for persistent remote access to compromised networks.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">AI Notetaker Lets Hackers Spy on Government, Corporate Video Calls</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-notetaker-spy-government-corporate-video-calls">
-                                            <div class="article-summary-box-inner">
-                                                <span>A Google Firebase misconfiguration lets users of tl;dv, an AI meeting tool, query any other users'meeting information and potentially join calls.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Device Code Phishing Up 1,500% in 2026;Vishing Doubles</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cybersecurity-analytics/device-code-phishing-vishing-doubles"><div class="article-summary-box-inner"><span>Newer social engineering techniques help attackers ignore entrenched security controls and limit the evidence they leave behind.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Attackers Exploit N-able Patch Bypass Flaw on RMM Servers</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/vulnerabilities-threats/attackers-exploit-n-able-patch-bypass-flaw"><div class="article-summary-box-inner"><span>Over the weekend,the vendor discovered another vector of authentication bypass CVE-2026-18577that gives attackers administrator access.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">New Tool Traces AI Videos Back to Their Source</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cyber-risk/new-tool-advances-ai-generated-video-detection"><div class="article-summary-box-inner"><span>Researchers dug into the root of the problem with the goal of promoting industry collaboration on improved protective measures.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Anthropic:Claude Attacks Result of Security Gaps,Not Model Issues</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cyber-risk/anthropic-ai-issues-result-security-gaps"><div class="article-summary-box-inner"><span>Last month's incidents in which the AI model breached real-world systems derived from over-permissioning, especially with Internet access.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">Chinese Actor Weaponizes Deepseek AI Agent to Attack Security Firm</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/chinese-actor-deepseek-ai-agent-attack-security-firm">
-                                            <div class="article-summary-box-inner">
-                                                <span>Researchers intercepted and investigated the model, which was attempting to compromise more than 1,200 hosts for proxyjacking to launch further attacks.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">Is There Really a Fix for CISO Fatigue?</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/fix-for-ciso-fatigue">
-                                            <div class="article-summary-box-inner">
-                                                <span>Accountability without any real authority is driving CISO burnout, and organizations need to take notice.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">CISA Issues Fresh SBOM Guidance. Did They Get It Right?</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/cisa-issues-fresh-sbom-guidance">
-                                            <div class="article-summary-box-inner">
-                                                <span>A couple dozen changes to SBOM fields will make them more comprehensive, but some argue that the framework lacks real risk-management improvements.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">The Morning After We Pull a Root of Trust, Nobody Owns It</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/morning-after-we-pull-root-of-trust-nobody-owns-it">
-                                            <div class="article-summary-box-inner">
-                                                <span>The most valuable move any security team can make is building a certificate and key inventory.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">Interpol Leverages Global System to Curtail Fraud Payments</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/interpol-leverages-global-system-curtail-fraud-payments">
-                                            <div class="article-summary-box-inner">
-                                                <span>When a fraudulent transaction occurs, law enforcement agencies must work quickly to halt payments before cybercriminals cash out.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">DROP Platform Lets Californians Reduce Digital Footprint</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/data-privacy/drop-platform-lets-californians-ditch-their-data">
-                                            <div class="article-summary-box-inner">
-                                                <span>Hundreds of thousands of California residents have already registered for the Delete Request and Opt-out Platform (DROP), which launches Aug. 1. Other states could follow if the process goes smoothly.</span>
-                                            </div>
-                                        </a>
-                                    </details>
-                                </article>
-                                <article>
-                                    <details class="article-expander">
-                                        <summary class="article-expander__title">USA Fencing Lunges Into the Hidden Identity Challenge in Amateur Sports</summary>
-                                        <a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/identity-access-management-security/usa-fencing-hidden-identity-challenge-amateur-sports">
-                                            <div class="article-summary-box-inner">
-                                                <span>The organization behind Team USA's Olympic/Paralympic fencing teams has automated identity verification to handle growing membership,cutting manual review time while ensuring athletes compete in the correct categories.</span></div></a></details></article></section></section></li></ul></section><footer><time id="build-timestamp"datetime="2026-08-24 23:10:22.866523264 UTC">2026-8-2423:10:22UTC</time><span><a class="footer-link"href="https://github.com/NotCraft/NotFeed">notfeed 0.2.9</a></span></footer><script src="index.js"></script>
+                                                <span>Last month's incidents in which the AI model breached real-world systems derived from over-permissioning,especially with Internet access.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Chinese Actor Weaponizes Deepseek AI Agent to Attack Security Firm</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cyberattacks-data-breaches/chinese-actor-deepseek-ai-agent-attack-security-firm"><div class="article-summary-box-inner"><span>Researchers intercepted and investigated the model,which was attempting to compromise more than 1,200hosts for proxyjacking to launch further attacks.</span></div></a></details></article><article><details class="article-expander"><summary class="article-expander__title">Is There Really a Fix for CISO Fatigue?</summary><a class="article-summary-link article-summary-box-outer"href="https://www.darkreading.com/cybersecurity-operations/fix-for-ciso-fatigue"><div class="article-summary-box-inner"><span>Accountability without any real authority is driving CISO burnout,and organizations need to take notice.</span></div></a></details></article></section></section></li></ul></section><footer><time id="build-timestamp"datetime="2026-08-25 23:07:30.210081509 UTC">2026-8-2523:7:30UTC</time><span><a class="footer-link"href="https://github.com/NotCraft/NotFeed">notfeed 0.2.9</a></span></footer><script src="index.js"></script>
 </body>
 </html>
