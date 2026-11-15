@@ -12,6 +12,977 @@
 <body>
 <section class="daily-content">
 <h2 class="daily-heading">
+<time datetime="2026-11-15T23:05:16.653581672Z">11-15</time>
+</h2>
+<ul class="sources card">
+<li class="source">
+<section>
+<h3 class="source-name">Latest Vulnerabilities</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-125423 - Gitea command execution through repository auto-initialization</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-125423">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-125423
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:16 p.m. | 59 minutes ago
+<br/>
+<strong>Description :</strong>A repository created with auto-init accepted pushes before its initialization had finished, and the initial commit was built in a checkout of whatever the repository already contained. A user who is allowed to create repositories could push a crafted tree during that window so that writing the README followed a symbolic link and overwrote a server-side git hook, which runs commands as the Gitea system user. The initial commit is now built in a freshly initialized directory, and a new repository only becomes ready, and accepts pushes, once its initialization is complete.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-123006 - Gitea password hash disclosure through repository search</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-123006">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-123006
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:16 p.m. | 59 minutes ago
+<br/>
+<strong>Description :</strong>The repository search used by the dashboard (`GET /repo/search`) returned the internal commit status object of each repository. Since 28.0.0 that object included the repository owner's full user record, so any signed-in user could read the password hash, salt and email address of the owner of any repository they can see that has a commit status. The response now contains only the state and target URL of the commit status.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-129525 - Gitea pull request disclosure to members with access to issues only</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-129525">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-129525
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:14 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>Several endpoints that work on both issues and pull requests did not check which of the two the addressed item is. A user who can read a repository's issues but not its pull requests could read pull request data through the issue sub-resources of the API (timeline, attachments, labels, subscriptions, tracked times and reactions), and list pull requests through the repository's issue search and milestone pages; the same applied in the other direction. These endpoints now check read access to the unit the item belongs to. The API endpoints were fixed in 28.2.0 and 28.3.0, the search and milestone pages in 28.4.0.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-129341 - Gitea release asset deletion by former writers</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-129341">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-129341
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:14 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>The web endpoint that removes an attachment skipped the permission check when the request came from the user who had uploaded the attachment, and it was reachable with read access to issues or pull requests. A user who had uploaded a release asset could still delete it after losing write access to the repository. The endpoint now only deletes attachments that the user uploaded and that are not yet linked to an issue, comment or release.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-129337 - Gitea push without write access to repositories still being created</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-129337">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-129337
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:14 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>Git over HTTP lowers the required permission for pushes to read access, so that the AGit flow works, and relies on the repository's server-side hooks to enforce write access. A repository that is still being created by a migration, fork or template generation has no hooks yet, so a user with read access to it could push branches and tags during that window, or after a failed migration that left the repository in that state. Git over HTTP now refuses requests to repositories that are still being created.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-128365 - Gitea required approval bypass through team review request removal</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-128365">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-128365
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:14 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>Removing a team's review request looked up a review by the negated team ID, which for the team with ID 2 is the ID of the built-in Actions user, and marked the review it found as official. In the organization that owns that team, a user who can change the review requests of a pull request could make an approval left by the Actions user count toward the approvals required by branch protection. Merging still required permission to merge. Removing a team review request no longer changes any review.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-128359 - Gitea OAuth2 provider tokens issued to disabled users</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-128359">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-128359
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:14 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>When Gitea acts as an OAuth2 or OpenID Connect provider, the token endpoint did not check the state of the user. After an administrator deactivated an account or prohibited its sign-in, existing refresh tokens and unused authorization codes of that user could still be exchanged for new tokens, so applications that sign users in through Gitea kept them signed in. The token endpoint now refuses users who may not sign in, and token introspection reports their tokens as inactive.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-127958 - Gitea disclosure of pending pull request reviews created through the API</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-127958">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-127958
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:14 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>A pull request review created through the API as a draft (`event` set to `PENDING` or left empty) was added to the pull request timeline and announced through notifications and activity feeds like a submitted review. Its body and line comments were therefore visible to everyone who can read the pull request, including anonymous visitors of a public repository, before the reviewer submitted it. Pending reviews no longer get a timeline entry or notifications until they are submitted.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-126338 - Gitea private diff disclosure through code comment replies</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-126338">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-126338
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:14 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>Replying to a code review comment accepted a review ID that belongs to a different pull request, through the web form, the API and incoming mail replies. A signed-in user could reply on a pull request they can access with the ID of a review in a repository they cannot read, and the new comment was attached to that review and received the diff context of the commented lines. Replies are now only accepted for a review of the same pull request, and for a pending review only from its author.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-125617 - Gitea hidden organization membership disclosure through the permissions API</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-125617">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-125617
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:14 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>`GET /api/v1/users/{username}/orgs/{org}/permissions` only checked that the organization is visible to the caller and then returned the named user's role in it. Any signed-in user could learn whether another user is an owner, admin or member of a public or limited organization, including for members who conceal their membership. The roles are now only returned to the user themselves, to members of the organization and to site administrators.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-123642 - Gitea pull request creation without pull request access through AGit</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-123642">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-123642
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:14 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>The AGit flow (pushing to `refs/for/...`) did not check the pusher's access to pull requests again when it created the pull request. A user or deploy key with read access to the code only, or with write access to the wiki over SSH, could open pull requests in a repository where they have no access to pull requests. Creating a pull request through AGit now requires read access to the pull requests of the repository and is refused for wiki pushes.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-123638 - Gitea protected file pattern bypass with quoted file names</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-123638">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-123638
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:14 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>The "Protected file patterns" setting of a branch protection rule was checked against file names as git prints them, and git quotes names that contain a double quote, a backslash or a control character. Such names never matched a pattern, so a user with write access could add or change files under a protected pattern by direct push or through a pull request merge, and could move a protected file out of the pattern's reach by renaming it. Where the patterns protect workflow files, this allowed adding a workflow that then ran on the repository's runners. Changed files are now listed unquoted, and a rename reports both the old and the new path.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-123065 - Gitea deletion of arbitrary attachment files through release edit</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-123065">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-123065
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:14 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>When a release was edited, the files of the attachments to remove were deleted by the identifiers submitted in the form rather than by the attachments verified to belong to the release. A user with write access to the releases of any repository, including their own, could submit a crafted identifier that resolves to the stored file of another attachment and delete it, provided they know that attachment's UUID. The attachment record stayed, so downloads of the affected issue, comment or release file failed. Release edits now only delete the files of attachments that belong to the release.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-123009 - Gitea base repository code disclosure through the web editor in forks</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-123009">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-123009
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:13 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>When a file is edited in a fork through the web editor, Gitea can first copy a branch from the base repository into the fork. That copy did not check whether the user may read the base repository's code. A user who had forked a repository and later lost access to it, for example after it was made private or they were removed as a collaborator, could keep copying its current branches into their fork and read them. The copy now requires read access to the code of the base repository.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-123002 - Gitea missing attempt limit for TOTP passcodes</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-123002">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-123002
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:13 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>Gitea accepted an unlimited number of wrong TOTP passcodes during sign-in, in the password reset flow and for Basic authentication with the `X-Gitea-OTP` header. An attacker who already knows an account's password could guess the six-digit passcode by trying codes at a high rate and sign in despite two-factor authentication. After five failed passcodes, further attempts for the account are now refused for 15 minutes.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-120991 - Gitea deletion of shared container blobs on rejected uploads</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-120991">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-120991
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:13 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>When a container blob upload was rejected, for example because it exceeded a package size quota, the cleanup removed the blob from storage even if the same content already existed and was used by other packages. On an instance with a package quota configured, a user who can upload container images and has the exact content of another owner's package file or image layer could make it undownloadable. The cleanup now only removes blobs that the failed upload created.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-120729 - Gitea stored cross-site scripting in the issue reference popup</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-120729">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-120729
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:13 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>The popup shown when hovering an issue reference loaded its data from the path of the hovered link and inserted part of the response as HTML. A user who can post a comment or other rendered content could add a link that is displayed as an ordinary issue reference but points to a file in a repository they control, so that the popup inserted that file's content into the page of anyone hovering the link and ran script in the viewer's session. The popup now requests the issue by the owner, repository and index parsed from the link.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-120725 - Gitea anonymous Git LFS access despite required sign-in</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-120725">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-120725
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:13 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>With `REQUIRE_SIGNIN_VIEW = true`, the Git LFS endpoints still answered unauthenticated requests for repositories that are not private. An anonymous client who knows the path of such a repository and the SHA-256 of an LFS object could download the object, and could use the batch endpoint to test whether an object exists. The Git LFS endpoints now require authentication when sign-in is required to view the instance.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-118535 - Gitea scoped workflow trust kept after repository transfer</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-118535">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-118535
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:13 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>A repository registered by its owner as a source of scoped workflows kept that registration when it was transferred to another owner. The new owner could then change the workflows in the transferred repository, and they kept running in the previous owner's repositories with access to their Actions secrets and job tokens. A transfer now removes the owner-level registrations of the repository, and registrations whose source repository no longer belongs to the registering owner are ignored.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-118389 - Gitea RubyGems compact index injection through package metadata</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-118389">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-118389
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 9:13 p.m. | 1 hour, 2 minutes ago
+<br/>
+<strong>Description :</strong>The RubyGems package registry accepted gems whose platform, dependency names or dependency version requirements contain newline characters. Because the compact index served to clients is line-based, a user who can publish a gem to an owner's registry could forge index entries, such as packages that do not exist or additional versions of an existing gem with dependencies of their choice. Clients that resolve gems from that registry could then be led to install attacker-chosen dependencies. Gems with such metadata are now rejected.
+<br/>
+<strong>Severity:</strong> 0.0 | NA
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-129091 - WordPress GrandPrix Core plugin <= 1.0 - Local File Inclusion vulnerability</>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-129091">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-129091
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 7:17 p.m. | 2 hours, 59 minutes ago
+<br/>
+<strong>Description :</strong>Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Mikado-Themes GrandPrix Core grandprix-core allows PHP Local File Inclusion.This issue affects GrandPrix Core: from n/a through 1.0.
+<br/>
+<strong>Severity:</strong> 8.1 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-125830 - WordPress belingoGeo plugin <= 1.13.3 - Cross Site Scripting (XSS) vulnerability</>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-125830">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-125830
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 7:17 p.m. | 2 hours, 59 minutes ago
+<br/>
+<strong>Description :</strong>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Belingo belingoGeo belingogeo allows Reflected XSS.This issue affects belingoGeo: from n/a through 1.13.3.
+<br/>
+<strong>Severity:</strong> 7.1 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-125826 - WordPress PowerPress Podcasting plugin <= 11.18.3 - Arbitrary File Deletion vulnerability</>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-125826">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-125826
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 7:17 p.m. | 2 hours, 59 minutes ago
+<br/>
+<strong>Description :</strong>Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Blubrry Podcasting PowerPress Podcasting powerpress allows Path Traversal.This issue affects PowerPress Podcasting: from n/a through 11.18.3.
+<br/>
+<strong>Severity:</strong> 5.0 | MEDIUM
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-125823 - WordPress Gutenverse plugin <= 4.2.2 - Denial of Service Attack vulnerability</>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-125823">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-125823
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 7:17 p.m. | 2 hours, 59 minutes ago
+<br/>
+<strong>Description :</strong>Allocation of Resources Without Limits or Throttling vulnerability in Jegstudio Gutenverse gutenverse allows HTTP DoS.This issue affects Gutenverse: from n/a through 4.2.2.
+<br/>
+<strong>Severity:</strong> 7.5 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CVE-2026-125822 - WordPress WordPress File Upload plugin <= 5.2.3 - Cross Site Scripting (XSS) vulnerability</>
+<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-125822">
+<div class="article-summary-box-inner">
+<span><strong>CVE ID :</strong>CVE-2026-125822
+<br/>
+<strong>Published :</strong> Nov. 15, 2026, 7:17 p.m. | 2 hours, 59 minutes ago
+<br/>
+<strong>Description :</strong>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Nickboss WordPress File Upload wp-file-upload allows Stored XSS.This issue affects WordPress File Upload: from n/a through 5.2.3.
+<br/>
+<strong>Severity:</strong> 7.1 | HIGH
+<br/>
+Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+<li class="source">
+<section>
+<h3 class="source-name">darkreading</h3>
+<section class="articles-per-source">
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">ArcticRAT Cybercrime Gang Profiles Victim Finances With AI</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/mobile-security/arcticrat-cybercrime-gang-profiles-victim-finances-ai">
+<div class="article-summary-box-inner">
+<span>The Android malware has expanded from focusing on crypto theft to full device control, and the attackers have added advanced analysis of stolen information.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Attackers in Binance Breach Targeted Known Weakness, Missing Controls</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/attackers-binance-breach-targeted-weakness-missing-controls">
+<div class="article-summary-box-inner">
+<span>Blockchain complexities, such as attacker-deployed sweepers, hobble security controls designed to limit the damage of an exchange compromise.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Getting Past the Post-Quantum Cryptography Discovery Phase</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/getting-past-post-quantum-cryptography-discovery">
+<div class="article-summary-box-inner">
+<span>Most organizations haven't sorted out their cryptographic estate enough to even know where they'd start with post-quantum cryptography (PQC).</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Cyber Experts Weigh In: How to Fight Artex &amp; AntiFox</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/cyber-experts-fight-artex-antifox">
+<div class="article-summary-box-inner">
+<span>Cybercriminals using agentic pen-testing tools is a proverbial genie out of the bottle at this point, so enterprises need to get a defense plan in place right away.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Extortion Group Luna Moth Flits Into Law Firms a Second Time</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/data-privacy/extortion-luna-moth-law-firms-second-time">
+<div class="article-summary-box-inner">
+<span>The cybercriminals are retargeting law firms that refused to pay its first ransom, with a social engineering con aimed at stealing Microsoft access tokens.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Inside an AI Attack Against a US Retailer</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer">
+<div class="article-summary-box-inner">
+<span>When hand-typed commands failed to breach a US retailer, the attacker turned to AI-generated scripts, achieving lateral movement in minutes.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Chinese AI Project Scouts Spies in Taiwan Chip Industry</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/chinese-ai-project-scouts-spies-taiwan-chip-industry">
+<div class="article-summary-box-inner">
+<span>The CCP built a Big Data system to scrape reams of information and learn about individuals abroad, to potentially target and exploit them. Think Alice Huang Lite.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Japan Pushes Emergency Funding for Cybersecurity as AI-Assisted Breaches Rise</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/japan-emergency-funding-cybersecurity-ai-assisted-breaches">
+<div class="article-summary-box-inner">
+<span>The package adds public-private cyber responders, an AI-focused team run by the economic ministry, and more leeway to use the government's new active cyber-defense powers.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AIを活用したサイバー攻撃の増加を受け、日本がサイバーセキュリティへの緊急資金拠出を推進</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/japan-emergency-funding-cybersecurity-ai-assisted-breaches-japanese">
+<div class="article-summary-box-inner">
+<span>この対策パッケージには、官民合同のサイバー対応チーム、経済省が主導するAI専門チーム、および政府の新たな能動的サイバー防衛権限の行使に関する裁量の拡大が含まれている。</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Attackers Say 'Hello' to a Different Scale of Cloud Attack</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cloud-security/attackers-hello-scale-cloud-attack">
+<div class="article-summary-box-inner">
+<span>Researchers dubbed an attack chain &quot;Greeter&quot; after discovering that attackers deliberately covered their trail by leaving &quot;hello&quot; messages in logs.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI Raises the Stakes for Cyber Resilience</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/ai-raises-stakes-cyber-resilience">
+<div class="article-summary-box-inner">
+<span>An organization's ability to quickly recover from a business disruption will be a competitive advantage in an era of AI-driven threats and business enablement.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">As Test Takers Turn to AI for Answers, Exam Security Must Catch Up</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/test-takers-ai-exam-security-catch-up">
+<div class="article-summary-box-inner">
+<span>It's hard to detect whether someone is using artificial intelligence (AI) to cheat on IT certification exams, but new tools and processes are emerging to boost trust.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">N-able Takes N-central Platform Offline After Discovery of 33 Flaws</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/n-able-n-central-offline-33-flaws">
+<div class="article-summary-box-inner">
+<span>The RMM provider also released a hotfix as a recommended mitigation to address public exploits for the alleged zero-days, which allow for attacker takeover.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">November Patch Tuesday: An Overflowing Cornucopia of CVEs</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves">
+<div class="article-summary-box-inner">
+<span>Microsoft serves up an actively exploited Outlook zero-day, and a wave of critical Exchange, SharePoint, Windows Search, and LDAP bugs that exhausted defenders need to prioritize fast.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Artex: The AI Pen-Test Tool Hackers Turned Into a Weapon</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/artex-ai-pen-test-tool-hackers-weapon">
+<div class="article-summary-box-inner">
+<span>Forks of the open source Artex framework, along with 45 similar pen-testing tools, remain capable of executing credential attacks and cloud breaches at machine speed across multiple industries.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">F-Secure Identifies 26 Ways AI Can Harm Consumers, and Where to Stop Them</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/f-secure-26-ways-ai-harm-consumers-where-to-stop-them">
+<div class="article-summary-box-inner">
+<span>New AI Harms Taxonomy traces how harm moves through AI systems, from misleading chatbot answers to compromised autonomous agents, and identifies where defenses can intervene.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Checkmarx Appoints Kobi Sivilya as Chief Information Security Officer</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-careers/checkmarx-appoints-kobi-sivilya-chief-information-security-officer">
+<div class="article-summary-box-inner">
+<span>Sivilya brings deep cybersecurity and technology leadership to Checkmarx as AI transforms software development.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">How to Assess OT Incident Response Preparedness</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/assess-ot-incident-response-preparedness">
+<div class="article-summary-box-inner">
+<span>Cloud Range's free 28-question OT Cyber Readiness Assessment helps organizations identify gaps in operational technology (OT) incident response.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI Coding Agents Leak Thousands of Secrets to GitHub</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/ai-coding-agents-leak-secrets-github">
+<div class="article-summary-box-inner">
+<span>A command in Claude Code inadvertently saves files with credentials and other sensitive data to public Git repositories, creating security gaps for organizations.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI Makes Reverse Engineering Mainstream Software &amp; Malware Far Easier</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ai-reverse-engineering-apps">
+<div class="article-summary-box-inner">
+<span>Researchers unpacked, mapped, and recreated complex software and the Turla malware, raising opportunities and concerns for organizations and cybersecurity analysts.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">People Are Getting Weird About AI</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/people-are-getting-weird-about-ai">
+<div class="article-summary-box-inner">
+<span>Dark Reading Confidential Episode 22: You can love AI without being blind to cybersecurity being sacrificed for utility. The tendency for humans to anthropomorphize the conversations and interactions we're having with AI is growing into potential delusion.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">CISA Announces Enhanced Reporting Form for Cyber Incidents</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/cisa-announces-enhanced-reporting-form-cyber-incidents">
+<div class="article-summary-box-inner">
+<span>New questionnaire captures critical data and information that improves the agency’s ability to assess incidents, identify trends and prioritize response actions.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Microsoft Fixes RCE Bug in Windows Paint After Weeks of Confusion</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/microsoft-rce-bug-windows-paint-confusion">
+<div class="article-summary-box-inner">
+<span>Last month, Microsoft disclosed a vulnerability in Microsoft Paint, but messaging regarding a patch was unclear.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Black Hat India 2026 Makes a Landmark Debut in Bengaluru, Bringing the Global Cybersecurity Community to India</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/black-hat-india-2026-landmark-debut">
+<div class="article-summary-box-inner">
+<span>Inaugural edition by Informa Markets in India brings together leading researchers, security practitioners and industry decision makers for four days of cutting-edge research, technical exchange and strategic dialogue.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Attackers Crash Claude's 'Office Party' Flaw to Run Malicious Code on Linux</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/attackers-claude-office-party-flaw-malicious-code-linux">
+<div class="article-summary-box-inner">
+<span>Attackers can exploit a flaw in Claude's document-processing tool by creating a temporary file that Anthropic's AI assistant can access and run on a user's machine.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">PwC's CISO on AI, Robots &amp; What's Next for Security</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/pwc-ciso-ai-robots-security">
+<div class="article-summary-box-inner">
+<span>As AI accelerates change across the enterprise, PwC's James Shira explains why security teams must rethink their approach to risk and adapt their strategies.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">NIST: Solo Shouldn't Mean Less Secure</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/nist-solo-shouldnt-mean-less-secure">
+<div class="article-summary-box-inner">
+<span>New guidance provides a basic framework for less-technical solo business owners, but it may miss the mark on how to secure technology that requires no human oversight.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">UK Wades Into Tech Sovereignty Amid AI Policy Changes</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/uk-tech-sovereignty-ai-policy">
+<div class="article-summary-box-inner">
+<span>The UK is betting on domestic AI and cyber investment to reduce reliance on US tech — but security leaders question whether the funding is too fragmented and too late.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">AI Gave Your Incident Archive a Second Job</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/ai-gave-your-incident-archive-second-job">
+<div class="article-summary-box-inner">
+<span>Security records are increasingly being used by vendors to train their models, creating new risks for enterprises.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Why Europe's Freezer Hacks Spread So Far, So Fast</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/europes-freezer-hacks-spread-so-far-so-fast">
+<div class="article-summary-box-inner">
+<span>Europe's supermarket freezer hacks show how security issues can cascade across an industry, disrupting supply chains at scale.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">UK Warns Its Critical Infrastructure Faces Grave Risk</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/uk-warns-critical-infrastructure-grave-risk">
+<div class="article-summary-box-inner">
+<span>Britain's new Labour-led government is making a concerted push to get ahead of the AI risks to its national networks and the industrial complex.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Operação de influência russa tem como alvo generalizado a América Latina</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/opera-o-de-influ-ncia-russa-tem-como-alvo-generalizado-a-am-rica-latina">
+<div class="article-summary-box-inner">
+<span>A operação, que contou com o uso de inteligência artificial, utilizou e-mails falsos, documentos governamentais falsificados e a criação de uma organização local para atacar escolas no Peru e no Equador, entre outras ações.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">US Government Email Systems Open to Abuse Thanks to Typos</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/us-government-email-systems-abuse-typos">
+<div class="article-summary-box-inner">
+<span>Erroneous or outdated DNS records can give attackers surprising powers over organizations' email systems.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">What We Missed: Knicks Phishing Test Goes Out of Bounds</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/what-we-missed-knicks-phishing-test-out-of-bounds">
+<div class="article-summary-box-inner">
+<span>In this video conversation, Dark Reading editors discuss some of the news they didn't get a chance to cover, from an ill-conceived phishing simulation to a hacktivist attack on a US government agency.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">APT29's Watering Holes Target Thousands of Mobile Users</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/mobile-security/apt29-watering-holes-target-mobile-users">
+<div class="article-summary-box-inner">
+<span>After compromising websites, the Russian state-sponsored threat group is fingerprinting victims, then harvesting information from the interesting ones.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">SecurityDataPipeline.com Launches as a New Educational Resource for the AI Era</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/securitydatapipeline-com-launches-as-a-new-educational-resource-for-the-ai-era">
+<div class="article-summary-box-inner">
+<span>The ungated resource explains how security data pipelines reduce SIEM ingestion costs, preserve detection coverage, and prepare the data layer for AI-driven security operations.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Critical Rails Bug Threatens to Derail Vulnerable Servers</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/critical-rails-bug-derail-vulnerable-servers">
+<div class="article-summary-box-inner">
+<span>An attacker could write arbitrary files and read sensitive files via images uploaded to the Rails Active Storage ImageMagick integration, possibly positioning a threat actor for lateral movement.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Google, Partners Disrupt 1.3 Million-Device-Strong XCPE Botnet</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/google-13-million-device-strong-xcpe-botnet">
+<div class="article-summary-box-inner">
+<span>Android device manufacturer Videostrong allegedly ran the operation, which infected set-top boxes and IoT devices with a backdoor to create infrastructure for criminal activity.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Incidents Move Too Fast for Pen &amp; Paper</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/incidents-move-fast-pen-paper">
+<div class="article-summary-box-inner">
+<span>Organizations may not be ready for completely autonomous communication processes, but there are places where automating information updates would alleviate pressure.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Philippine Migrant Worker Data Likely Leaked in 69GB Government Breach</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/philippine-migrant-worker-data-69gb-government-breach">
+<div class="article-summary-box-inner">
+<span>An unknown operator appears to have exfiltrated SQL Server backups from the Philippine Overseas Employment Administration in under a half hour.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Phishing-Resistant Isn't Enough; Yubico Takes Aim at Identity-Verification Gap</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/identity-access-management-security/beyond-phishing-resistant-yubico-identity-verification-gap">
+<div class="article-summary-box-inner">
+<span>The new YubiID service bridges identity verification with credential enrollment and recovery across existing identity platforms, closing an important authentication gap. Plus: post-quantum YubiKey beta.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Fresh European Fridge Attacks Put Cold-Chain Security in Focus</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/fresh-european-fridge-attacks-cold-chain-security">
+<div class="article-summary-box-inner">
+<span>Beyond food storage, the same combination of Internet connectivity, remote access, and inadequate security practices can put temperature-controlled infrastructure across other critical sectors at risk.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Germany Busts 'Crime-as-a-Service' Investment Fraud Outfit</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/germany-crime-service-investment-fraud">
+<div class="article-summary-box-inner">
+<span>Authorities seized more than 100 servers and arrested seven as part of a crackdown on a fraud network spanning more than 50 countries.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">9 Cyber Awareness Tips That Actually Match Today's Maze of Threats</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/9-cyber-awareness-tips-todays-maze-threats">
+<div class="article-summary-box-inner">
+<span>Practical guidance on safer search, stronger login security, better executive protection, and other habits can reduce enterprise risk.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">LLMjacking Emerges as Thriving Cybercriminal Enterprise</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cloud-security/llmjacking-thriving-cybercriminal-enterprise">
+<div class="article-summary-box-inner">
+<span>Cybercriminals have turned reselling cloud access to LLMs into a lucrative business model, with some victims paying as much as $1 million in resource consumption before access was revoked.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">3AM Affiliate Embraces AI-Like Loops in European School Attack</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/data-privacy/3am-affiliate-ai-loops-european-school-attack">
+<div class="article-summary-box-inner">
+<span>Evidence suggests a model may have generated and revised commands during the ransom gang's breach, though researchers stopped short of claiming full automation.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">One Compromised Laptop, Billions Lost: The Binance Attack-Path Warning</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/binance-hack-test-attack-paths">
+<div class="article-summary-box-inner">
+<span>The record theft shows how weak system separation, inadequate controls, and untested attack possibilities can turn one breach into systemic loss.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Microsoft's AI Risk Report Misses This Key Detail</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/microsoft-ai-cyber-risk-report-miss">
+<div class="article-summary-box-inner">
+<span>The latest &quot;Digital Defense Report&quot; identifies government agencies as prime targets for AI attacks, but it doesn't mention that they are broadly being targeted through Microsoft bugs.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">PapRAT Cyber-Espionage Campaign Leaves a 'Bitter' Taste in South Asia</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/paprat-cyberespionage-campaign-bitter-south-asia">
+<div class="article-summary-box-inner">
+<span>Organizations in the region face growing cyberattacks from the known India-linked threat group, which leverages legitimate Windows functionality in three distinct attack chains.</span>
+</div>
+</a>
+</details>
+</article>
+<article>
+<details class="article-expander">
+<summary class="article-expander__title">Investors Dish on New Startups &amp; What They'd Back Next</summary>
+<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/investors-dish-new-startsup-what-back-next">
+<div class="article-summary-box-inner">
+<span>The cybersecurity market is difficult to predict, but a glimpse into the annual DataTribe Challenge shows what's trending and what's not.</span>
+</div>
+</a>
+</details>
+</article>
+</section>
+</section>
+</li>
+</ul>
+</section>
+<section class="daily-content">
+<h2 class="daily-heading">
 <time datetime="2026-11-14T23:04:37.277405646Z">11-14</time>
 </h2>
 <ul class="sources card">
@@ -6818,1021 +7789,8 @@ Visit the link for more details, such as CVSS details, affected products, timeli
 </li>
 </ul>
 </section>
-<section class="daily-content">
-<h2 class="daily-heading">
-<time datetime="2026-11-07T23:04:36.691253186Z">11-07</time>
-</h2>
-<ul class="sources card">
-<li class="source">
-<section>
-<h3 class="source-name">Latest Vulnerabilities</h3>
-<section class="articles-per-source">
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-120531 - Subscribe2 – Form, Email Subscribers & Newsletters <= 10.47 - Unauthenticated Stored Cross-Site Scripting via 'data[ip]' Parameter</>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-120531">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-120531
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 9:24 p.m. | 15 minutes ago
-<br/>
-<strong>Description :</strong>The Subscribe2 – Form, Email Subscribers & Newsletters plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘data[ip]’ parameter in all versions up to, and including, 10.47 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
-<br/>
-<strong>Severity:</strong> 0.0 | NA
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-99284 - net: skbuff: propagate shared-frag marker in skb_zerocopy()</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-99284">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-99284
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 9:17 p.m. | 22 minutes ago
-<br/>
-<strong>Description :</strong>In the Linux kernel, the following vulnerability has been resolved:
-net: skbuff: propagate shared-frag marker in skb_zerocopy()
-skb_zerocopy() moves frag descriptors from @from into @to and takes a
-reference on each frag, but it does not copy skb_shinfo(from)->flags into
-skb_shinfo(to)->flags. A destination skb holding the same page-cache
-backed frags as the source therefore reports skb_has_shared_frag() as
-false.
-That breaks the invariant relied on by later in-place writers. ESP input
-checks skb_has_shared_frag() before deciding whether an uncloned
-nonlinear skb can skip skb_cow_data(); with the marker lost, an skb that
-skb_zerocopy() built for nfnetlink_queue or for an openvswitch upcall is
-decrypted in place, letting an unprivileged user write into the page
-cache of a root-owned read-only file.
-Propagate SKBFL_SHARED_FRAG when frag descriptors are copied, as done for
-the other frag-transfer helpers.
-<br/>
-<strong>Severity:</strong> 0.0 | NA
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-99283 - netfilter: conntrack: tcp: use UNACK timeout for non-closing RST packets</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-99283">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-99283
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 9:17 p.m. | 22 minutes ago
-<br/>
-<strong>Description :</strong>In the Linux kernel, the following vulnerability has been resolved:
-netfilter: conntrack: tcp: use UNACK timeout for non-closing RST packets
-Commit be0502a3f2e9 ("netfilter: conntrack: tcp: only close if RST
-matches exact sequence") keeps an established conntrack entry in
-ESTABLISHED when an in-window RST does not match the expected sequence
-number exactly, so the endpoint can validate the RST with a challenge
-ACK.
-The timeout selection nevertheless uses the CLOSE timeout for every RST
-packet. The bug is that timeout selection is based on the packet type,
-not on the state transition result: even when RST validation keeps
-new_state in ESTABLISHED, the timeout is still forced to
-TCP_CONNTRACK_CLOSE.
-Linux TCP independently rate limits challenge ACKs per socket. A second
-non-exact RST can therefore arrive after the first challenge ACK has
-restored the timeout but before the rate limit expires. The second RST
-lowers the timeout to 10 seconds again while the endpoint suppresses the
-second challenge ACK, allowing the conntrack entry to expire while both
-TCP endpoints remain established.
-Using the ESTABLISHED timeout for such RSTs would avoid this short
-expiration window, but it could also retain stale entries for the
-five-day default because conntrack cannot reliably match the endpoint's
-exact TCP state.
-Use the UNACK timeout for RST packets that leave the conntrack entry in
-TCP_CONNTRACK_ESTABLISHED. Exact-match RSTs and accepted RST packet
-trains still fall through to timeouts[new_state], which preserves the
-CLOSE timeout when conntrack accepts the RST as closing the flow.
-This avoids the aggressive 10-second expiration window for non-exact
-RSTs while preserving the short timeout for RSTs that conntrack accepts
-as closing the flow.
-<br/>
-<strong>Severity:</strong> 0.0 | NA
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124060 - TOTOLINK CA300-PoE cstecgi.cgi UploadCustomModule buffer overflow</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124060">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124060
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 9:17 p.m. | 22 minutes ago
-<br/>
-<strong>Description :</strong>A vulnerability was detected in TOTOLINK CA300-PoE 6.2c.884. Affected by this issue is the function UploadCustomModule of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument File results in buffer overflow. The attack may be launched remotely. The exploit is now public and may be used.
-<br/>
-<strong>Severity:</strong> 9.1 | CRITICAL
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124059 - TOTOLINK CA300-PoE cstecgi.cgi setWiFiWdsAddConfig buffer overflow</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124059">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124059
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 7:17 p.m. | 2 hours, 21 minutes ago
-<br/>
-<strong>Description :</strong>A security vulnerability has been detected in TOTOLINK CA300-PoE 6.2c.884. Affected by this vulnerability is the function setWiFiWdsAddConfig of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument ApCliKeyStr leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used.
-<br/>
-<strong>Severity:</strong> 9.1 | CRITICAL
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124058 - TOTOLINK CA300-PoE cstecgi.cgi setWiFiRepeaterConfig buffer overflow</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124058">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124058
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 7:17 p.m. | 2 hours, 21 minutes ago
-<br/>
-<strong>Description :</strong>A weakness has been identified in TOTOLINK CA300-PoE 6.2c.884. Affected is the function setWiFiRepeaterConfig of the file /cgi-bin/cstecgi.cgi. Executing a manipulation of the argument ApCliKeyStr can lead to buffer overflow. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks.
-<br/>
-<strong>Severity:</strong> 9.1 | CRITICAL
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124258 - WordPress User Registration plugin <= 5.3.1 - Broken Access Control vulnerability</>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124258">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124258
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 6:17 p.m. | 3 hours, 21 minutes ago
-<br/>
-<strong>Description :</strong>Missing Authorization vulnerability in ThemeGrill User Registration user-registration allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects User Registration: from n/a through 5.3.1.
-<br/>
-<strong>Severity:</strong> 5.3 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124057 - TOTOLINK CA300-PoE cstecgi.cgi setWiFiMultipleConfig buffer overflow</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124057">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124057
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 6:17 p.m. | 3 hours, 21 minutes ago
-<br/>
-<strong>Description :</strong>A security flaw has been discovered in TOTOLINK CA300-PoE 6.2c.884. This impacts the function setWiFiMultipleConfig of the file /cgi-bin/cstecgi.cgi. Performing a manipulation of the argument Key1Str1 results in buffer overflow. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.
-<br/>
-<strong>Severity:</strong> 9.1 | CRITICAL
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-123992 - DataEase SVG StaticResourceServer.java StaticResourceServer.validateSvgContent cross site scripting</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-123992">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-123992
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 6:17 p.m. | 3 hours, 21 minutes ago
-<br/>
-<strong>Description :</strong>A flaw has been found in DataEase up to 2.10.27. Affected by this issue is the function StaticResourceServer.validateSvgContent of the file core/core-backend/src/main/java/io/dataease/visualization/server/StaticResourceServer.java of the component SVG Handler. Executing a manipulation can lead to cross site scripting. It is possible to launch the attack remotely. The exploit has been published and may be used. Upgrading to version 2.10.28 can resolve this issue. This patch is called 0709fe98d6608c3507daee3e92cf433e7ff61370. You should upgrade the affected component. The vendor confirms: "The reported tab/entity-based URL bypass is covered by our previously implemented SVG security hardening. The fix replaces the blacklist-based checks with namespace-aware element and attribute allowlists, restricts permitted references to document-local fragments, and applies a restrictive Content Security Policy to uploaded SVG responses."
-<br/>
-<strong>Severity:</strong> 5.0 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-123472 - WordPress Meta Box – WordPress Custom Fields Framework plugin <= 5.15.3 - Cross Site Scripting (XSS) vulnerability</>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-123472">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-123472
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 6:17 p.m. | 3 hours, 21 minutes ago
-<br/>
-<strong>Description :</strong>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in eLightUp Meta Box – WordPress Custom Fields Framework meta-box allows Stored XSS.This issue affects Meta Box – WordPress Custom Fields Framework: from n/a through 5.15.3.
-<br/>
-<strong>Severity:</strong> 6.5 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-123461 - WordPress FOX plugin <= 1.5.6 - Broken Access Control vulnerability</>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-123461">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-123461
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 6:17 p.m. | 3 hours, 21 minutes ago
-<br/>
-<strong>Description :</strong>Missing Authorization vulnerability in PluginUs.Net FOX woocommerce-currency-switcher allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects FOX: from n/a through 1.5.6.
-<br/>
-<strong>Severity:</strong> 5.3 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-120836 - WordPress Meta Box – WordPress Custom Fields Framework plugin <= 5.15.3 - Broken Access Control vulnerability</>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-120836">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-120836
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 6:17 p.m. | 3 hours, 21 minutes ago
-<br/>
-<strong>Description :</strong>Missing Authorization vulnerability in eLightUp Meta Box – WordPress Custom Fields Framework meta-box allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Meta Box – WordPress Custom Fields Framework: from n/a through 5.15.3.
-<br/>
-<strong>Severity:</strong> 6.5 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-119522 - WordPress User Registration plugin <= 5.3.1 - Broken Access Control vulnerability</>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-119522">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-119522
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 6:17 p.m. | 3 hours, 22 minutes ago
-<br/>
-<strong>Description :</strong>Missing Authorization vulnerability in ThemeGrill User Registration user-registration allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects User Registration: from n/a through 5.3.1.
-<br/>
-<strong>Severity:</strong> 5.3 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-123991 - DataEase Authentication Filter WhitelistUtils.java WhitelistUtils.endsWithAny unrestricted upload</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-123991">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-123991
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 5:16 p.m. | 4 hours, 22 minutes ago
-<br/>
-<strong>Description :</strong>A vulnerability was detected in DataEase up to 2.10.27. Affected by this vulnerability is the function WhitelistUtils.endsWithAny of the file WhitelistUtils.java of the component Authentication Filter. Performing a manipulation of the argument File results in unrestricted upload. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 2.10.28 addresses this issue. It is advisable to upgrade the affected component. The vendor confirms: "This issue has been addressed by enforcing authentication on the standalone static-resource upload endpoint independently of the URI suffix whitelist."
-<br/>
-<strong>Severity:</strong> 7.5 | HIGH
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-123990 - DataEase Chart Data ExtWhere2Str.java ExtWhere2Str.extWhere2sqlOjb sql injection</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-123990">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-123990
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 5:16 p.m. | 4 hours, 22 minutes ago
-<br/>
-<strong>Description :</strong>A security vulnerability has been detected in DataEase up to 2.10.27/3.1.0. Affected is the function ExtWhere2Str.extWhere2sqlOjb of the file engine/trans/ExtWhere2Str.java of the component Chart Data Handler. Such manipulation of the argument operator leads to sql injection. The attack may be performed from remote. The exploit has been disclosed publicly and may be used. Upgrading to version 3.2.0 is able to address this issue. Upgrading the affected component is advised. The vendor confirms: "The fix validates the complete compound operator and uses fixed AND / OR keywords instead of concatenating user-controlled logic into SQL."
-<br/>
-<strong>Severity:</strong> 7.5 | HIGH
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124318 - Treeio through 2.0 Insecure Deserialization RCE via Admin-Editable Pickle Fields</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124318">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124318
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 3:17 p.m. | 6 hours, 22 minutes ago
-<br/>
-<strong>Description :</strong>Treeio through 2.0 contains an insecure deserialization vulnerability in UpdateRecord.get_format_strings and ModuleSetting.loads that allows staff users to execute code via unverified pickle data. Attackers can store a crafted base64 pickle payload in an UpdateRecord format_strings field through the Django admin, executing Python code as the web server user when news feeds render.
-<br/>
-<strong>Severity:</strong> 8.6 | HIGH
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124317 - libexpat through 2.10.0 Out-of-Bounds Read via unknown_toUtf8 and unknown_toUtf16</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124317">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124317
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 3:17 p.m. | 6 hours, 22 minutes ago
-<br/>
-<strong>Description :</strong>libexpat through 2.10.0 contains an out-of-bounds read vulnerability in unknown_toUtf8() and unknown_toUtf16() in xmltok.c when handling application-registered unknown encodings. Attackers can supply a document ending in a truncated multibyte sequence so the convert callback reads past the parse buffer, leaking adjacent memory or crashing applications.
-<br/>
-<strong>Severity:</strong> 6.3 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124316 - Frappe ERPNext before 15.121.4 and 16.36.0 Missing Authorization via get_linked_material_requests</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124316">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124316
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 3:17 p.m. | 6 hours, 22 minutes ago
-<br/>
-<strong>Description :</strong>Frappe ERPNext before 15.121.4 and 16.x before 16.36.0 contains a missing authorization vulnerability in the whitelisted erpnext.buying.utils.get_linked_material_requests method lacking document or company permission checks. Authenticated users, including portal users or users without roles, can supply item codes to retrieve open Purchase-type Material Requests belonging to other companies.
-<br/>
-<strong>Severity:</strong> 5.3 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124315 - Frappe ERPNext before 15.121.4 and 16.36.0 Missing Authorization via get_bom_items</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124315">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124315
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 3:17 p.m. | 6 hours, 22 minutes ago
-<br/>
-<strong>Description :</strong>Frappe ERPNext before 15.121.4 and 16.x before 16.36.0 contains a missing authorization vulnerability in the whitelisted get_bom_items and get_bom_diff methods that skip BOM read permission checks. Any authenticated user, including portal or no-role users, can call get_bom_items with a BOM name to retrieve every raw material, quantity, rate and cost.
-<br/>
-<strong>Severity:</strong> 7.1 | HIGH
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124314 - Frappe ERPNext before 15.121.4 and 16.36.0 Missing Authorization via get_open_activities</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124314">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124314
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 3:17 p.m. | 6 hours, 22 minutes ago
-<br/>
-<strong>Description :</strong>Frappe ERPNext before 15.121.4 and 16.x before 16.36.0 contains a missing authorization vulnerability in erpnext.crm.utils.get_open_activities that exposes ToDo and Event records. Any authenticated user, including portal or no-role users, can supply arbitrary ref_doctype and ref_docname values to enumerate activities and private calendar event details.
-<br/>
-<strong>Severity:</strong> 7.1 | HIGH
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124313 - Frappe ERPNext before 15.121.4 and 16.36.0 Missing Authorization via get_linked_payments_for_doc</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124313">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124313
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 3:17 p.m. | 6 hours, 22 minutes ago
-<br/>
-<strong>Description :</strong>Frappe ERPNext before 15.121.4 and 16.x before 16.36.0 contains a missing authorization vulnerability in the whitelisted get_linked_payments_for_doc method. Any authenticated user, including portal users, can supply arbitrary company, doctype, and docname values to read Payment Ledger Entry allocation data for other companies' invoices and vouchers.
-<br/>
-<strong>Severity:</strong> 5.3 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124312 - Fraunhofer HHI VVdeC through 3.2.1 Heap Out-of-Bounds Read via CodingStructure::getColInfo</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124312">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124312
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 3:17 p.m. | 6 hours, 22 minutes ago
-<br/>
-<strong>Description :</strong>Fraunhofer HHI VVdeC through 3.2.1 contains a heap out-of-bounds read vulnerability that allows attackers to crash the decoder by supplying a collocated picture of different resolution. Attackers can craft a VVC bitstream enabling TMVP with a smaller collocated reference picture, causing getColInfo to read past the colMotion allocation when error concealment is enabled.
-<br/>
-<strong>Severity:</strong> 5.7 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124311 - Fraunhofer HHI VVdeC through 3.2.1 NULL Pointer Dereference via InterPrediction::xPredInterBlk</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124311">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124311
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 3:17 p.m. | 6 hours, 22 minutes ago
-<br/>
-<strong>Description :</strong>Fraunhofer HHI VVdeC through 3.2.1 contains a NULL pointer dereference vulnerability in InterPrediction::xPredInterBlk that allows attackers to crash the decoder by switching SPS to enable reference wrap-around. Attackers can supply a crafted VVC bitstream activating a new SPS with sps_ref_wraparound_enabled_flag set, causing reads from missing PIC_RECON_WRAP buffers and denial of service.
-<br/>
-<strong>Severity:</strong> 6.8 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124310 - Fraunhofer HHI VVdeC before 3.2.1 Out-of-Bounds Read via Slice::getRefPic</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124310">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124310
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 3:17 p.m. | 6 hours, 22 minutes ago
-<br/>
-<strong>Description :</strong>Fraunhofer HHI VVdeC before 3.2.1 contains an out-of-bounds read vulnerability that allows attackers to crash the decoder by supplying bitstreams with overlapping slice CTU coverage. Attackers can code a CTU in a second slice so a bi-predicted BDOF coding unit carries a negative reference index, causing Slice::getRefPic to read outside m_apcRefPicList and crash decoding.
-<br/>
-<strong>Severity:</strong> 6.9 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">CVE-2026-124309 - Fraunhofer HHI VVdeC before 3.2.1 Heap Out-of-Bounds Read via SEIReader::xParseSEIScalableNesting</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://cvefeed.io/vuln/detail/CVE-2026-124309">
-<div class="article-summary-box-inner">
-<span><strong>CVE ID :</strong>CVE-2026-124309
-<br/>
-<strong>Published :</strong> Nov. 7, 2026, 3:17 p.m. | 6 hours, 22 minutes ago
-<br/>
-<strong>Description :</strong>Fraunhofer HHI VVdeC before 3.2.1 contains a heap out-of-bounds read vulnerability in SEIReader::xParseSEIScalableNesting that allows attackers to read past heap allocations by casting the SEI wrapper object instead of its payload. Attackers can supply a crafted VVC bitstream with a scalable nesting SEI containing a nested buffering period SEI to crash the decoder or copy adjacent heap memory.
-<br/>
-<strong>Severity:</strong> 6.9 | MEDIUM
-<br/>
-Visit the link for more details, such as CVSS details, affected products, timeline, and more...</span>
-</div>
-</a>
-</details>
-</article>
-</section>
-</section>
-</li>
-<li class="source">
-<section>
-<h3 class="source-name">darkreading</h3>
-<section class="articles-per-source">
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">UK Wades Into Tech Sovereignty Amid AI Policy Changes</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/uk-tech-sovereignty-ai-policy">
-<div class="article-summary-box-inner">
-<span>The UK is betting on domestic AI and cyber investment to reduce reliance on US tech — but security leaders question whether the funding is too fragmented and too late.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">AI Gave Your Incident Archive a Second Job</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/ai-gave-your-incident-archive-second-job">
-<div class="article-summary-box-inner">
-<span>Security records are increasingly being used by vendors to train their models, creating new risks for enterprises.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Why Europe's Freezer Hacks Spread So Far, So Fast</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/europes-freezer-hacks-spread-so-far-so-fast">
-<div class="article-summary-box-inner">
-<span>Europe's supermarket freezer hacks show how security issues can cascade across an industry, disrupting supply chains at scale.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">UK Warns Its Critical Infrastructure Faces Grave Risk</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/uk-warns-critical-infrastructure-grave-risk">
-<div class="article-summary-box-inner">
-<span>Britain's new Labour-led government is making a concerted push to get ahead of the AI risks to its national networks and the industrial complex.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Operação de influência russa tem como alvo generalizado a América Latina</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/opera-o-de-influ-ncia-russa-tem-como-alvo-generalizado-a-am-rica-latina">
-<div class="article-summary-box-inner">
-<span>A operação, que contou com o uso de inteligência artificial, utilizou e-mails falsos, documentos governamentais falsificados e a criação de uma organização local para atacar escolas no Peru e no Equador, entre outras ações.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">US Government Email Systems Open to Abuse Thanks to Typos</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/us-government-email-systems-abuse-typos">
-<div class="article-summary-box-inner">
-<span>Erroneous or outdated DNS records can give attackers surprising powers over organizations' email systems.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">What We Missed: Knicks Phishing Test Goes Out of Bounds</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/what-we-missed-knicks-phishing-test-out-of-bounds">
-<div class="article-summary-box-inner">
-<span>In this video conversation, Dark Reading editors discuss some of the news they didn't get a chance to cover, from an ill-conceived phishing simulation to a hacktivist attack on a US government agency.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">APT29's Watering Holes Target Thousands of Mobile Users</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/mobile-security/apt29-watering-holes-target-mobile-users">
-<div class="article-summary-box-inner">
-<span>After compromising websites, the Russian state-sponsored threat group is fingerprinting victims, then harvesting information from the interesting ones.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">SecurityDataPipeline.com Launches as a New Educational Resource for the AI Era</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/securitydatapipeline-com-launches-as-a-new-educational-resource-for-the-ai-era">
-<div class="article-summary-box-inner">
-<span>The ungated resource explains how security data pipelines reduce SIEM ingestion costs, preserve detection coverage, and prepare the data layer for AI-driven security operations.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Critical Rails Bug Threatens to Derail Vulnerable Servers</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/critical-rails-bug-derail-vulnerable-servers">
-<div class="article-summary-box-inner">
-<span>An attacker could write arbitrary files and read sensitive files via images uploaded to the Rails Active Storage ImageMagick integration, possibly positioning a threat actor for lateral movement.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Google, Partners Disrupt 1.3 Million-Device-Strong XCPE Botnet</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/google-13-million-device-strong-xcpe-botnet">
-<div class="article-summary-box-inner">
-<span>Android device manufacturer Videostrong allegedly ran the operation, which infected set-top boxes and IoT devices with a backdoor to create infrastructure for criminal activity.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Incidents Move Too Fast for Pen &amp; Paper</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/incidents-move-fast-pen-paper">
-<div class="article-summary-box-inner">
-<span>Organizations may not be ready for completely autonomous communication processes, but there are places where automating information updates would alleviate pressure.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Philippine Migrant Worker Data Likely Leaked in 69GB Government Breach</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/philippine-migrant-worker-data-69gb-government-breach">
-<div class="article-summary-box-inner">
-<span>An unknown operator appears to have exfiltrated SQL Server backups from the Philippine Overseas Employment Administration in under a half hour.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Phishing-Resistant Isn't Enough; Yubico Takes Aim at Identity-Verification Gap</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/identity-access-management-security/beyond-phishing-resistant-yubico-identity-verification-gap">
-<div class="article-summary-box-inner">
-<span>The new YubiID service bridges identity verification with credential enrollment and recovery across existing identity platforms, closing an important authentication gap. Plus: post-quantum YubiKey beta.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Fresh European Fridge Attacks Put Cold-Chain Security in Focus</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/ics-ot-security/fresh-european-fridge-attacks-cold-chain-security">
-<div class="article-summary-box-inner">
-<span>Beyond food storage, the same combination of Internet connectivity, remote access, and inadequate security practices can put temperature-controlled infrastructure across other critical sectors at risk.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Germany Busts 'Crime-as-a-Service' Investment Fraud Outfit</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/germany-crime-service-investment-fraud">
-<div class="article-summary-box-inner">
-<span>Authorities seized more than 100 servers and arrested seven as part of a crackdown on a fraud network spanning more than 50 countries.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">9 Cyber Awareness Tips That Actually Match Today's Maze of Threats</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/9-cyber-awareness-tips-todays-maze-threats">
-<div class="article-summary-box-inner">
-<span>Practical guidance on safer search, stronger login security, better executive protection, and other habits can reduce enterprise risk.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">LLMjacking Emerges as Thriving Cybercriminal Enterprise</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cloud-security/llmjacking-thriving-cybercriminal-enterprise">
-<div class="article-summary-box-inner">
-<span>Cybercriminals have turned reselling cloud access to LLMs into a lucrative business model, with some victims paying as much as $1 million in resource consumption before access was revoked.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">3AM Affiliate Embraces AI-Like Loops in European School Attack</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/data-privacy/3am-affiliate-ai-loops-european-school-attack">
-<div class="article-summary-box-inner">
-<span>Evidence suggests a model may have generated and revised commands during the ransom gang's breach, though researchers stopped short of claiming full automation.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">One Compromised Laptop, Billions Lost: The Binance Attack-Path Warning</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/binance-hack-test-attack-paths">
-<div class="article-summary-box-inner">
-<span>The record theft shows how weak system separation, inadequate controls, and untested attack possibilities can turn one breach into systemic loss.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Microsoft's AI Risk Report Misses This Key Detail</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/microsoft-ai-cyber-risk-report-miss">
-<div class="article-summary-box-inner">
-<span>The latest &quot;Digital Defense Report&quot; identifies government agencies as prime targets for AI attacks, but it doesn't mention that they are broadly being targeted through Microsoft bugs.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">PapRAT Cyber-Espionage Campaign Leaves a 'Bitter' Taste in South Asia</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/paprat-cyberespionage-campaign-bitter-south-asia">
-<div class="article-summary-box-inner">
-<span>Organizations in the region face growing cyberattacks from the known India-linked threat group, which leverages legitimate Windows functionality in three distinct attack chains.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Investors Dish on New Startups &amp; What They'd Back Next</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/investors-dish-new-startsup-what-back-next">
-<div class="article-summary-box-inner">
-<span>The cybersecurity market is difficult to predict, but a glimpse into the annual DataTribe Challenge shows what's trending and what's not.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Devs Hit by Trojanized Claude Code Extension for Cursor</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/devs-trojanized-claude-code-extension-cursor">
-<div class="article-summary-box-inner">
-<span>Two serious security issues hit Cursor on the same day, highlighting the risks for AI-powered integrated development environments (IDEs).</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Behind the Scenes of How Operation Blackout Went Down</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/behind-the-scenes-how-operation-blackout-went-down">
-<div class="article-summary-box-inner">
-<span>A recent law enforcement operation to dismantle harmful scam centers was a big success. A threat intelligence expert walks us through what happened and why he wants more of the same.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">L’Italia è afflitta da vulnerabilità informatiche, senza una causa chiara</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-analytics/cyber-vulnerabilities-besiege-italy-italian">
-<div class="article-summary-box-inner">
-<span>I ricercatori non riescono a spiegare del tutto perché le minacce informatiche in Italia siano così diverse rispetto a quelle di qualsiasi altro Paese.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Undead Software Projects Continue to Raise Security Risks</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/undead-software-projects-raise-security-risks">
-<div class="article-summary-box-inner">
-<span>A security firm patched a decade-old app to prevent the takeover of millions of machines, highlighting that abandoned domains remain a boon to attackers.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">As Russia's Cyberwar Evolves, Belarus Steps Forward</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/physical-security/russia-cyber-war-belarus-steps-forward">
-<div class="article-summary-box-inner">
-<span>The &quot;FrostyNeighbor&quot; advanced persistent threat (APT) launched a destructive attack in Ukraine and is raising concerns about deeper alignment with Russian cyber objectives.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Anthropic-Themed Phishing Emails Bypass Top Security Tools</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/anthropic-phishing-emails-bypass-security-tools">
-<div class="article-summary-box-inner">
-<span>Obvious phishing emails with numerous red flags are somehow getting past some of the industry-leading secure email gateway (SEG) products.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Rethinking Cybersecurity Awareness in the AI Era</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/rethinking-cybersecurity-awareness-ai-era">
-<div class="article-summary-box-inner">
-<span>This installment of the Reporters' Notebook video series discusses some of the trends and topics from Cybersecurity Awareness Month, from using AI for better training to educating next-generation workforces on modern risks and emerging threats.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Why CTF Competitions May Be More Important Than Ever</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/why-ctf-more-important-than-ever">
-<div class="article-summary-box-inner">
-<span>As artificial intelligence squeezes early-career learning opportunities, capture-the-flag contests could be one way to help pick up the slack.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Claude Model Builds Exploits Across Major Browsers &amp; OSes</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/claude-model-exploits-major-browsers-oses">
-<div class="article-summary-box-inner">
-<span>An unreleased version of the AI model has found and chained multiple vulnerabilities in Chrome, Safari, Android, Windows, and Linux, Anthropic says.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Threat Modeling With 4 Simple Questions on a White Board</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/threat-modeling-4-simple-questions">
-<div class="article-summary-box-inner">
-<span>A four-question exercise that CISOs can use to create a threat model that promises results, without a big spend.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Shadowy AI Relay Disables OpenAI Codex, Claude Code Sandboxes</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/threat-intelligence/ai-relay-service-openai-codex-claude-code-sandboxes">
-<div class="article-summary-box-inner">
-<span>The enigmatic service is providing popular AI coding tools to mainland China and other regions where OpenAI and Anthropic products are not officially for sale — but with key security features turned off.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Cyber Vulnerabilities Besiege Italy, Absent Clear Cause</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-analytics/cyber-vulnerabilities-besiege-italy">
-<div class="article-summary-box-inner">
-<span>Researchers can't quite explain why cyber threats look so different in Italy compared with everywhere else.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">GhostAction Hacking Wave Fizzles, but Attackers Lurk on in GitHub</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/ghostaction-hacking-wave-fizzles-attackers-github">
-<div class="article-summary-box-inner">
-<span>The supply chain attack campaign's shift toward developer endpoints and cloud access signals what could be next for the cybercrime outfit.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">AI Takes Root in Hospital Corridors, Raises Security Stakes</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/ai-root-hospital-corridors-raised-security-stakes">
-<div class="article-summary-box-inner">
-<span>Artificial intelligence is everywhere in healthcare, from doctors' intake forms to cancer screenings. But in some cases, life-and-death uses are outpacing cybersecurity.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Attacker Relentlessly Scans for Credentials by Impersonating AI Bots</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/attacker-impersonates-ai-bots-scans-credentials">
-<div class="article-summary-box-inner">
-<span>The threat actor lurked behind bots posing as agents from OpenAI, Anthropic, Meta, and others to find exposed data.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Third Serengeti Sweep Tops 1,400 Arrests as Investigations Mature</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/third-serengeti-sweep-1400-arrests-investigations-mature">
-<div class="article-summary-box-inner">
-<span>Interpol's annual Operation Serengeti, now in its third iteration, led to 1,462 arrests across 20 African countries and the US, recovering $105 million in stolen funds.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">3 Frameworks to Protect CISOs &amp; Orgs Against AI Liability</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/3-frameworks-cisos-ai-liability">
-<div class="article-summary-box-inner">
-<span>Cyber leaders can get ahead of AI liability with rigorous documentation, transparency, and smart contract negotiations with AI vendors.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">External Teams Chats Anchor 15-Minute Malware Delivery</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cloud-security/email-bombing-external-teams-chats-repeatable-access-path">
-<div class="article-summary-box-inner">
-<span>Mail bombing is getting a new look with a wide-scale, ongoing social engineering campaign that might be tied to the Black Basta ransomware gang.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">SBOMs Alone Can't Reveal the Scope of a Supply Chain Attack</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/sboms-alone-scope-supply-chain-attack">
-<div class="article-summary-box-inner">
-<span>A recent Shai-Hulud attack shows defenders need real-time visibility into production code and affected services to respond to supply chain compromises.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Beware the Slasher: AI Could Kill Off Cybersecurity Pros' Skills</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-operations/ai-kill-off-cybersecurity-pros-skills">
-<div class="article-summary-box-inner">
-<span>Nathan Hamiel outlines potential SecOps horror in the AI midst, as core technical capabilities go the way of reading an atlas or remembering phone numbers.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">'Aokigahara' Stealer Targets 'Developer Keyrings' &amp; AI Assistants</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/endpoint-security/aokigahara-stealer-developer-keyrings-ai-assistants">
-<div class="article-summary-box-inner">
-<span>The malware's focus on AI tools expands the traditional infostealer playbook to expose a forest of AI sessions, sensitive business data, and developer infrastructure from a single compromised endpoint.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">So Many AI Security Benchmarks, but None Tell the Whole Story</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-analytics/benchmarking-security-of-ai-models-poses-challenges">
-<div class="article-summary-box-inner">
-<span>Measuring artificial intelligence model security gets complex, fast, thanks to a growing patchwork of benchmarks targeting different variables in the equation. But none replace testing against your own code and workflows.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Risks &amp; Rewards: How AI Is Redefining the CISO's Role</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cybersecurity-careers/risks-rewards-ai-redefining-ciso-role">
-<div class="article-summary-box-inner">
-<span>Nvidia security executive Mark Weatherford says CISOs must help business leaders weigh AI's pros and cons, and ensure those deploying it own the risks.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">In-the-Wild Attack Abuses AI Agents' Trust in Markdown</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/application-security/in-the-wild-attack-ai-agents-trust-markdown">
-<div class="article-summary-box-inner">
-<span>A new AI agent prompt injection technique exploits how coding assistants consume local instruction files, blurring the line between text documents and executable actions.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">'Gheist' Weaponizes GitHub Tokens to Steal Cloud Secrets</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/gheist-stolen-github-tokens-cloud-secrets">
-<div class="article-summary-box-inner">
-<span>An ongoing supply chain attack is harvesting credentials and sensitive data from thousands of developer repositories.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">10 Software Security Practices Built for the Next 250 Years</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyberattacks-data-breaches/10-software-security-practices-built-250-years">
-<div class="article-summary-box-inner">
-<span>This Cybersecurity Awareness Month's theme, &quot;Securing the Next 250,&quot; asks us to look beyond vulnerabilities and consider what will make our digital systems resilient for generations.</span>
-</div>
-</a>
-</details>
-</article>
-<article>
-<details class="article-expander">
-<summary class="article-expander__title">Trust Is Not What It Seems — and Fraudsters Are Counting on It</summary>
-<a class="article-summary-link article-summary-box-outer" href="https://www.darkreading.com/cyber-risk/trust-is-not-what-it-seems-and-fraudsters-are-counting-on-it">
-<div class="article-summary-box-inner">
-<span>Threat actors don't need to rely on malware to breach organizations anymore. They're simply calling help desks and politely asking for access, with a little help from artificial intelligence.</span>
-</div>
-</a>
-</details>
-</article>
-</section>
-</section>
-</li>
-</ul>
-</section>
 <footer>
-<time id="build-timestamp" datetime="2026-11-14 23:04:37.453976822 UTC">2026-11-14 23:04:37 UTC</time>
+<time id="build-timestamp" datetime="2026-11-15 23:05:16.829864554 UTC">2026-11-15 23:05:16 UTC</time>
 <span><a class="footer-link" href="https://github.com/NotCraft/NotFeed"> notfeed 0.2.9</a></span>
 </footer>
 <script src="index.js"></script>
